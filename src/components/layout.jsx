@@ -3,11 +3,9 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import Footer from "./footer"
+import Title from "./title"
 import Image from "./image"
-import "./layout.css"
-
-require("typeface-roboto")
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -22,7 +20,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header />
+      <Title siteTitle={data.site.siteMetadata.title} />
       <div>
         <main>{children}</main>
       </div>

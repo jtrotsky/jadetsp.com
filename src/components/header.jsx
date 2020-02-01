@@ -1,26 +1,14 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      marginTop: `0.45rem`,
-    }}
-  >
-    <div>
-      <h1>
-        <Link
-          to="/"
-          style={{
-            color: `black`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+import PropTypes from "prop-types"
+
+const Header = () => (
+  <header>
+    <p>
+      Jade Tan
+      Right now: My partner and I are relocating to London, and I’m looking for a new team to create magic with. Get in touch!
+    </p>
   </header>
 )
 

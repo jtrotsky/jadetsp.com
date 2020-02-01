@@ -1,12 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `I lead product design teams`,
+    title: `I lead product design teams to collaborate and thrive, by helping designers grow into empathetic leaders and allies.`,
     description: `Jade's Portfolio`,
     author: `@jadetsssp`,
   },
   plugins: [
+    `gatsby-plugin-mdx`,
+    `gatsby-plugin-theme-ui`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -34,5 +35,20 @@ module.exports = {
         precachePages: [`/`],
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Noto Serif SC`,
+            variants: [`600`]
+          },
+          {
+            family: `Nunito`,
+            variants: [`600`, `300`]
+          },
+        ],
+      },
+    }
   ],
 }
