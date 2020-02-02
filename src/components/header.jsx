@@ -1,23 +1,70 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 
-import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
 
-const Header = () => (
-  <header>
-    <p>
-      Jade Tan
-      Right now: My partner and I are relocating to London, and I’m looking for a new team to create magic with. Get in touch!
-    </p>
-  </header>
-)
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          author
+          statusUpdate
+        }
+      }
+    }
+  `)
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+  return (
+    <header>
+      <div
+        sx={{
+          marginTop: '50px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignContent: 'center',
+        }}>
+
+        <span
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            variant: 'text.signPost',
+            width: '32%',
+          }}>
+          {data.site.siteMetadata.author}
+        </span>
+
+        <div
+          sx={{
+            width: '320px',
+            height: '105px',
+            display: 'flex',
+            justifyContent: 'center',
+            variant: 'text.hardCaption',
+          }}>
+          <p
+            sx={{
+              margin: '0 0 0 0',
+            }}>
+          {data.site.siteMetadata.statusUpdate} <a style={{color:"#000"}} href="mailto:sweaphin@gmail.com">Get in touch!</a></p>
+        </div>
+
+        <span
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            variant: 'text.signPost',
+            width: '32%',
+          }}>
+          About<br></br>
+          Work<br></br>
+          Contact<br></br>
+        </span>
+      </div>
+    </header>
+  )
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default Header

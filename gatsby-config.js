@@ -1,10 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `I lead product design teams to collaborate and thrive, by helping designers grow into empathetic leaders and allies.`,
-    description: `Jade's Portfolio`,
-    author: `@jadetsssp`,
+    title: `I lead product design teams to collaborate and thrive, 
+      by helping designers grow into empathetic leaders and allies.`,
+    description:  `Jade's Portfolio`,
+    author: `Jade Tan`,
+    statusUpdate: `Right now: My partner and I are relocating to London, 
+      and I’m looking for a new team to create magic with.`
   },
   plugins: [
+    // For markdown files 
     `gatsby-plugin-mdx`,
     `gatsby-plugin-theme-ui`,
     `gatsby-plugin-styled-components`,
@@ -17,6 +21,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    // Can I remove this?
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -29,6 +34,7 @@ module.exports = {
         icon: `./static/favicon/favicon.png`,
       },
     },
+    // Test this is working
     {
       resolve: `gatsby-plugin-offline`,
       options: {

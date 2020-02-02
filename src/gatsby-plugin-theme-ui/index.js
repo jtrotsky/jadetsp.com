@@ -30,30 +30,35 @@ export default {
             fontFamily: 'Noto Serif SC',
             fontSize: 60,
             lineHeight: '80px',
+            letterSpacing: 0,
             fontWeight: 600,
         },
         chooChooBoi: {
-            fontFamily: 'Noto Serif SC',
+            fontFamily: 'Nunito', // Need this to switch to Noto if Web
             fontSize: 40,
             lineHeight: '80px',
+            letterSpacing: 0,
             fontWeight: 600,
         },
         pugBoi: {
             fontFamily: 'Noto Serif SC',
             fontSize: 32,
             lineHeight: '60px',
+            letterSpacing: 0,
             fontWeight: 600,
         },
         smolBoi: {
             fontFamily: 'Noto Serif SC',
             fontSize: 24,
             lineHeight: '40px',
+            letterSpacing: 0,
             fontWeight: 600,
         },
         pocketBoi: {
             fontFamily: 'Nunito',
             fontSize: 24,
             lineHeight: '40px',
+            letterSpacing: 0,
             fontWeight: 600,
         },
         signPost: {
@@ -62,17 +67,20 @@ export default {
             lineHeight: '26px',
             letterSpacing: 2,
             fontWeight: 600,
+            textTransform: 'uppercase',
         },
         hardCaption: {
             fontFamily: 'Nunito',
             fontSize: 16,
             lineHeight: '26px',
-            fontWeight: 600,
+            letterSpacing: 0,
+            fontWeight: 700, // Made heavier
         },
         softCaption: {
             fontFamily: 'Nunito',
             fontSize: 16,
             lineHeight: '22px',
+            letterSpacing: 0,
             fontWeight: 300,
         },
     },
