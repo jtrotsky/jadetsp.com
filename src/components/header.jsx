@@ -1,22 +1,22 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import { useStaticQuery, graphql } from "gatsby"
-
-const Header = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-          author
-          statusUpdate
+const Header = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            author
+            statusUpdate
+          }
         }
-      }
-    }
-  `)
+      }`,
+  );
 
-  return (
+  return (
     <header>
       <div
         sx={{
@@ -24,15 +24,17 @@ const Header = () => {
           display: 'flex',
           justifyContent: 'space-between',
           alignContent: 'center',
-        }}>
+        }}
+      >
 
         <span
           sx={{
             display: 'flex',
             justifyContent: 'center',
-            variant: 'text.signPost',
+            variant: 'text.signPost',
             width: '32%',
-          }}>
+          }}
+        >
           {data.site.siteMetadata.author}
         </span>
 
@@ -42,29 +44,38 @@ const Header = () => {
             height: '105px',
             display: 'flex',
             justifyContent: 'center',
-            variant: 'text.hardCaption',
-          }}>
+            variant: 'text.hardCaption',
+          }}
+        >
           <p
             sx={{
               margin: '0 0 0 0',
-            }}>
-          {data.site.siteMetadata.statusUpdate} <a style={{color:"#000"}} href="mailto:sweaphin@gmail.com">Get in touch!</a></p>
+            }}
+          >
+            {data.site.siteMetadata.statusUpdate}
+            <a style={{ color: '#000' }} href="mailto:sweaphin@gmail.com">Get in touch!</a>
+
+          </p>
         </div>
 
         <span
           sx={{
             display: 'flex',
             justifyContent: 'center',
-            variant: 'text.signPost',
+            variant: 'text.signPost',
             width: '32%',
-          }}>
-          About<br></br>
-          Work<br></br>
-          Contact<br></br>
+          }}
+        >
+          About
+          <br />
+          Work
+          <br />
+          Contact
+          <br />
         </span>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

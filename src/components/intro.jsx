@@ -1,52 +1,53 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-
-import { useStaticQuery, graphql } from "gatsby"
-
-import circle from "../images/circle.svg"
+import { jsx } from 'theme-ui';
+import { useStaticQuery, graphql } from 'gatsby';
+import circle from '../images/circle.svg';
 
 const Intro = () => {
-  const data = useStaticQuery(graphql`
-    query {
+  const data = useStaticQuery(
+    graphql`
+      query {
         site {
-            siteMetadata {
-                title
-            }
+          siteMetadata {
+            title
+          }
         }
-    }
-  `)
-    
+      }`,
+  );
+
   return (
-    <intro>
-      <container          
+    <div>
+      <div
         sx={{
           marginTop: '150px',
-          marginBottom: '400px',
           display: 'flex',
           justifyContent: 'center',
-        }}>
+        }}
+      >
 
         <div
           sx={{
             width: 668,
             height: 616,
-          }}>
+          }}
+        >
           <img src={circle} alt="Circle" />
         </div>
 
         <div
           sx={{
-            width: 840,
-            height: 246,
-            variant: 'text.chooChooBoi', 
+            maxWidth: 840,
+            maxHeight: 246,
+            variant: 'text.chooChooBoi',
             alignSelf: 'center',
             position: 'absolute',
-          }}>
+          }}
+        >
           {data.site.siteMetadata.title}
         </div>
-      </container>
-    </intro>
-  )
-}
+      </div>
+    </div>
+  );
+};
 
-export default Intro
+export default Intro;
