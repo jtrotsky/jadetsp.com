@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+// import PropTypes from 'prop-types';
 
 const Banner = () => (
   <div
@@ -8,9 +9,17 @@ const Banner = () => (
       justifyContent: 'center',
       height: '843px',
       width: '100%',
-      backgroundColor: '#AE4F2B',
+      // backgroundColor: { color }, // overridden to clay for now
     }}
   />
 );
+
+// Banner.defaultProps = {
+//   color: 'clay',
+// };
+
+// Banner.propTypes = {
+//   color: PropTypes.string,
+// };
 
 export default Banner;

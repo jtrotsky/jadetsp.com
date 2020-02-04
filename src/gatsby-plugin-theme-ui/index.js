@@ -1,6 +1,6 @@
 export default {
   breakpoints: ['40em', '52em', '64em'],
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  space: [32, 40, 80, 120, 160, 200, 280, 360, 400],
   fonts: {
     body: '"Noto Serif Semibold", "Nunito Semi Bold", "Nunito Light Italic", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif',
     heading: 'Noto Serif Semibold',

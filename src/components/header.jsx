@@ -20,7 +20,7 @@ const Header = () => {
     <header>
       <div
         sx={{
-          marginTop: '50px',
+          marginTop: 2,
           display: 'flex',
           justifyContent: 'space-between',
           alignContent: 'center',
@@ -47,14 +47,9 @@ const Header = () => {
             variant: 'text.hardCaption',
           }}
         >
-          <p
-            sx={{
-              margin: '0 0 0 0',
-            }}
-          >
+          <p>
             {data.site.siteMetadata.statusUpdate}
             <a style={{ color: '#000' }} href="mailto:sweaphin@gmail.com">Get in touch!</a>
-
           </p>
         </div>
 

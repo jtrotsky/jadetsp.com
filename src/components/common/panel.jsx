@@ -7,7 +7,6 @@ const Panel = ({ children }) => (
     sx={{
       display: 'flex',
       justifyContent: 'center',
-      width: '50%',
     }}
   >
     {children}

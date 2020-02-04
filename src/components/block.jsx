@@ -11,19 +11,11 @@ const Block = ({ paragraphOne, paragraphTwo }) => (
     }}
   >
 
-    <div
-      sx={{
-        paddingTop: '20px',
-      }}
-    >
+    <div>
       {paragraphOne}
     </div>
-
-    <div
-      sx={{
-        paddingTop: '50px',
-      }}
-    >
+    <br />
+    <div>
       {paragraphTwo}
     </div>
   </div>

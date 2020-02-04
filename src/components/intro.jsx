@@ -19,7 +19,7 @@ const Intro = () => {
     <div>
       <div
         sx={{
-          marginTop: '150px',
+          paddingTop: 6,
           display: 'flex',
           justifyContent: 'center',
         }}
