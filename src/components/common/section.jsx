@@ -6,8 +6,6 @@ const Section = ({ children }) => (
   <div
     sx={{
       display: 'flex',
-      paddingTop: '400px',
-      paddingBottom: '200px',
     }}
   >
     {children}

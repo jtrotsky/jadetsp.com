@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
+import { jsx, Grid } from 'theme-ui';
 import { useStaticQuery, graphql } from 'gatsby';
 import circle from '../images/circle.svg';
 
@@ -16,22 +16,28 @@ const Intro = () => {
   );
 
   return (
-    <div>
+    <Grid
+      sx={{
+        paddingTop: 6,
+        justifyItems: 'center',
+      }}
+      columns={1}
+    >
       <div
         sx={{
-          marginTop: '150px',
           display: 'flex',
           justifyContent: 'center',
         }}
       >
-
-        <div
-          sx={{
-            width: 668,
-            height: 616,
-          }}
-        >
-          <img src={circle} alt="Circle" />
+        <div>
+          <img
+            src={circle}
+            alt="Circle"
+            sx={{
+              maxWidth: '100%',
+              maxHeight: '100%',
+            }}
+          />
         </div>
 
         <div
@@ -46,7 +52,7 @@ const Intro = () => {
           {data.site.siteMetadata.title}
         </div>
       </div>
-    </div>
+    </Grid>
   );
 };
 

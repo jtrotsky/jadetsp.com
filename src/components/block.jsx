@@ -5,25 +5,16 @@ import PropTypes from 'prop-types';
 const Block = ({ paragraphOne, paragraphTwo }) => (
   <div
     sx={{
-      maxWidth: 391,
-      maxHeight: 705,
+      maxWidth: '503px',
       variant: 'text.pugBoi',
     }}
   >
 
-    <div
-      sx={{
-        paddingTop: '20px',
-      }}
-    >
+    <div>
       {paragraphOne}
     </div>
-
-    <div
-      sx={{
-        paddingTop: '50px',
-      }}
-    >
+    <br />
+    <div>
       {paragraphTwo}
     </div>
   </div>

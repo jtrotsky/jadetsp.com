@@ -1,21 +1,35 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
+import { jsx, Grid } from 'theme-ui';
 
 const Footer = () => (
-  <footer
+  <Grid
     sx={{
-      variant: 'text.softCaption',
-      opacity: 0.5,
+      paddingTop: 5,
+      textAlign: 'center',
+      backgroundColor: 'green',
     }}
+    columns={2}
+    gap={0}
   >
-    <span>
-      Fun fact #25: I have a collection of discontinued cash and coins from around the world.
-      It&apos;s priceless.
-      ©
-      {new Date().getFullYear()}
-      Jade Tan Swea Phin
-    </span>
-  </footer>
+    <div
+      sx={{
+        variant: 'text.softCaption',
+        opacity: 0.5,
+        color: 'background',
+      }}
+    >
+      <span>
+        Fun fact #25: I have a collection of discontinued cash and coins from around the world.
+        It&apos;s priceless.
+      </span>
+
+      <span>
+        ©&nbsp;
+        {new Date().getFullYear()}
+        &nbsp;Jade Tan Swea Phin
+      </span>
+    </div>
+  </Grid>
 );
 
 export default Footer;

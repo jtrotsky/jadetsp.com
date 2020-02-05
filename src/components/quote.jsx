@@ -22,11 +22,9 @@ const Quote = ({ quote, attribution }) => {
   return (
     <div
       sx={{
-        maxWidth: 391,
-        maxHeight: 136,
+        maxWidth: '400px',
       }}
     >
-
       <div
         sx={{
           variant: 'text.smolBoi',
@@ -38,7 +36,7 @@ const Quote = ({ quote, attribution }) => {
       <div
         sx={{
           variant: 'text.softCaption',
-          paddingTop: '40px',
+          paddingTop: 1,
         }}
       >
         {attributionString}

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
+import { jsx, Grid } from 'theme-ui';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const Header = () => {
@@ -17,64 +17,46 @@ const Header = () => {
   );
 
   return (
-    <header>
-      <div
+    <Grid
+      sx={{
+        marginTop: 2,
+        justifyItems: 'center',
+      }}
+      columns={[2, 2, 3]}
+    >
+
+      <span
         sx={{
-          marginTop: '50px',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignContent: 'center',
+          variant: 'text.signPost',
         }}
       >
+        {data.site.siteMetadata.author}
+      </span>
 
-        <span
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            variant: 'text.signPost',
-            width: '32%',
-          }}
-        >
-          {data.site.siteMetadata.author}
-        </span>
-
-        <div
-          sx={{
-            width: '320px',
-            height: '105px',
-            display: 'flex',
-            justifyContent: 'center',
-            variant: 'text.hardCaption',
-          }}
-        >
-          <p
-            sx={{
-              margin: '0 0 0 0',
-            }}
-          >
-            {data.site.siteMetadata.statusUpdate}
-            <a style={{ color: '#000' }} href="mailto:sweaphin@gmail.com">Get in touch!</a>
-
-          </p>
-        </div>
-
-        <span
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            variant: 'text.signPost',
-            width: '32%',
-          }}
-        >
-          About
-          <br />
-          Work
-          <br />
-          Contact
-          <br />
-        </span>
+      <div
+        sx={{
+          variant: 'text.hardCaption',
+          width: '320px',
+          display: ['none', 'none', 'block'],
+        }}
+      >
+        {data.site.siteMetadata.statusUpdate}
+        <a style={{ color: '#000' }} href="mailto:sweaphin@gmail.com">Get in touch!</a>
       </div>
-    </header>
+
+      <span
+        sx={{
+          variant: 'text.signPost',
+        }}
+      >
+        About
+        <br />
+        Work
+        <br />
+        Contact
+        <br />
+      </span>
+    </Grid>
   );
 };
 

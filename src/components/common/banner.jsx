@@ -1,16 +1,32 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import PropTypes from 'prop-types';
 
-const Banner = () => (
+const Banner = ({ children }) => (
   <div
     sx={{
-      display: 'block',
+      display: 'flex',
+      alignItems: 'center',
       justifyContent: 'center',
-      height: '843px',
+      height: '800px',
       width: '100%',
-      backgroundColor: '#AE4F2B',
+      backgroundColor: 'clay', // overridden to clay for now
     }}
-  />
+  >
+    {children}
+  </div>
 );
+
+Banner.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+// Banner.defaultProps = {
+//   color: 'clay',
+// };
+
+// Banner.propTypes = {
+//   color: PropTypes.string,
+// };
 
 export default Banner;

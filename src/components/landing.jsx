@@ -1,12 +1,11 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
+import { jsx, Grid } from 'theme-ui';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import Intro from './intro';
 import Quote from './quote';
 import Block from './block';
-import Panel from './common/panel';
-import Section from './common/section';
+import Contact from './contact';
 import Banner from './common/banner';
 import scale from '../images/scale.svg';
 import dots from '../images/dots.svg';
@@ -14,80 +13,207 @@ import dots from '../images/dots.svg';
 const Landing = () => (
   <>
     <Intro />
-    <div>
-      <Section>
-        <Panel>
-          <div>
-            <Quote
-              quote="Some quote about me being really good at this and that. Will recommend for all
-                eternity."
-              attribution="-Said by a nice person I worked with"
-            />
-          </div>
-        </Panel>
+    <Grid
+      sx={{
+        paddingTop: 6,
+      }}
+      columns={[1, 1, 2]}
+    >
+      <div
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+      >
+        <Quote
+          quote="Some quote about me being really good at this and that. Will recommend for all
+            eternity."
+          attribution="-Said by a nice person I worked with"
+        />
+      </div>
+    </Grid>
 
-        <Panel
+    <Grid
+      columns={[1, 1, 2]}
+      gap={0}
+    >
+      <div />
+      <div
+        sx={{
+          display: 'flex',
+          justifyContent: ['center', 'center', 'left'],
+        }}
+      >
+        <Quote
+          quote="Some quote about me being really good at this and that. Will recommend for all
+            eternity."
+          attribution="-Said by a nice person I worked with"
+        />
+      </div>
+    </Grid>
+
+    <Grid
+      sx={{
+        paddingTop: 6,
+      }}
+      columns={[1, 1, 2]}
+      gap={0}
+    >
+      <div>
+        <img
           sx={{
-            variant: 'text.quoteTwo',
+            maxWidth: '100%',
+            paddingLeft: 1,
           }}
-        >
-          <div
+          src={scale}
+          alt="Scale"
+        />
+      </div>
+
+      <div
+        sx={{
+          display: 'flex',
+          justifyContent: ['center', 'center', 'left'],
+          alignItems: 'center',
+        }}
+      >
+        <Block
+          paragraphOne="I bring a breadth of experience, from launching a startup to expanding a
+            seasoned product."
+          paragraphTwo="I move fast on user feedback, and focus on delivering real impact on
+            people's lives."
+        />
+      </div>
+    </Grid>
+
+    <Grid
+      sx={{
+        paddingTop: 6,
+      }}
+      columns={[1, 1, 2]}
+      gap={0}
+    >
+
+      <div
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Block
+          paragraphOne="With a decade of design experience, I've learned to recognise the unique
+            creative process in each designer."
+          paragraphTwo="I tune in for cues on when to push them to solve a problem for themselves,
+            or when to collaborate closely to keep the process moving."
+        />
+      </div>
+
+      <div
+        sx={{
+          display: 'flex',
+          justifyContent: ['center', 'center', 'left'],
+          alignItems: 'center',
+        }}
+      >
+        <img
+          sx={{
+            maxWidth: '100%',
+          }}
+          src={dots}
+          alt="Dots"
+        />
+      </div>
+    </Grid>
+
+    <Grid
+      sx={{
+        paddingTop: 6,
+        display: 'flex',
+        textAlign: '-webkit-center',
+      }}
+      columns={[1]}
+    >
+      <Banner>
+        <div>
+          <h1
             sx={{
-              paddingTop: '185px',
+              variant: 'text.bigBoi',
+              color: 'background',
+              width: '686px',
             }}
           >
-            <Quote
-              quote="Some quote about me being really good at this and that. Will recommend for all
-                eternity."
-              attribution="-Said by a nice person I worked with"
-            />
-          </div>
-        </Panel>
-      </Section>
-
-      <Section>
-        <div
-          sx={{
-            width: 668,
-            height: 616,
-          }}
-        >
-          <img src={scale} alt="Scale" />
+            Great work takes hard work, critical thinking &amp; passion.
+          </h1>
+          <p
+            sx={{
+              paddingTop: 1,
+              variant: 'text.pugBoi',
+              color: 'background',
+              width: '686px',
+            }}
+          >
+            As a design leader, my goal is to create a space where people feel inspired, invested,
+            and protected to do their best work.
+          </p>
         </div>
+      </Banner>
+    </Grid>
 
-        <Panel
+    <Grid
+      sx={{
+        paddingTop: 6,
+        justifyItems: 'center',
+        textAlign: 'center',
+      }}
+      columns={[1, 1, 3]}
+    >
+      <span
+        sx={{
+          variant: 'text.chooChooBoi',
+        }}
+      >
+        <a
+          href="https://dribbble.com/JadeTSP"
+          target="_blank"
+          rel="noopener noreferrer"
           sx={{
-            paddingTop: '100px',
+            textDecoration: 'none',
+            color: 'text',
           }}
         >
-          <Block
-            paragraphOne="I bring a breadth of experience, from launching a startup to expanding a
-              seasoned product."
-            paragraphTwo="I move fast on user feedback, and focus on delivering real impact on
-              people's lives."
-          />
-        </Panel>
-      </Section>
+          See some of my projects
+        </a>
+      </span>
 
-      <Section>
-        <Panel
+      <p
+        sx={{
+          variant: 'text.softCaption',
+        }}
+      >
+        or
+      </p>
+
+      <span
+        sx={{
+          variant: 'text.chooChooBoi',
+        }}
+      >
+        <a
+          href="https://medium.com/@JadeTSP"
+          target="_blank"
+          rel="noopener noreferrer"
           sx={{
-            paddingTop: '200px',
+            textDecoration: 'none',
+            color: 'text',
           }}
         >
-          <Block
-            paragraphOne="With a decade of design experience, I've learned to recognise the unique
-              creative process in each designer."
-            paragraphTwo="I tune in for cues on when to push them to solve a problem for themselves,
-              or when to collaborate closely to keep the process moving."
-          />
-        </Panel>
+          Read about my process
+        </a>
+      </span>
+    </Grid>
 
-        <img src={dots} alt="Dots" />
-      </Section>
-
-      <Banner />
-    </div>
+    <Contact />
   </>
 );
 

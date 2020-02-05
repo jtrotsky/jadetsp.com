@@ -6,8 +6,6 @@ const Panel = ({ children }) => (
   <div
     sx={{
       display: 'flex',
-      justifyContent: 'center',
-      width: '50%',
     }}
   >
     {children}
