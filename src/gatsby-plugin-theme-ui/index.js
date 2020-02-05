@@ -87,6 +87,8 @@ export default {
   },
   styles: {
     root: {
+      margin: '0 0 0 0',
+      padding: '0 0 0 0',
       fontFamily: 'body',
       lineHeight: 'body',
       fontWeight: 'body',

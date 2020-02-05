@@ -5,8 +5,8 @@ import React from 'react';
 import Intro from './intro';
 import Quote from './quote';
 import Block from './block';
-import Panel from './common/panel';
-// import Banner from './common/banner';
+import Contact from './contact';
+import Banner from './common/banner';
 import scale from '../images/scale.svg';
 import dots from '../images/dots.svg';
 
@@ -19,26 +19,37 @@ const Landing = () => (
       }}
       columns={[1, 1, 2]}
     >
-      <Panel>
+      <div
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+      >
         <Quote
           quote="Some quote about me being really good at this and that. Will recommend for all
             eternity."
           attribution="-Said by a nice person I worked with"
         />
-      </Panel>
+      </div>
     </Grid>
 
     <Grid
       columns={[1, 1, 2]}
+      gap={0}
     >
       <div />
-      <Panel>
+      <div
+        sx={{
+          display: 'flex',
+          justifyContent: ['center', 'center', 'left'],
+        }}
+      >
         <Quote
           quote="Some quote about me being really good at this and that. Will recommend for all
             eternity."
           attribution="-Said by a nice person I worked with"
         />
-      </Panel>
+      </div>
     </Grid>
 
     <Grid
@@ -46,25 +57,33 @@ const Landing = () => (
         paddingTop: 6,
       }}
       columns={[1, 1, 2]}
+      gap={0}
     >
-      <Panel>
+      <div>
         <img
           sx={{
-            // width: '600px',
+            maxWidth: '100%',
+            paddingLeft: 1,
           }}
           src={scale}
           alt="Scale"
         />
-      </Panel>
+      </div>
 
-      <Panel>
+      <div
+        sx={{
+          display: 'flex',
+          justifyContent: ['center', 'center', 'left'],
+          alignItems: 'center',
+        }}
+      >
         <Block
           paragraphOne="I bring a breadth of experience, from launching a startup to expanding a
             seasoned product."
           paragraphTwo="I move fast on user feedback, and focus on delivering real impact on
             people's lives."
         />
-      </Panel>
+      </div>
     </Grid>
 
     <Grid
@@ -72,28 +91,74 @@ const Landing = () => (
         paddingTop: 6,
       }}
       columns={[1, 1, 2]}
+      gap={0}
     >
 
-      <Panel>
+      <div
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
         <Block
           paragraphOne="With a decade of design experience, I've learned to recognise the unique
             creative process in each designer."
           paragraphTwo="I tune in for cues on when to push them to solve a problem for themselves,
             or when to collaborate closely to keep the process moving."
         />
-      </Panel>
+      </div>
 
-      <img
+      <div
         sx={{
           display: 'flex',
-          justifyContent: 'flex-end',
+          justifyContent: ['center', 'center', 'left'],
+          alignItems: 'center',
         }}
-        src={dots}
-        alt="Dots"
-      />
+      >
+        <img
+          sx={{
+            maxWidth: '100%',
+          }}
+          src={dots}
+          alt="Dots"
+        />
+      </div>
     </Grid>
 
-    {/* <Banner /> */}
+    <Grid
+      sx={{
+        paddingTop: 6,
+        display: 'flex',
+        textAlign: '-webkit-center',
+      }}
+      columns={[1]}
+    >
+      <Banner>
+        <div>
+          <h1
+            sx={{
+              variant: 'text.bigBoi',
+              color: 'background',
+              width: '686px',
+            }}
+          >
+            Great work takes hard work, critical thinking &amp; passion.
+          </h1>
+          <p
+            sx={{
+              paddingTop: 1,
+              variant: 'text.pugBoi',
+              color: 'background',
+              width: '686px',
+            }}
+          >
+            As a design leader, my goal is to create a space where people feel inspired, invested,
+            and protected to do their best work.
+          </p>
+        </div>
+      </Banner>
+    </Grid>
 
     <Grid
       sx={{
@@ -147,6 +212,8 @@ const Landing = () => (
         </a>
       </span>
     </Grid>
+
+    <Contact />
   </>
 );
 

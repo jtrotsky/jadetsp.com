@@ -6,8 +6,12 @@ module.exports = {
     author: 'Jade Tan',
     statusUpdate: `Right now: My partner and I are relocating to London, 
       and I’m looking for a new team to create magic with. `,
-    quote: '"Some quote about me being really good at this and that. Will recommend for all eternity."',
+    quote: `"Some quote about me being really good at this and that. Will recommend for all 
+      eternity."`,
     attribution: '-Said by a nice person I worked with',
+    medium: 'https://medium.com/@JadeTSP',
+    dribbble: 'https://dribbble.com/JadeTSP',
+    twitter: 'https://twitter.com/jadetsssp',
   },
   plugins: [
     // For markdown files
@@ -23,19 +27,15 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    // Can I remove this?
-    // {
-    //   resolve: 'gatsby-plugin-manifest',
-    //   options: {
-    //     name: 'gatsby-starter-default',
-    //     short_name: 'starter',
-    //     start_url: '/',
-    //     background_color: '#663399',
-    //     theme_color: '#663399',
-    //     display: 'minimal-ui',
-    //     icon: './static/favicon/favicon.png',
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'gatsby-starter-default',
+        start_url: '/',
+        display: 'minimal-ui',
+        icon: './static/favicon/favicon-32x32.png',
+      },
+    },
     // Test this is working
     {
       resolve: 'gatsby-plugin-offline',

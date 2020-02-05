@@ -34,7 +34,6 @@ const Intro = () => {
             src={circle}
             alt="Circle"
             sx={{
-              // position: 'absolute',
               maxWidth: '100%',
               maxHeight: '100%',
             }}

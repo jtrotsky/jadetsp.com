@@ -5,8 +5,7 @@ import PropTypes from 'prop-types';
 const Block = ({ paragraphOne, paragraphTwo }) => (
   <div
     sx={{
-      maxWidth: 391,
-      maxHeight: 705,
+      maxWidth: '503px',
       variant: 'text.pugBoi',
     }}
   >
