@@ -76,11 +76,13 @@ const Landing = () => (
       </div>
 
       <div
+        id="about"
         sx={{
           display: 'flex',
           justifyContent: ['center', 'center', 'left'],
           alignItems: 'center',
           paddingTop: [3, 3, 0],
+          mx: 1,
         }}
       >
         <Block
@@ -145,12 +147,13 @@ const Landing = () => (
       <Banner>
         <div
           sx={{
-            mx: '80px',
+            mx: 3,
+            my: 3,
           }}
         >
           <h1
             sx={{
-              variant: 'text.bigBoi',
+              variant: ['text.chooChooBoi', 'text.chooChooBoi', 'text.bigBoi'],
               color: 'background',
               maxWidth: 840,
             }}
@@ -160,7 +163,7 @@ const Landing = () => (
           <p
             sx={{
               paddingTop: 1,
-              variant: 'text.pugBoi',
+              variant: ['text.smolBoi', 'text.smolBoi', 'text.pugBoi'],
               color: 'background',
               maxWidth: 840,
             }}
@@ -174,18 +177,16 @@ const Landing = () => (
 
     <Grid
       sx={{
-        paddingTop: [3, 3, 6],
-        justifyItems: 'center',
+        paddingTop: [2, 2, 3],
         textAlign: 'center',
       }}
-      columns={[1, 1, 3]}
-      // css={{
-      //   id="work"
-      // }}
+      columns={[3, '2fr 0.15fr 2fr']}
+      gap={0}
     >
       <span
         sx={{
           variant: 'text.chooChooBoi',
+          textAlign: 'right',
         }}
       >
         <a
@@ -202,8 +203,10 @@ const Landing = () => (
       </span>
 
       <p
+        id="my-work"
         sx={{
           variant: 'text.softCaption',
+          alignSelf: 'center',
         }}
       >
         or
@@ -212,6 +215,7 @@ const Landing = () => (
       <span
         sx={{
           variant: 'text.chooChooBoi',
+          textAlign: 'left',
         }}
       >
         <a

@@ -30,7 +30,15 @@ const Header = () => {
           variant: 'text.signPost',
         }}
       >
-        {data.site.siteMetadata.author}
+        <a
+          href="#intro"
+          sx={{
+            textDecoration: 'none',
+            color: 'text',
+          }}
+        >
+          {data.site.siteMetadata.author}
+        </a>
       </span>
 
       <div
@@ -41,7 +49,7 @@ const Header = () => {
         }}
       >
         {data.site.siteMetadata.statusUpdate}
-        <a style={{ color: '#000' }} href="mailto:sweaphin@gmail.com">Get in touch!</a>
+        <a style={{ color: '#000' }} href="#contact">Get in touch!</a>
       </div>
 
       <span
@@ -49,7 +57,15 @@ const Header = () => {
           variant: 'text.signPost',
         }}
       >
-        About
+        <a
+          href="#about"
+          sx={{
+            textDecoration: 'none',
+            color: 'text',
+          }}
+        >
+          About
+        </a>
         <br />
         <a
           href="#my-work"
@@ -61,7 +77,15 @@ const Header = () => {
           Work
         </a>
         <br />
-        Contact
+        <a
+          href="#contact"
+          sx={{
+            textDecoration: 'none',
+            color: 'text',
+          }}
+        >
+          Contact
+        </a>
         <br />
       </span>
     </Grid>

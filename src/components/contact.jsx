@@ -22,7 +22,7 @@ const Contact = () => {
   return (
     <div
       sx={{
-        paddingTop: [3, 3, 6],
+        paddingTop: [2, 2, 3],
       }}
     >
       {/* <div
@@ -42,6 +42,7 @@ const Contact = () => {
         />
       </div> */}
       <Grid
+        id="contact"
         sx={{
           alignItems: 'center',
           backgroundColor: 'green',
