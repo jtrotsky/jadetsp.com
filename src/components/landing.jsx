@@ -15,7 +15,7 @@ const Landing = () => (
     <Intro />
     <Grid
       sx={{
-        paddingTop: 6,
+        paddingTop: [3, 3, 6],
       }}
       columns={[1, 1, 2]}
     >
@@ -23,6 +23,7 @@ const Landing = () => (
         sx={{
           display: 'flex',
           justifyContent: 'center',
+          mx: 1,
         }}
       >
         <Quote
@@ -42,6 +43,7 @@ const Landing = () => (
         sx={{
           display: 'flex',
           justifyContent: ['center', 'center', 'left'],
+          paddingTop: [3, 0, 0],
         }}
       >
         <Quote
@@ -54,16 +56,19 @@ const Landing = () => (
 
     <Grid
       sx={{
-        paddingTop: 6,
+        paddingTop: [3, 3, 6],
       }}
       columns={[1, 1, 2]}
       gap={0}
     >
-      <div>
+      <div
+        sx={{
+          mx: 1,
+        }}
+      >
         <img
           sx={{
             maxWidth: '100%',
-            paddingLeft: 1,
           }}
           src={scale}
           alt="Scale"
@@ -75,6 +80,7 @@ const Landing = () => (
           display: 'flex',
           justifyContent: ['center', 'center', 'left'],
           alignItems: 'center',
+          paddingTop: [3, 3, 0],
         }}
       >
         <Block
@@ -88,7 +94,7 @@ const Landing = () => (
 
     <Grid
       sx={{
-        paddingTop: 6,
+        paddingTop: [3, 3, 6],
       }}
       columns={[1, 1, 2]}
       gap={0}
@@ -99,6 +105,7 @@ const Landing = () => (
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
+          mx: 1,
         }}
       >
         <Block
@@ -114,6 +121,7 @@ const Landing = () => (
           display: 'flex',
           justifyContent: ['center', 'center', 'left'],
           alignItems: 'center',
+          paddingTop: [3, 3, 0],
         }}
       >
         <img
@@ -128,19 +136,23 @@ const Landing = () => (
 
     <Grid
       sx={{
-        paddingTop: 6,
+        paddingTop: [3, 3, 6],
         display: 'flex',
         textAlign: '-webkit-center',
       }}
       columns={[1]}
     >
       <Banner>
-        <div>
+        <div
+          sx={{
+            mx: '80px',
+          }}
+        >
           <h1
             sx={{
               variant: 'text.bigBoi',
               color: 'background',
-              width: '686px',
+              maxWidth: 840,
             }}
           >
             Great work takes hard work, critical thinking &amp; passion.
@@ -150,7 +162,7 @@ const Landing = () => (
               paddingTop: 1,
               variant: 'text.pugBoi',
               color: 'background',
-              width: '686px',
+              maxWidth: 840,
             }}
           >
             As a design leader, my goal is to create a space where people feel inspired, invested,
@@ -162,11 +174,14 @@ const Landing = () => (
 
     <Grid
       sx={{
-        paddingTop: 6,
+        paddingTop: [3, 3, 6],
         justifyItems: 'center',
         textAlign: 'center',
       }}
       columns={[1, 1, 3]}
+      // css={{
+      //   id="work"
+      // }}
     >
       <span
         sx={{

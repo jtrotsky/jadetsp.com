@@ -3,7 +3,7 @@ import { jsx, Grid } from 'theme-ui';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import blob from '../images/blob.svg';
+// import blob from '../images/blob.svg';
 
 const Contact = () => {
   const data = useStaticQuery(
@@ -20,8 +20,12 @@ const Contact = () => {
   );
 
   return (
-    <div>
-      <div
+    <div
+      sx={{
+        paddingTop: [3, 3, 6],
+      }}
+    >
+      {/* <div
         sx={{
           paddingTop: 5,
           display: 'flex',
@@ -36,14 +40,12 @@ const Contact = () => {
             maxHeight: '100%',
           }}
         />
-      </div>
+      </div> */}
       <Grid
         sx={{
-          paddingTop: 2,
           alignItems: 'center',
           backgroundColor: 'green',
           height: '800px',
-          paddingLeft: 2,
         }}
         columns={[1, 1, 2]}
         gap={0}
@@ -51,6 +53,7 @@ const Contact = () => {
         <div
           sx={{
             maxWidth: '540px',
+            mx: 1,
           }}
         >
           <h1
@@ -75,6 +78,7 @@ const Contact = () => {
           sx={{
             variant: 'text.smolBoi',
             color: 'background',
+            mx: 1,
           }}
         >
           {data.site.siteMetadata.twitter}

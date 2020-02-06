@@ -51,7 +51,15 @@ const Header = () => {
       >
         About
         <br />
-        Work
+        <a
+          href="#my-work"
+          sx={{
+            textDecoration: 'none',
+            color: 'text',
+          }}
+        >
+          Work
+        </a>
         <br />
         Contact
         <br />
