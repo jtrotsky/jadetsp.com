@@ -9,11 +9,14 @@ module.exports = {
     quote: `"Some quote about me being really good at this and that. Will recommend for all 
       eternity."`,
     attribution: '-Said by a nice person I worked with',
+    email: 'sweaphin@gmail.com',
     medium: 'https://medium.com/@JadeTSP',
     dribbble: 'https://dribbble.com/JadeTSP',
     twitter: 'https://twitter.com/jadetsssp',
+    resume: 'https://docs.google.com/document/d/1hkA9ABHDa6CI0pCXKx_JTTCt_-alEDakXqjwmSBiYjw/edit#',
   },
   plugins: [
+    'gatsby-plugin-smoothscroll',
     // For markdown files
     // `gatsby-plugin-mdx`,
     'gatsby-plugin-theme-ui',

@@ -139,7 +139,7 @@ export default {
     table: {
       width: '100%',
       borderCollapse: 'separate',
-      borderSpacing: 0,
+      borderSpacing: '20px',
     },
     th: {
       textAlign: 'left',

@@ -19,9 +19,9 @@ const Intro = () => {
     <Grid
       id="intro"
       sx={{
-        paddingTop: [3, 3, 6],
+        paddingTop: [1, 1, 6],
         justifyItems: 'center',
-        my: 3,
+        my: 1,
       }}
       columns={1}
     >

@@ -1,17 +1,16 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
+import PropTypes from 'prop-types';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
-// function goToAnchor() {
-//   document.body.scrollTop = document.documentElement.scrollTop =
-//       document.getElementById('center').offsetTop - window.innerHeight / 2;
-// }
-
-const Anchor = () => (
-  <div
-    sx={{
-      display: 'flex',
-    }}
-  />
+const Anchor = ({ anchor }) => (
+  scrollTo(anchor)
 );
+
+Anchor.defaultProps = {
+  anchor: '',
+};
+
+Anchor.propTypes = {
+  anchor: PropTypes.string.isRequired,
+};
 
 export default Anchor;

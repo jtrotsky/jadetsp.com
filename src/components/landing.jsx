@@ -108,6 +108,7 @@ const Landing = () => (
           justifyContent: 'center',
           alignItems: 'center',
           mx: 1,
+          gridRow: [0, 0, 1],
         }}
       >
         <Block
@@ -123,7 +124,8 @@ const Landing = () => (
           display: 'flex',
           justifyContent: ['center', 'center', 'left'],
           alignItems: 'center',
-          paddingTop: [3, 3, 0],
+          py: [2, 2, 0],
+          gridRow: [1, 1, null],
         }}
       >
         <img
@@ -147,7 +149,7 @@ const Landing = () => (
       <Banner>
         <div
           sx={{
-            mx: 3,
+            mx: 1,
             my: 3,
           }}
         >
@@ -181,12 +183,11 @@ const Landing = () => (
         textAlign: 'center',
       }}
       columns={[3, '2fr 0.15fr 2fr']}
-      gap={0}
+      gap={-1}
     >
       <span
         sx={{
           variant: 'text.chooChooBoi',
-          textAlign: 'right',
         }}
       >
         <a
@@ -215,7 +216,7 @@ const Landing = () => (
       <span
         sx={{
           variant: 'text.chooChooBoi',
-          textAlign: 'left',
+          // textAlign: 'left',
         }}
       >
         <a

@@ -8,27 +8,37 @@ const Footer = () => (
       textAlign: 'center',
       backgroundColor: 'green',
     }}
-    columns={2}
+    columns={[1, 1, 2]}
     gap={0}
   >
-    <div
+    <span
       sx={{
         variant: 'text.softCaption',
         opacity: 0.5,
         color: 'background',
+        textAlign: 'left',
+        mx: 1,
+        paddingLeft: 1,
+        marginBottom: '16px',
       }}
     >
-      <span>
-        Fun fact #25: I have a collection of discontinued cash and coins from around the world.
-        It&apos;s priceless.
-      </span>
+      Fun fact #25: I have a collection of discontinued cash and coins from around the world.
+      It&apos;s priceless.
+    </span>
 
-      <span>
-        ©&nbsp;
-        {new Date().getFullYear()}
-        &nbsp;Jade Tan Swea Phin
-      </span>
-    </div>
+    <span
+      sx={{
+        variant: 'text.softCaption',
+        opacity: 0.5,
+        color: 'background',
+        textAlign: 'left',
+        mx: 2,
+      }}
+    >
+      ©&nbsp;
+      {new Date().getFullYear()}
+      &nbsp;Jade Tan Swea Phin
+    </span>
   </Grid>
 );
 
