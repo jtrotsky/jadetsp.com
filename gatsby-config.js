@@ -14,6 +14,7 @@ module.exports = {
     twitter: 'https://twitter.com/jadetsssp',
   },
   plugins: [
+    'gatsby-plugin-smoothscroll',
     // For markdown files
     // `gatsby-plugin-mdx`,
     'gatsby-plugin-theme-ui',

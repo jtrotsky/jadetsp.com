@@ -1,6 +1,8 @@
 /** @jsx jsx */
 import { jsx, Grid } from 'theme-ui';
 import { useStaticQuery, graphql } from 'gatsby';
+import scrollTo from 'gatsby-plugin-smoothscroll';
+// import Anchor from './common/anchor';
 
 const Header = () => {
   const data = useStaticQuery(
@@ -30,15 +32,18 @@ const Header = () => {
           variant: 'text.signPost',
         }}
       >
-        <a
-          href="#intro"
+        <span
           sx={{
-            textDecoration: 'none',
-            color: 'text',
+            color: '#132640',
+            cursor: 'pointer',
           }}
+          role="menuitem"
+          onClick={() => scrollTo('#intro')}
+          tabIndex={0}
+          onKeyPress={() => scrollTo('#intro')}
         >
           {data.site.siteMetadata.author}
-        </a>
+        </span>
       </span>
 
       <div
@@ -49,7 +54,19 @@ const Header = () => {
         }}
       >
         {data.site.siteMetadata.statusUpdate}
-        <a style={{ color: '#000' }} href="#contact">Get in touch!</a>
+        <span
+          sx={{
+            color: '#132640',
+            textDecoration: 'underline',
+            cursor: 'pointer',
+          }}
+          role="button"
+          onClick={() => scrollTo('#contact')}
+          tabIndex={0}
+          onKeyPress={() => scrollTo('#contact')}
+        >
+          Get in touch!
+        </span>
       </div>
 
       <span
@@ -57,35 +74,44 @@ const Header = () => {
           variant: 'text.signPost',
         }}
       >
-        <a
-          href="#about"
+        <span
           sx={{
-            textDecoration: 'none',
-            color: 'text',
+            color: '#132640',
+            cursor: 'pointer',
           }}
+          role="menuitem"
+          onClick={() => scrollTo('#intro')}
+          tabIndex={0}
+          onKeyPress={() => scrollTo('#intro')}
         >
           About
-        </a>
+        </span>
         <br />
-        <a
-          href="#my-work"
+        <span
           sx={{
-            textDecoration: 'none',
-            color: 'text',
+            color: '#132640',
+            cursor: 'pointer',
           }}
+          role="menuitem"
+          onClick={() => scrollTo('#my-work')}
+          tabIndex={0}
+          onKeyPress={() => scrollTo('#my-work')}
         >
           Work
-        </a>
+        </span>
         <br />
-        <a
-          href="#contact"
+        <span
           sx={{
-            textDecoration: 'none',
-            color: 'text',
+            color: '#132640',
+            cursor: 'pointer',
           }}
+          role="menuitem"
+          onClick={() => scrollTo('#contact')}
+          tabIndex={0}
+          onKeyPress={() => scrollTo('#contact')}
         >
           Contact
-        </a>
+        </span>
         <br />
       </span>
     </Grid>

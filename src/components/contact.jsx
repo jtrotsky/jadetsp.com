@@ -46,7 +46,6 @@ const Contact = () => {
         sx={{
           alignItems: 'center',
           backgroundColor: 'green',
-          height: '800px',
         }}
         columns={[1, 1, 2]}
         gap={0}
@@ -75,15 +74,33 @@ const Contact = () => {
             create magic with.
           </p>
         </div>
-        <div
+        <Grid
           sx={{
-            variant: 'text.smolBoi',
+            variant: 'text.pocketBoi',
             color: 'background',
             mx: 1,
           }}
+          columns={[1, 1, 2]}
         >
-          {data.site.siteMetadata.twitter}
-        </div>
+          <div>
+            Let&apos;s chat
+            <div>
+              {data.site.siteMetadata.twitter}
+            </div>
+          </div>
+          <div>
+            Tweet at me
+            <div>
+              {data.site.siteMetadata.twitter}
+            </div>
+          </div>
+          <div>
+            See my resume
+            <div>
+              {data.site.siteMetadata.twitter}
+            </div>
+          </div>
+        </Grid>
       </Grid>
     </div>
   );
