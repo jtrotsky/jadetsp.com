@@ -14,6 +14,8 @@ const Contact = () => {
             medium
             dribbble
             twitter
+            email
+            resume
           }
         }
       }`,
@@ -53,7 +55,9 @@ const Contact = () => {
         <div
           sx={{
             maxWidth: '540px',
-            mx: 1,
+            marginTop: 2,
+            marginBottom: 1,
+            mx: 2,
           }}
         >
           <h1
@@ -74,33 +78,81 @@ const Contact = () => {
             create magic with.
           </p>
         </div>
-        <Grid
+      </Grid>
+
+      <Grid
+        id="contact"
+        sx={{
+          alignItems: 'center',
+          backgroundColor: 'green',
+        }}
+        columns={[1, 1, 2]}
+        gap={0}
+      >
+        <div />
+        <table
           sx={{
             variant: 'text.pocketBoi',
             color: 'background',
-            mx: 1,
+            mx: 2,
           }}
           columns={[1, 1, 2]}
+          gap={0}
         >
-          <div>
-            Let&apos;s chat
-            <div>
-              {data.site.siteMetadata.twitter}
-            </div>
-          </div>
-          <div>
-            Tweet at me
-            <div>
-              {data.site.siteMetadata.twitter}
-            </div>
-          </div>
-          <div>
-            See my resume
-            <div>
-              {data.site.siteMetadata.twitter}
-            </div>
-          </div>
-        </Grid>
+          <tbody>
+            <tr>
+              <td>
+                Let&apos;s chat
+              </td>
+              <td>
+                <a
+                  sx={{
+                    color: 'background',
+                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="mailto:{data.site.siteMetadata.email}"
+                >
+                  sweaphin@gmail.com
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tweet at me
+              </td>
+              <td>
+                <a
+                  sx={{
+                    color: 'background',
+                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={data.site.siteMetadata.twitter}
+                >
+                  @jadetsssp
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                See my resume
+              </td>
+              <td>
+                <a
+                  sx={{
+                    color: 'background',
+                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={data.site.siteMetadata.resume}
+                >
+                  jadetansweaphin
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </Grid>
     </div>
   );

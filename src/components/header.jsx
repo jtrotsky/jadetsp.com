@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Grid } from 'theme-ui';
+import { jsx, Grid, NavLink } from 'theme-ui';
 import { useStaticQuery, graphql } from 'gatsby';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 // import Anchor from './common/anchor';
@@ -69,12 +69,13 @@ const Header = () => {
         </span>
       </div>
 
-      <span
+      <div
+        as="nav"
         sx={{
           variant: 'text.signPost',
         }}
       >
-        <span
+        <NavLink
           sx={{
             color: '#132640',
             cursor: 'pointer',
@@ -85,9 +86,9 @@ const Header = () => {
           onKeyPress={() => scrollTo('#intro')}
         >
           About
-        </span>
+        </NavLink>
         <br />
-        <span
+        <NavLink
           sx={{
             color: '#132640',
             cursor: 'pointer',
@@ -98,9 +99,9 @@ const Header = () => {
           onKeyPress={() => scrollTo('#my-work')}
         >
           Work
-        </span>
+        </NavLink>
         <br />
-        <span
+        <NavLink
           sx={{
             color: '#132640',
             cursor: 'pointer',
@@ -111,9 +112,9 @@ const Header = () => {
           onKeyPress={() => scrollTo('#contact')}
         >
           Contact
-        </span>
+        </NavLink>
         <br />
-      </span>
+      </div>
     </Grid>
   );
 };
