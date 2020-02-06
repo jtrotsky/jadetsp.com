@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `I lead product design teams to collaborate and thrive, 
       by helping designers grow into empathetic leaders and allies.`,
-    description: 'Jade\'s Portfolio',
+    description: 'I lead product design teams',
     author: 'Jade Tan',
     statusUpdate: `Right now: My partner and I are relocating to London, 
       and I’m looking for a new team to create magic with. `,
@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
+        name: "Jade Tan's Portfolio",
         start_url: '/',
         display: 'minimal-ui',
         icon: './static/favicon/favicon-32x32.png',

@@ -17,9 +17,11 @@ const Intro = () => {
 
   return (
     <Grid
+      id="intro"
       sx={{
         paddingTop: [3, 3, 6],
         justifyItems: 'center',
+        my: 3,
       }}
       columns={1}
     >
@@ -44,7 +46,7 @@ const Intro = () => {
           sx={{
             maxWidth: 840,
             maxHeight: 246,
-            variant: 'text.chooChooBoi',
+            variant: ['text.pugBoi', 'text.pugBoi', 'text.chooChooBoi'],
             alignSelf: 'center',
             position: 'absolute',
             mx: 1,

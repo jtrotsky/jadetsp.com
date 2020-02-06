@@ -8,7 +8,6 @@ const Banner = ({ children }) => (
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      height: '800px',
       width: '100%',
       backgroundColor: 'clay', // overridden to clay for now
     }}
