@@ -18,7 +18,7 @@ const Intro = () => {
   return (
     <Grid
       sx={{
-        paddingTop: 6,
+        paddingTop: [3, 3, 6],
         justifyItems: 'center',
       }}
       columns={1}
@@ -47,6 +47,7 @@ const Intro = () => {
             variant: 'text.chooChooBoi',
             alignSelf: 'center',
             position: 'absolute',
+            mx: 1,
           }}
         >
           {data.site.siteMetadata.title}
