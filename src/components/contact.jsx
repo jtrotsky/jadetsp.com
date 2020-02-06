@@ -15,7 +15,7 @@ const Contact = () => {
             dribbble
             twitter
             email
-            resume
+            linkedin
           }
         }
       }`,
@@ -145,7 +145,7 @@ const Contact = () => {
                   }}
                   target="_blank"
                   rel="noopener noreferrer"
-                  href={data.site.siteMetadata.resume}
+                  href={data.site.siteMetadata.linkedin}
                 >
                   jadetansweaphin
                 </a>

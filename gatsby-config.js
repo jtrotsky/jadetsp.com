@@ -13,7 +13,7 @@ module.exports = {
     medium: 'https://medium.com/@JadeTSP',
     dribbble: 'https://dribbble.com/JadeTSP',
     twitter: 'https://twitter.com/jadetsssp',
-    resume: 'https://docs.google.com/document/d/1hkA9ABHDa6CI0pCXKx_JTTCt_-alEDakXqjwmSBiYjw/edit#',
+    linkedin: 'https://www.linkedin.com/in/jadetansweaphin',
   },
   plugins: [
     'gatsby-plugin-smoothscroll',
