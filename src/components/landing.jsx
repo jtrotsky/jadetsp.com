@@ -26,11 +26,6 @@ const Landing = () => (
           mx: 1,
         }}
       >
-        <Quote
-          quote="Some quote about me being really good at this and that. Will recommend for all
-            eternity."
-          attribution="-Said by a nice person I worked with"
-        />
       </div>
     </Grid>
 
@@ -46,11 +41,6 @@ const Landing = () => (
           paddingTop: [3, 0, 0],
         }}
       >
-        <Quote
-          quote="Some quote about me being really good at this and that. Will recommend for all
-            eternity."
-          attribution="-Said by a nice person I worked with"
-        />
       </div>
     </Grid>
 
