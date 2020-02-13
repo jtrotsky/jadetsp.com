@@ -4,41 +4,37 @@ import { jsx, Grid } from 'theme-ui';
 const Footer = () => (
   <Grid
     sx={{
-      paddingTop: 5,
-      textAlign: 'center',
-      backgroundColor: 'green',
+      paddingTop: 1,
     }}
-    columns={[1, 1, 2]}
+    // columns={[1, 1, 2]}
+    columns={1}
     gap={0}
   >
-    <span
+    <div
       sx={{
+        mx: 0,
+        my: 0,
         variant: 'text.softCaption',
         opacity: 0.5,
         color: 'background',
-        textAlign: 'left',
-        mx: 1,
-        paddingLeft: 1,
-        marginBottom: '16px',
       }}
     >
-      Fun fact #25: I have a collection of discontinued cash and coins from around the world.
-      It&apos;s priceless.
-    </span>
+      <span>
+        Fun fact #25: I have a collection of discontinued cash and coins from around the world.
+        It&apos;s priceless.
+      </span>
 
-    <span
-      sx={{
-        variant: 'text.softCaption',
-        opacity: 0.5,
-        color: 'background',
-        textAlign: 'left',
-        mx: 2,
-      }}
-    >
-      ©&nbsp;
-      {new Date().getFullYear()}
-      &nbsp;Jade Tan Swea Phin
-    </span>
+      <span
+        sx={{
+          // textAlign: 'right',
+        }}
+      >
+        &nbsp;
+        ©&nbsp;
+        {new Date().getFullYear()}
+        &nbsp;Jade Tan Swea Phin
+      </span>
+    </div>
   </Grid>
 );
 

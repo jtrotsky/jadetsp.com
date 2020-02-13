@@ -1,6 +1,11 @@
 export default {
   breakpoints: ['0px', '768px', '768px'],
   space: [32, 40, 80, 120, 160, 200, 280, 360, 400],
+  layout: {
+    container: {
+      maxWidth: '1000px',
+    },
+  },
   fonts: {
     body: '"Noto Serif Semibold", "Nunito Semi Bold", "Nunito Light Italic", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif',
     heading: 'Noto Serif Semibold',
@@ -56,7 +61,7 @@ export default {
     },
     pocketBoi: {
       fontFamily: 'Nunito',
-      fontSize: 24,
+      fontSize: 20,
       lineHeight: '40px',
       letterSpacing: 0,
       fontWeight: 600,
@@ -66,22 +71,22 @@ export default {
       fontSize: 14,
       lineHeight: '26px',
       letterSpacing: 2,
-      fontWeight: 600,
+      fontWeight: 700,
       textTransform: 'uppercase',
     },
     hardCaption: {
       fontFamily: 'Nunito',
-      fontSize: 16,
+      fontSize: 14,
       lineHeight: '26px',
       letterSpacing: 0,
-      fontWeight: 700,
+      fontWeight: 600,
     },
     softCaption: {
       fontFamily: 'Nunito',
       fontSize: 16,
       lineHeight: '22px',
       letterSpacing: 0,
-      fontWeight: 300,
+      fontWeight: 600,
       fontStyle: 'italic',
     },
   },
@@ -95,35 +100,27 @@ export default {
     },
     h1: {
       variant: 'text.bigBoi',
-      fontSize: 4,
     },
     h2: {
       variant: 'text.chooChooBoi',
-      fontSize: 4,
     },
     h3: {
       variant: 'text.pugBoi',
-      fontSize: 3,
     },
     h4: {
       variant: 'text.smolBoi',
-      fontSize: 2,
     },
     h5: {
       variant: 'text.pocketBoi',
-      fontSize: 2,
     },
     h6: {
       variant: 'text.signPost',
-      fontSize: 0,
     },
     hardCaption: {
       variant: 'text.hardCaption',
-      fontSize: 1,
     },
     softCaption: {
       variant: 'text.softCaption',
-      fontSize: 1,
     },
     pre: {
       fontFamily: 'monospace',
@@ -138,16 +135,23 @@ export default {
     },
     table: {
       width: '100%',
-      borderCollapse: 'separate',
-      borderSpacing: '20px',
+      // borderCollapse: 'separate',
+      // borderSpacing: '20px',
     },
     th: {
       textAlign: 'left',
-      borderBottomStyle: 'solid',
+      borderBottom: '1px solid white',
     },
     td: {
       textAlign: 'left',
-      borderBottomStyle: 'solid',
+      borderBottom: '1px solid white',
+    },
+    a: {
+      cursor: 'pointer',
+      textDecoration: 'none',
+      '&:hover': {
+        textDecoration: 'underline',
+      },
     },
   },
 };

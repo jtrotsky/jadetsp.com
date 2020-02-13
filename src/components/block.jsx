@@ -6,7 +6,7 @@ const Block = ({ paragraphOne, paragraphTwo }) => (
   <div
     sx={{
       maxWidth: '503px',
-      variant: 'text.pugBoi',
+      variant: 'text.smolBoi',
     }}
   >
 

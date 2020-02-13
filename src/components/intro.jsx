@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx, Grid } from 'theme-ui';
 import { useStaticQuery, graphql } from 'gatsby';
-import circle from '../images/circle.svg';
+import Circle from '../images/circle.svg';
+
 
 const Intro = () => {
   const data = useStaticQuery(
@@ -19,9 +20,8 @@ const Intro = () => {
     <Grid
       id="intro"
       sx={{
-        paddingTop: [1, 1, 6],
         justifyItems: 'center',
-        my: 1,
+        my: [1, 1, 3],
       }}
       columns={1}
     >
@@ -33,11 +33,11 @@ const Intro = () => {
       >
         <div>
           <img
-            src={circle}
-            alt="Circle"
+            src={Circle}
+            title="Circle Illustration"
+            alt="A yellow blob in the centre of the screen"
             sx={{
               maxWidth: '100%',
-              maxHeight: '100%',
             }}
           />
         </div>
@@ -46,7 +46,7 @@ const Intro = () => {
           sx={{
             maxWidth: 840,
             maxHeight: 246,
-            variant: ['text.pugBoi', 'text.pugBoi', 'text.chooChooBoi'],
+            variant: ['text.smolBoi', 'text.smolBoi', 'text.chooChooBoi'],
             alignSelf: 'center',
             position: 'absolute',
             mx: 1,

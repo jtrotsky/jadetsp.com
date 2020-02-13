@@ -1,8 +1,9 @@
 /** @jsx jsx */
-import { jsx, Grid, NavLink } from 'theme-ui';
+import {
+  jsx, Grid, NavLink, Styled,
+} from 'theme-ui';
 import { useStaticQuery, graphql } from 'gatsby';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-// import Anchor from './common/anchor';
 
 const Header = () => {
   const data = useStaticQuery(
@@ -28,35 +29,30 @@ const Header = () => {
     >
 
       <span
+        as={NavLink}
         sx={{
           variant: 'text.signPost',
+          cursor: 'pointer',
+          outline: 'none',
         }}
+        role="menuitem"
+        onClick={() => scrollTo('#intro')}
+        tabIndex={0}
+        onKeyPress={() => scrollTo('#intro')}
       >
-        <span
-          sx={{
-            color: '#132640',
-            cursor: 'pointer',
-          }}
-          role="menuitem"
-          onClick={() => scrollTo('#intro')}
-          tabIndex={0}
-          onKeyPress={() => scrollTo('#intro')}
-        >
-          {data.site.siteMetadata.author}
-        </span>
+        {data.site.siteMetadata.author}
       </span>
 
       <div
         sx={{
           variant: 'text.hardCaption',
-          width: '320px',
+          width: '300px',
           display: ['none', 'none', 'block'],
         }}
       >
         {data.site.siteMetadata.statusUpdate}
         <span
           sx={{
-            color: '#132640',
             textDecoration: 'underline',
             cursor: 'pointer',
           }}
@@ -70,49 +66,39 @@ const Header = () => {
       </div>
 
       <div
-        as="nav"
         sx={{
           variant: 'text.signPost',
         }}
       >
-        <NavLink
-          sx={{
-            color: '#132640',
-            cursor: 'pointer',
-          }}
+        <Styled.a
+          as={NavLink}
           role="menuitem"
           onClick={() => scrollTo('#intro')}
           tabIndex={0}
           onKeyPress={() => scrollTo('#intro')}
         >
           About
-        </NavLink>
+        </Styled.a>
         <br />
-        <NavLink
-          sx={{
-            color: '#132640',
-            cursor: 'pointer',
-          }}
+        <Styled.a
+          as={NavLink}
           role="menuitem"
           onClick={() => scrollTo('#my-work')}
           tabIndex={0}
           onKeyPress={() => scrollTo('#my-work')}
         >
           Work
-        </NavLink>
+        </Styled.a>
         <br />
-        <NavLink
-          sx={{
-            color: '#132640',
-            cursor: 'pointer',
-          }}
+        <Styled.a
+          as={NavLink}
           role="menuitem"
           onClick={() => scrollTo('#contact')}
           tabIndex={0}
           onKeyPress={() => scrollTo('#contact')}
         >
           Contact
-        </NavLink>
+        </Styled.a>
         <br />
       </div>
     </Grid>

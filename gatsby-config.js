@@ -9,7 +9,6 @@ module.exports = {
     quote: `"Some quote about me being really good at this and that. Will recommend for all 
       eternity."`,
     attribution: '-Said by a nice person I worked with',
-    email: 'sweaphin@gmail.com',
     medium: 'https://medium.com/@JadeTSP',
     dribbble: 'https://dribbble.com/JadeTSP',
     twitter: 'https://twitter.com/jadetsssp',
@@ -17,8 +16,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-smoothscroll',
-    // For markdown files
-    // `gatsby-plugin-mdx`,
     'gatsby-plugin-theme-ui',
     'gatsby-plugin-styled-components',
     {
@@ -29,7 +26,12 @@ module.exports = {
       },
     },
     'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        maxWidth: 1000,
+      },
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -39,7 +41,6 @@ module.exports = {
         icon: './static/favicon/favicon-32x32.png',
       },
     },
-    // Test this is working
     {
       resolve: 'gatsby-plugin-offline',
       options: {
@@ -56,7 +57,7 @@ module.exports = {
           },
           {
             family: 'Nunito',
-            variants: ['600', '300'],
+            variants: ['600', '700'],
           },
         ],
       },
