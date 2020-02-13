@@ -20,7 +20,11 @@ const Contact = () => {
   );
 
   return (
-    <div>
+    <div
+      sx={{
+        mx: 1,
+      }}
+    >
       {/* <div
         sx={{
           paddingTop: 5,
@@ -41,7 +45,6 @@ const Contact = () => {
         id="contact"
         sx={{
           alignItems: 'center',
-          mx: 1,
         }}
         columns={[1, 1, 2]}
         gap={-1}
@@ -76,7 +79,6 @@ const Contact = () => {
       <Grid
         id="contact"
         sx={{
-          alignItems: 'center',
           backgroundColor: 'green',
         }}
         columns={[1, 1, 2]}
@@ -84,86 +86,162 @@ const Contact = () => {
       >
         <div />
 
-        <table
+        <Grid
           sx={{
-            variant: 'text.pocketBoi',
-            color: 'background',
-            mx: 1,
+            // borderTop: '1px solid white',
+            py: '8px',
           }}
           columns={[1, 1, 2]}
-          gap={0}
+          gap={-1}
         >
-          <tbody>
-            <tr>
-              <td>
-                Tweet me
-              </td>
-              <td>
-                <a
-                  sx={{
-                    color: 'background',
-                  }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={data.site.siteMetadata.twitter}
-                >
-                  @jadetsssp
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Connect on LinkedIn
-              </td>
-              <td>
-                <a
-                  sx={{
-                    color: 'background',
-                  }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={data.site.siteMetadata.linkedin}
-                >
-                  linkedin/jadetsp
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Go in-depth on Medium
-              </td>
-              <td>
-                <a
-                  sx={{
-                    color: 'background',
-                  }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={data.site.siteMetadata.medium}
-                >
-                  jadetansweaphin
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Get inspired on Dribbble
-              </td>
-              <td>
-                <a
-                  sx={{
-                    color: 'background',
-                  }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={data.site.siteMetadata.dribbble}
-                >
-                  jadetsp
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+
+          <span
+            sx={{
+              variant: 'text.pocketBoi',
+              color: 'background',
+              justifySelf: 'left',
+            }}
+          >
+            Tweet me
+          </span>
+          <span
+            sx={{
+              variant: 'text.pocketBoi',
+              color: 'background',
+              justifySelf: ['left', 'left', 'right'],
+            }}
+          >
+            <a
+              sx={{
+                color: 'background',
+              }}
+              target="_blank"
+              rel="noopener noreferrer"
+              href={data.site.siteMetadata.twitter}
+            >
+              @jadetsssp
+            </a>
+          </span>
+        </Grid>
+
+        <div />
+
+        <Grid
+          sx={{
+            // borderTop: '1px solid white',
+            py: '8px',
+          }}
+          columns={[1, 1, 2]}
+          gap={-1}
+        >
+          <span
+            sx={{
+              variant: 'text.pocketBoi',
+              color: 'background',
+              justifySelf: 'left',
+            }}
+          >
+            Connect on LinkedIn
+          </span>
+          <span
+            sx={{
+              variant: 'text.pocketBoi',
+              color: 'background',
+              justifySelf: ['left', 'left', 'right'],
+            }}
+          >
+            <a
+              sx={{
+                color: 'background',
+                justifySelf: ['left', 'left', 'right'],
+              }}
+              target="_blank"
+              rel="noopener noreferrer"
+              href={data.site.siteMetadata.linkedin}
+            >
+              linkedin/jadetsp
+            </a>
+          </span>
+        </Grid>
+
+        <div />
+
+        <Grid
+          sx={{
+            // borderTop: '1px solid white',
+            py: '8px',
+          }}
+          columns={[1, 1, 2]}
+          gap={-1}
+        >
+          <span
+            sx={{
+              variant: 'text.pocketBoi',
+              color: 'background',
+              justifySelf: 'left',
+            }}
+          >
+            Go in-depth on Medium
+          </span>
+          <span
+            sx={{
+              variant: 'text.pocketBoi',
+              color: 'background',
+              justifySelf: ['left', 'left', 'right'],
+            }}
+          >
+            <a
+              sx={{
+                color: 'background',
+              }}
+              target="_blank"
+              rel="noopener noreferrer"
+              href={data.site.siteMetadata.medium}
+            >
+              jadetansweaphin
+            </a>
+          </span>
+        </Grid>
+
+        <div />
+
+        <Grid
+          sx={{
+            // borderTop: '1px solid white',
+            // borderBottom: '1px solid white',
+            py: '8px',
+          }}
+          columns={[1, 1, 2]}
+          gap={-1}
+        >
+          <span
+            sx={{
+              variant: 'text.pocketBoi',
+              color: 'background',
+              justifySelf: 'left',
+            }}
+          >
+            Get inspired on Dribbble
+          </span>
+          <span
+            sx={{
+              variant: 'text.pocketBoi',
+              color: 'background',
+              justifySelf: ['left', 'left', 'right'],
+            }}
+          >
+            <a
+              sx={{
+                color: 'background',
+              }}
+              target="_blank"
+              rel="noopener noreferrer"
+              href={data.site.siteMetadata.dribbble}
+            >
+              jadetsp
+            </a>
+          </span>
+        </Grid>
       </Grid>
     </div>
   );
