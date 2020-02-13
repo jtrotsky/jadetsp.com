@@ -2,7 +2,9 @@
 import { jsx, Grid, Styled } from 'theme-ui';
 
 const Work = () => (
-  <div>
+  <div
+    id="my-work"
+  >
     <Grid
       sx={{
         my: [4, 4, 5],
