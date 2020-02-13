@@ -84,11 +84,10 @@ const Contact = () => {
         columns={[1, 1, 2]}
         gap={0}
       >
-        <div />
 
+        <div />
         <Grid
           sx={{
-            // borderTop: '1px solid white',
             py: '8px',
           }}
           columns={[1, 1, 2]}
@@ -125,10 +124,8 @@ const Contact = () => {
         </Grid>
 
         <div />
-
         <Grid
           sx={{
-            // borderTop: '1px solid white',
             py: '8px',
           }}
           columns={[1, 1, 2]}
@@ -165,7 +162,6 @@ const Contact = () => {
         </Grid>
 
         <div />
-
         <Grid
           sx={{
             // borderTop: '1px solid white',
@@ -204,7 +200,6 @@ const Contact = () => {
         </Grid>
 
         <div />
-
         <Grid
           sx={{
             // borderTop: '1px solid white',
