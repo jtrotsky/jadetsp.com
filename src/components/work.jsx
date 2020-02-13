@@ -31,7 +31,6 @@ const Work = () => (
       </span>
 
       <p
-        id="my-work"
         sx={{
           variant: 'text.softCaption',
           justifySelf: 'center',

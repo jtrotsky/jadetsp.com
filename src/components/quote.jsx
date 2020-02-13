@@ -24,6 +24,7 @@ const Quote = ({ quote, attribution }) => {
       sx={{
         maxWidth: '480px',
         mx: 1,
+        display: 'none',
       }}
     >
       <div

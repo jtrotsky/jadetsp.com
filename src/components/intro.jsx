@@ -35,7 +35,7 @@ const Intro = () => {
           <img
             src={Circle}
             title="Circle Illustration"
-            alt="A yellow blob in the centre of the screen"
+            alt="The background is an imperfect yellow circle in screen centre"
             sx={{
               maxWidth: '100%',
             }}
@@ -45,7 +45,8 @@ const Intro = () => {
         <div
           sx={{
             maxWidth: 840,
-            maxHeight: 246,
+            // maxHeight: 246,
+            // 246
             variant: ['text.smolBoi', 'text.smolBoi', 'text.chooChooBoi'],
             alignSelf: 'center',
             position: 'absolute',

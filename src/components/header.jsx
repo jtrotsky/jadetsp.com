@@ -37,7 +37,7 @@ const Header = () => {
         }}
         role="menuitem"
         onClick={() => scrollTo('#intro')}
-        tabIndex={0}
+        tabIndex={-1}
         onKeyPress={() => scrollTo('#intro')}
       >
         {data.site.siteMetadata.author}
