@@ -4,9 +4,9 @@ import { jsx, Grid } from 'theme-ui';
 const Footer = () => (
   <Grid
     sx={{
+      backgroundColor: 'green',
       paddingTop: 5,
       textAlign: 'center',
-      backgroundColor: 'green',
     }}
     columns={[1, 1, 2]}
     gap={0}

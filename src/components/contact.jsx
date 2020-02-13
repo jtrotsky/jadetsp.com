@@ -11,11 +11,10 @@ const Contact = () => {
       query {
         site {
           siteMetadata {
+            twitter
+            linkedin
             medium
             dribbble
-            twitter
-            email
-            linkedin
           }
         }
       }`,
@@ -50,11 +49,11 @@ const Contact = () => {
           backgroundColor: 'green',
         }}
         columns={[1, 1, 2]}
-        gap={0}
+        gap={-1}
       >
         <div
           sx={{
-            maxWidth: '540px',
+            maxWidth: '460px',
             marginTop: 2,
             marginBottom: 1,
             mx: 2,
@@ -70,7 +69,7 @@ const Contact = () => {
           </h1>
           <p
             sx={{
-              variant: 'text.pugBoi',
+              variant: 'text.smolBoi',
               color: 'background',
             }}
           >
@@ -102,24 +101,7 @@ const Contact = () => {
           <tbody>
             <tr>
               <td>
-                Let&apos;s chat
-              </td>
-              <td>
-                <a
-                  sx={{
-                    color: 'background',
-                  }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="mailto:{data.site.siteMetadata.email}"
-                >
-                  sweaphin@gmail.com
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Tweet at me
+                Tweet me
               </td>
               <td>
                 <a
@@ -136,7 +118,7 @@ const Contact = () => {
             </tr>
             <tr>
               <td>
-                See my resume
+                Connect on LinkedIn
               </td>
               <td>
                 <a
@@ -147,7 +129,41 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   href={data.site.siteMetadata.linkedin}
                 >
+                  linkedin/jadetsp
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go in-depth on Medium
+              </td>
+              <td>
+                <a
+                  sx={{
+                    color: 'background',
+                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={data.site.siteMetadata.medium}
+                >
                   jadetansweaphin
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Get inspired on Dribbble
+              </td>
+              <td>
+                <a
+                  sx={{
+                    color: 'background',
+                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={data.site.siteMetadata.dribbble}
+                >
+                  jadetsp
                 </a>
               </td>
             </tr>

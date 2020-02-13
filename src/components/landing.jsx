@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Grid } from 'theme-ui';
+import { jsx, Grid, Styled } from 'theme-ui';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import Intro from './intro';
@@ -155,19 +155,18 @@ const Landing = () => (
         >
           <h1
             sx={{
-              variant: ['text.chooChooBoi', 'text.chooChooBoi', 'text.bigBoi'],
+              variant: ['text.pugBoi', 'text.pugBoi', 'text.chooChooBoi'],
               color: 'background',
-              maxWidth: 840,
+              maxWidth: 600,
             }}
           >
             Great work takes hard work, critical thinking &amp; passion.
           </h1>
           <p
             sx={{
-              paddingTop: 1,
-              variant: ['text.smolBoi', 'text.smolBoi', 'text.pugBoi'],
+              variant: ['text.smolBoi', 'text.smolBoi', 'text.smolBoi'],
               color: 'background',
-              maxWidth: 840,
+              maxWidth: 600,
             }}
           >
             As a design leader, my goal is to create a space where people feel inspired, invested,
@@ -187,20 +186,19 @@ const Landing = () => (
     >
       <span
         sx={{
-          variant: 'text.chooChooBoi',
+          variant: 'text.pugBoi',
         }}
       >
-        <a
+        <Styled.a
           href="https://dribbble.com/JadeTSP"
           target="_blank"
           rel="noopener noreferrer"
           sx={{
-            textDecoration: 'none',
-            color: 'text',
+            color: 'clay',
           }}
         >
           See some of my projects
-        </a>
+        </Styled.a>
       </span>
 
       <p
@@ -215,21 +213,19 @@ const Landing = () => (
 
       <span
         sx={{
-          variant: 'text.chooChooBoi',
-          // textAlign: 'left',
+          variant: 'text.pugBoi',
         }}
       >
-        <a
+        <Styled.a
           href="https://medium.com/@JadeTSP"
           target="_blank"
           rel="noopener noreferrer"
           sx={{
-            textDecoration: 'none',
-            color: 'text',
+            color: 'clay',
           }}
         >
           Read about my process
-        </a>
+        </Styled.a>
       </span>
     </Grid>
 

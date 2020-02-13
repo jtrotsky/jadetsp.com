@@ -46,7 +46,7 @@ const Intro = () => {
           sx={{
             maxWidth: 840,
             maxHeight: 246,
-            variant: ['text.pugBoi', 'text.pugBoi', 'text.chooChooBoi'],
+            variant: ['text.smolBoi', 'text.smolBoi', 'text.chooChooBoi'],
             alignSelf: 'center',
             position: 'absolute',
             mx: 1,
