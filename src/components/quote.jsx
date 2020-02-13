@@ -22,7 +22,8 @@ const Quote = ({ quote, attribution }) => {
   return (
     <div
       sx={{
-        maxWidth: '400px',
+        maxWidth: '480px',
+        mx: 1,
       }}
     >
       <div
@@ -36,7 +37,7 @@ const Quote = ({ quote, attribution }) => {
       <div
         sx={{
           variant: 'text.softCaption',
-          paddingTop: 1,
+          my: [0, 0, 1],
         }}
       >
         {attributionString}

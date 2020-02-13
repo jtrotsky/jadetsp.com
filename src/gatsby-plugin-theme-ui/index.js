@@ -1,6 +1,11 @@
 export default {
   breakpoints: ['0px', '768px', '768px'],
   space: [32, 40, 80, 120, 160, 200, 280, 360, 400],
+  layout: {
+    container: {
+      maxWidth: '1000px',
+    },
+  },
   fonts: {
     body: '"Noto Serif Semibold", "Nunito Semi Bold", "Nunito Light Italic", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif',
     heading: 'Noto Serif Semibold',
@@ -130,16 +135,16 @@ export default {
     },
     table: {
       width: '100%',
-      borderCollapse: 'separate',
-      borderSpacing: '20px',
+      // borderCollapse: 'separate',
+      // borderSpacing: '20px',
     },
     th: {
       textAlign: 'left',
-      borderBottomStyle: 'solid',
+      borderBottom: '1px solid white',
     },
     td: {
       textAlign: 'left',
-      borderBottomStyle: 'solid',
+      borderBottom: '1px solid white',
     },
     a: {
       cursor: 'pointer',

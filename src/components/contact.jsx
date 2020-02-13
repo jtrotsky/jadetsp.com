@@ -3,7 +3,6 @@ import { jsx, Grid } from 'theme-ui';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-// import blob from '../images/blob.svg';
 
 const Contact = () => {
   const data = useStaticQuery(
@@ -21,11 +20,7 @@ const Contact = () => {
   );
 
   return (
-    <div
-      sx={{
-        paddingTop: [2, 2, 3],
-      }}
-    >
+    <div>
       {/* <div
         sx={{
           paddingTop: 5,
@@ -46,17 +41,15 @@ const Contact = () => {
         id="contact"
         sx={{
           alignItems: 'center',
-          backgroundColor: 'green',
+          mx: 1,
         }}
         columns={[1, 1, 2]}
         gap={-1}
       >
         <div
           sx={{
-            maxWidth: '460px',
+            maxWidth: '480px',
             marginTop: 2,
-            marginBottom: 1,
-            mx: 2,
           }}
         >
           <h1
@@ -71,6 +64,7 @@ const Contact = () => {
             sx={{
               variant: 'text.smolBoi',
               color: 'background',
+              paddingTop: 0,
             }}
           >
             My partner and I are relocating to London, and I&apos;m looking for a new team to
@@ -89,11 +83,12 @@ const Contact = () => {
         gap={0}
       >
         <div />
+
         <table
           sx={{
             variant: 'text.pocketBoi',
             color: 'background',
-            mx: 2,
+            mx: 1,
           }}
           columns={[1, 1, 2]}
           gap={0}

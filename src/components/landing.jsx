@@ -1,235 +1,169 @@
 /** @jsx jsx */
-import { jsx, Grid, Styled } from 'theme-ui';
+import { jsx, Grid, Container } from 'theme-ui';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
+import Header from './header';
 import Intro from './intro';
 import Quote from './quote';
 import Block from './block';
+import Background from './common/background';
+import Banner from './banner';
+import Work from './work';
 import Contact from './contact';
-import Banner from './common/banner';
-import scale from '../images/scale.svg';
-import dots from '../images/dots.svg';
+import Footer from './footer';
+import Scale from '../images/scale.svg';
+import Dots from '../images/dots.svg';
+
 
 const Landing = () => (
   <>
-    <Intro />
-    <Grid
-      sx={{
-        paddingTop: [3, 3, 6],
-      }}
-      columns={[1, 1, 2]}
-    >
-      <div
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          mx: 1,
-        }}
-      >
-        <Quote
-          quote="Some quote about me being really good at this and that. Will recommend for all
-            eternity."
-          attribution="-Said by a nice person I worked with"
-        />
-      </div>
-    </Grid>
+    <Container>
+      <Header />
 
-    <Grid
-      columns={[1, 1, 2]}
-      gap={0}
-    >
-      <div />
-      <div
-        sx={{
-          display: 'flex',
-          justifyContent: ['center', 'center', 'left'],
-          paddingTop: [3, 0, 0],
-        }}
-      >
-        <Quote
-          quote="Some quote about me being really good at this and that. Will recommend for all
-            eternity."
-          attribution="-Said by a nice person I worked with"
-        />
-      </div>
-    </Grid>
+      <Intro />
 
-    <Grid
-      sx={{
-        paddingTop: [3, 3, 6],
-      }}
-      columns={[1, 1, 2]}
-      gap={0}
-    >
-      <div
-        sx={{
-          mx: 1,
-        }}
+      <Grid
+        columns={[1, 1, 2]}
       >
-        <img
+        <div
           sx={{
-            maxWidth: '100%',
+            display: 'flex',
+            justifyContent: 'center',
           }}
-          src={scale}
-          alt="Scale"
-        />
-      </div>
+        >
+          <Quote
+            quote="Some quote about me being really good at this and that. Will recommend for all
+              eternity."
+            attribution="-Said by a nice person I worked with"
+          />
+        </div>
+      </Grid>
 
-      <div
-        id="about"
-        sx={{
-          display: 'flex',
-          justifyContent: ['center', 'center', 'left'],
-          alignItems: 'center',
-          paddingTop: [3, 3, 0],
-          mx: 1,
-        }}
+      <Grid
+        columns={[1, 1, 2]}
+        gap={0}
       >
-        <Block
-          paragraphOne="I bring a breadth of experience, from launching a startup to expanding a
-            seasoned product."
-          paragraphTwo="I move fast on user feedback, and focus on delivering real impact on
-            people's lives."
-        />
-      </div>
-    </Grid>
 
-    <Grid
-      sx={{
-        paddingTop: [3, 3, 6],
-      }}
-      columns={[1, 1, 2]}
-      gap={0}
-    >
+        <div />
 
-      <div
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          mx: 1,
-          gridRow: [0, 0, 1],
-        }}
-      >
-        <Block
-          paragraphOne="With a decade of design experience, I've learned to recognise the unique
-            creative process in each designer."
-          paragraphTwo="I tune in for cues on when to push them to solve a problem for themselves,
-            or when to collaborate closely to keep the process moving."
-        />
-      </div>
-
-      <div
-        sx={{
-          display: 'flex',
-          justifyContent: ['center', 'center', 'left'],
-          alignItems: 'center',
-          py: [2, 2, 0],
-          gridRow: [1, 1, null],
-        }}
-      >
-        <img
+        <div
           sx={{
-            maxWidth: '100%',
+            display: 'flex',
+            justifyContent: ['center', 'center', 'left'],
           }}
-          src={dots}
-          alt="Dots"
-        />
-      </div>
-    </Grid>
+        >
+          <Quote
+            quote="In her time at Vend, Jade personally mentored me and developed a design
+            practice that changed the way I have pursued product design as a career."
+            attribution="-Nicola Horlor, Product Designer at Vend. Previously design graduate
+            from AUT."
+          />
+        </div>
+      </Grid>
 
-    <Grid
-      sx={{
-        paddingTop: [3, 3, 6],
-        display: 'flex',
-        textAlign: '-webkit-center',
-      }}
-      columns={[1]}
-    >
-      <Banner>
+      <Grid
+        sx={{
+          paddingTop: [2, 2, 4],
+        }}
+        columns={[1, 1, 2]}
+        gap={0}
+      >
         <div
           sx={{
             mx: 1,
-            my: 3,
           }}
         >
-          <h1
+          <img
+            src={Scale}
+            title="Scale Illustration"
+            alt="Colourful half-circles projecting outward from the left of the screen"
             sx={{
-              variant: ['text.pugBoi', 'text.pugBoi', 'text.chooChooBoi'],
-              color: 'background',
-              maxWidth: 600,
+              maxWidth: '100%',
             }}
-          >
-            Great work takes hard work, critical thinking &amp; passion.
-          </h1>
-          <p
-            sx={{
-              variant: ['text.smolBoi', 'text.smolBoi', 'text.smolBoi'],
-              color: 'background',
-              maxWidth: 600,
-            }}
-          >
-            As a design leader, my goal is to create a space where people feel inspired, invested,
-            and protected to do their best work.
-          </p>
+          />
         </div>
-      </Banner>
-    </Grid>
 
-    <Grid
-      sx={{
-        paddingTop: [2, 2, 3],
-        textAlign: 'center',
-      }}
-      columns={[3, '2fr 0.15fr 2fr']}
-      gap={-1}
-    >
-      <span
-        sx={{
-          variant: 'text.pugBoi',
-        }}
-      >
-        <Styled.a
-          href="https://dribbble.com/JadeTSP"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
+          id="about"
           sx={{
-            color: 'clay',
+            display: 'flex',
+            justifyContent: ['center', 'center', 'left'],
+            alignItems: 'center',
+            my: [2, 2, 3],
+            mx: 1,
           }}
         >
-          See some of my projects
-        </Styled.a>
-      </span>
+          <Block
+            paragraphOne="I bring a breadth of experience, from launching a startup to expanding a
+              seasoned product."
+            paragraphTwo="I move fast on user feedback, and focus on delivering real impact on
+              people's lives."
+          />
+        </div>
+      </Grid>
 
-      <p
-        id="my-work"
+      <Grid
         sx={{
-          variant: 'text.softCaption',
-          alignSelf: 'center',
+          my: [0, 0, 3],
         }}
+        columns={[1, 1, 2]}
+        gap={0}
       >
-        or
-      </p>
 
-      <span
-        sx={{
-          variant: 'text.pugBoi',
-        }}
-      >
-        <Styled.a
-          href="https://medium.com/@JadeTSP"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
           sx={{
-            color: 'clay',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            my: [2, 2, 3],
+            mx: 1,
+            gridRow: [0, 0, 1],
           }}
         >
-          Read about my process
-        </Styled.a>
-      </span>
-    </Grid>
+          <Block
+            paragraphOne="With a decade of design experience, I've learned to recognise the unique
+              creative process in each designer."
+            paragraphTwo="I tune in for cues on when to push them to solve a problem for themselves,
+              or when to collaborate closely to keep the process moving."
+          />
+        </div>
 
-    <Contact />
+        <div
+          sx={{
+            display: 'flex',
+            justifyContent: ['center', 'center', 'left'],
+            alignItems: 'center',
+            gridRow: [1, 1, null],
+          }}
+        >
+          <img
+            src={Dots}
+            title="Dots Illustration"
+            alt="A grid of colourful dots filling the right-hand side of the screen"
+            sx={{
+              maxWidth: '100%',
+            }}
+          />
+        </div>
+      </Grid>
+    </Container>
+
+    <Background color="clay">
+      <Container>
+        <Banner />
+      </Container>
+    </Background>
+
+    <Container>
+      <Work />
+    </Container>
+
+    <Background color="green">
+      <Container>
+        <Contact />
+        <Footer />
+      </Container>
+    </Background>
   </>
 );
 

@@ -1,18 +1,17 @@
 import React from 'react';
+import { Grid } from 'theme-ui';
 import PropTypes from 'prop-types';
-import Header from './header';
-import Footer from './footer';
 
 const Layout = ({ children }) => (
-  <>
-    <Header />
-    <div>
+  <div>
+    <Grid
+      columns={1}
+    >
       <main>
         {children}
       </main>
-    </div>
-    <Footer />
-  </>
+    </Grid>
+  </div>
 );
 
 Layout.propTypes = {
