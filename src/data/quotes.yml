@@ -1,0 +1,18 @@
+defaultQuote:
+  quote:
+    `"Some quote about me being really good at this and that. Will recommend for all 
+    eternity."`
+  attribution: 
+    '-Said by a nice person I worked with'
+firstQuote:
+  quote: 
+    `placeholder`
+  attribution: 
+    `placeholder`
+secondQuote:
+  quote: 
+    `In her time at Vend, Jade personally mentored me and developed a design
+    practice that changed the way I have pursued product design as a career.`
+  attribution: 
+    `-Nicola Horlor, Product Designer at Vend. Previously design graduate
+    from AUT.`
