@@ -55,6 +55,7 @@ const Header = () => {
           sx={{
             textDecoration: 'underline',
             cursor: 'pointer',
+            color: 'plum',
           }}
           role="button"
           onClick={() => scrollTo('#contact')}

@@ -47,7 +47,7 @@ const Intro = () => {
             maxWidth: 840,
             // maxHeight: 246,
             // 246
-            variant: ['text.smolBoi', 'text.smolBoi', 'text.chooChooBoi'],
+            variant: 'text.chooChooBoi',
             alignSelf: 'center',
             position: 'absolute',
             mx: 1,

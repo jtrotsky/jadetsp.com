@@ -25,7 +25,7 @@ const Work = () => (
           target="_blank"
           rel="noopener noreferrer"
           sx={{
-            color: 'clay',
+            color: 'plum',
           }}
         >
           See some of my projects
@@ -51,7 +51,7 @@ const Work = () => (
           target="_blank"
           rel="noopener noreferrer"
           sx={{
-            color: 'clay',
+            color: 'plum',
           }}
         >
           Read about my process

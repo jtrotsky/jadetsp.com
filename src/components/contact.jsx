@@ -79,7 +79,7 @@ const Contact = () => {
       <Grid
         id="contact"
         sx={{
-          backgroundColor: 'green',
+          backgroundColor: 'night',
         }}
         columns={[1, 1, 2]}
         gap={0}

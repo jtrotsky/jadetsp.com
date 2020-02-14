@@ -24,11 +24,10 @@ export default {
   colors: {
     text: '#132640',
     background: '#F7F8F8',
-    green: '#525237',
+    night: '#1B2130',
     yellow: '#ED9A12',
-    clay: '#AE4F2B',
-    tan: '#C07B2E',
-    peach: '#C68B6E',
+    plum: '#763248',
+    tan: '#B1836F',
   },
   text: {
     bigBoi: {
@@ -132,19 +131,6 @@ export default {
     code: {
       fontFamily: 'monospace',
       fontSize: 'inherit',
-    },
-    table: {
-      width: '100%',
-      // borderCollapse: 'separate',
-      // borderSpacing: '20px',
-    },
-    th: {
-      textAlign: 'left',
-      borderBottom: '1px solid white',
-    },
-    td: {
-      textAlign: 'left',
-      borderBottom: '1px solid white',
     },
     a: {
       cursor: 'pointer',
