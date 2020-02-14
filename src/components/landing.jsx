@@ -8,6 +8,7 @@ import Quote from './quote';
 import Block from './block';
 import Background from './common/background';
 import Banner from './banner';
+import Media from './media';
 import Work from './work';
 import Contact from './contact';
 import Footer from './footer';
@@ -98,7 +99,9 @@ const Landing = () => (
               seasoned product."
             paragraphTwo="I move fast on user feedback, and focus on delivering real impact on
               people's lives."
-          />
+          >
+            {/* <Media /> */}
+          </Block>
         </div>
       </Grid>
 

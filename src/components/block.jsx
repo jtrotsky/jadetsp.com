@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui';
 import PropTypes from 'prop-types';
 
-const Block = ({ paragraphOne, paragraphTwo }) => (
+const Block = ({ paragraphOne, paragraphTwo, children }) => (
   <div
     sx={{
       maxWidth: '503px',
@@ -17,17 +17,20 @@ const Block = ({ paragraphOne, paragraphTwo }) => (
     <div>
       {paragraphTwo}
     </div>
+    {children}
   </div>
 );
 
 Block.defaultProps = {
   paragraphOne: '',
   paragraphTwo: '',
+  children: '',
 };
 
 Block.propTypes = {
   paragraphOne: PropTypes.string,
   paragraphTwo: PropTypes.string,
+  children: PropTypes.node,
 };
 
 export default Block;

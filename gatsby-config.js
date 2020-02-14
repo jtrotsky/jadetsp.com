@@ -15,6 +15,7 @@ module.exports = {
     linkedin: 'https://www.linkedin.com/in/jadetansweaphin',
   },
   plugins: [
+    'gatsby-transformer-yaml',
     'gatsby-plugin-smoothscroll',
     'gatsby-plugin-theme-ui',
     'gatsby-plugin-styled-components',
@@ -23,6 +24,13 @@ module.exports = {
       options: {
         name: 'images',
         path: './src/images',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'data',
+        path: './src/data',
       },
     },
     'gatsby-transformer-sharp',
@@ -63,4 +71,9 @@ module.exports = {
       },
     },
   ],
+  mapping: {
+    socials: 'SocialsYaml',
+    quotes: 'QuotesYaml',
+    media: 'MediaYaml',
+  },
 };
