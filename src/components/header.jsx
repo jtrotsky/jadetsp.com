@@ -46,7 +46,7 @@ const Header = () => {
       <div
         sx={{
           variant: 'text.hardCaption',
-          width: '300px',
+          width: '350px',
           display: ['none', 'none', 'block'],
         }}
       >
@@ -55,6 +55,7 @@ const Header = () => {
           sx={{
             textDecoration: 'underline',
             cursor: 'pointer',
+            color: 'plum',
           }}
           role="button"
           onClick={() => scrollTo('#contact')}

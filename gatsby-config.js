@@ -9,13 +9,12 @@ module.exports = {
     quote: `"Some quote about me being really good at this and that. Will recommend for all 
       eternity."`,
     attribution: '-Said by a nice person I worked with',
-    medium: 'https://medium.com/@JadeTSP',
-    dribbble: 'https://dribbble.com/JadeTSP',
+    medium: 'https://medium.com/@jadetsp',
+    dribbble: 'https://dribbble.com/jadetsp',
     twitter: 'https://twitter.com/jadetsssp',
-    linkedin: 'https://www.linkedin.com/in/jadetansweaphin',
+    linkedin: 'https://www.linkedin.com/in/jadetsp',
   },
   plugins: [
-    'gatsby-transformer-yaml',
     'gatsby-plugin-smoothscroll',
     'gatsby-plugin-theme-ui',
     'gatsby-plugin-styled-components',
@@ -26,6 +25,7 @@ module.exports = {
         path: './src/images',
       },
     },
+    'gatsby-transformer-yaml',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -65,7 +65,7 @@ module.exports = {
           },
           {
             family: 'Nunito',
-            variants: ['600', '700'],
+            variants: ['400', '600', '700'],
           },
         ],
       },

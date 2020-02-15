@@ -1,55 +1,80 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-const Quote = ({ quote, attribution }) => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            quote
-            attribution
-          }
-        }
-      }`,
-  );
+const Quote = ({
+  quote,
+  name,
+  role,
+  formerly,
+}) => (
+  <div
+    sx={{
+      mx: 1,
+      maxWidth: '580px',
+      color: 'background',
+    }}
+  >
 
-  const quoteString = quote || data.site.siteMetadata.quote;
-  const attributionString = attribution || data.site.siteMetadata.attribution;
-
-  return (
     <div
       sx={{
-        maxWidth: '480px',
-        mx: 1,
-        display: 'none',
+        variant: 'text.pugBoi',
+        marginLeft: '8px',
       }}
     >
-      <div
-        sx={{
-          variant: 'text.smolBoi',
-        }}
-      >
-        {quoteString}
-      </div>
 
       <div
         sx={{
-          variant: 'text.softCaption',
-          my: [0, 0, 1],
+          variant: 'text.pugBoi',
         }}
       >
-        {attributionString}
+        <div
+          sx={{
+            position: 'absolute',
+            textIndent: '-34px',
+          }}
+        >
+          &ldquo;
+        </div>
+        {quote}
+        &rdquo;
       </div>
     </div>
-  );
-};
+
+    <div
+      sx={{
+        my: 1,
+        marginLeft: '8px',
+      }}
+    >
+      <span
+        sx={{
+          variant: 'text.hardCaption',
+        }}
+      >
+        {name}
+        <br />
+      </span>
+
+      <span
+        sx={{
+          variant: 'text.softCaption',
+        }}
+      >
+        {role}
+        <br />
+        formerly&nbsp;
+        {formerly}
+      </span>
+    </div>
+  </div>
+);
 
 Quote.propTypes = {
   quote: PropTypes.string.isRequired,
-  attribution: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  role: PropTypes.string.isRequired,
+  formerly: PropTypes.string.isRequired,
 };
 
 export default Quote;

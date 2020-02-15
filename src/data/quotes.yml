@@ -1,18 +1,10 @@
-defaultQuote:
-  quote:
-    `"Some quote about me being really good at this and that. Will recommend for all 
-    eternity."`
-  attribution: 
-    '-Said by a nice person I worked with'
-firstQuote:
-  quote: 
-    `placeholder`
-  attribution: 
-    `placeholder`
-secondQuote:
-  quote: 
-    `In her time at Vend, Jade personally mentored me and developed a design
-    practice that changed the way I have pursued product design as a career.`
-  attribution: 
-    `-Nicola Horlor, Product Designer at Vend. Previously design graduate
-    from AUT.`
+- firstQuote: 
+  formerly: "at Apple."
+  name: "Ludwig Wendzich"
+  quote: "Jade is a pioneer for connecting the craft with the commercial."
+  role: "Director of Product Design at Vend,"
+- secondQuote: 
+  formerly: "design graduate from AUT."
+  name: "Nicola Horlor"
+  quote: "Jade brought the team together with offsites, design critiques, and reflection journals in a way that normalised failure and celebrated learning."
+  role: "Product Designer at Vend,"

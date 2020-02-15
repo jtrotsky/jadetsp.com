@@ -1,19 +1,5 @@
-firstVideo:
-  thumbnail:
-    'test'
-  link:
-    'test'
-  icon:
-    'test'
-  description:
-    'test'
-secondMedia:
-  thumbnail:
-  link:
-  icon:
-  description:
-thirdMedia:
-  thumbnail:
-  link:
-  icon:
-  description:
+- firstMedia:
+  thumbnail: 'test'
+  link: 'test'
+  icon: 'test'
+  description: 'test'

@@ -24,11 +24,7 @@ const Footer = () => (
         It&apos;s priceless.
       </span>
 
-      <span
-        sx={{
-          // textAlign: 'right',
-        }}
-      >
+      <span>
         &nbsp;
         ©&nbsp;
         {new Date().getFullYear()}

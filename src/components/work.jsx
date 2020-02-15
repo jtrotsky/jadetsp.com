@@ -11,7 +11,6 @@ const Work = () => (
         mx: 1,
         textAlign: 'center',
       }}
-      // columns={[3, '2fr 0.15fr 2fr']} // how to make center grid smaller?
       columns={[1, 1, 3]}
       gap={-1}
     >
@@ -25,10 +24,10 @@ const Work = () => (
           target="_blank"
           rel="noopener noreferrer"
           sx={{
-            color: 'clay',
+            color: 'plum',
           }}
         >
-          See some of my projects
+          See snapshots of my work
         </Styled.a>
       </span>
 
@@ -51,7 +50,7 @@ const Work = () => (
           target="_blank"
           rel="noopener noreferrer"
           sx={{
-            color: 'clay',
+            color: 'plum',
           }}
         >
           Read about my process

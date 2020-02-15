@@ -25,34 +25,17 @@ const Banner = () => (
       >
         <h1
           sx={{
-            variant: ['text.pugBoi', 'text.pugBoi', 'text.chooChooBoi'],
-            color: 'background',
-            maxWidth: 600,
-          }}
-        >
-          Great work takes hard work, critical thinking &amp; passion.
-        </h1>
-        <p
-          sx={{
-            variant: ['text.smolBoi', 'text.smolBoi', 'text.smolBoi'],
+            variant: ['text.smolBoi', 'text.smolBoi', 'text.chooChooBoi'],
             color: 'background',
             maxWidth: 600,
           }}
         >
           As a design leader, my goal is to create a space where people feel inspired, invested,
           and protected to do their best work.
-        </p>
+        </h1>
       </div>
     </Grid>
   </div>
 );
-
-// Banner.defaultProps = {
-//   color: 'clay',
-// };
-
-// Banner.propTypes = {
-//   color: PropTypes.string,
-// };
 
 export default Banner;

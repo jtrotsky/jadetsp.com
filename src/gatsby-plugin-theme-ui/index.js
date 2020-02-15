@@ -24,11 +24,10 @@ export default {
   colors: {
     text: '#132640',
     background: '#F7F8F8',
-    green: '#525237',
+    night: '#1B2130',
     yellow: '#ED9A12',
-    clay: '#AE4F2B',
-    tan: '#C07B2E',
-    peach: '#C68B6E',
+    plum: '#763248',
+    tan: '#B1836F',
   },
   text: {
     bigBoi: {
@@ -76,7 +75,7 @@ export default {
     },
     hardCaption: {
       fontFamily: 'Nunito',
-      fontSize: 14,
+      fontSize: 16,
       lineHeight: '26px',
       letterSpacing: 0,
       fontWeight: 600,
@@ -86,7 +85,7 @@ export default {
       fontSize: 16,
       lineHeight: '22px',
       letterSpacing: 0,
-      fontWeight: 600,
+      fontWeight: 400,
       fontStyle: 'italic',
     },
   },
@@ -134,16 +133,13 @@ export default {
       fontSize: 'inherit',
     },
     table: {
-      width: '100%',
-      // borderCollapse: 'separate',
-      // borderSpacing: '20px',
+      borderCollapse: 'collapse',
     },
-    th: {
-      textAlign: 'left',
-      borderBottom: '1px solid white',
+    tr: {
     },
     td: {
-      textAlign: 'left',
+      paddingTop: '20px',
+      paddingBottom: '20px',
       borderBottom: '1px solid white',
     },
     a: {
