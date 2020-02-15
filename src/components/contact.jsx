@@ -1,244 +1,192 @@
 /** @jsx jsx */
-import { jsx, Grid } from 'theme-ui';
+import { jsx, Grid, Styled } from 'theme-ui';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import JadeProfile from '../images/img-jade-profile.jpg';
 
 const Contact = () => {
   const data = useStaticQuery(
     graphql`
-      query {
-        site {
-          siteMetadata {
-            twitter
-            linkedin
-            medium
-            dribbble
-          }
-        }
-      }`,
+    query {
+      socialsYaml {
+        dribbble
+        linkedin
+        medium
+        twitter
+      }
+    }`,
   );
 
   return (
-    <div
+    <Grid
       sx={{
         mx: 1,
       }}
+      columns={[1, 1, 2]}
+      gap={2}
     >
-      {/* <div
+
+      <div
+        id="contact"
         sx={{
-          paddingTop: 5,
+          maxWidth: '480px',
+          my: [null, null, 3],
+          gridRow: [0, 0, 1],
+        }}
+      >
+        <h1
+          sx={{
+            variant: 'text.bigBoi',
+            color: 'background',
+          }}
+        >
+          What&apos;s next?
+        </h1>
+        <p
+          sx={{
+            variant: 'text.smolBoi',
+            color: 'background',
+            paddingTop: 0,
+          }}
+        >
+          My partner and I are relocating to London, and I&apos;m looking for a new team to
+          create magic with.
+        </p>
+
+        <Styled.table
+          id="contact"
+          sx={{
+            maxWidth: '480px',
+            width: '100%',
+            my: 1,
+            color: 'background',
+            variant: 'text.pocketBoi',
+          }}
+        >
+          <tbody>
+            <Styled.tr
+              sx={{
+                borderTop: '1px solid white',
+              }}
+            >
+              <Styled.td>
+                Tweet me
+              </Styled.td>
+              <Styled.td
+                sx={{
+                  textAlign: 'right',
+                }}
+              >
+                <a
+                  sx={{
+                    color: 'background',
+                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={data.socialsYaml.twitter}
+                >
+                  @jadetsssp
+                </a>
+              </Styled.td>
+            </Styled.tr>
+            <Styled.tr>
+              <Styled.td
+                sx={{
+                  variant: 'text.pocketBoi',
+                  color: 'background',
+                }}
+              >
+                See my work history
+              </Styled.td>
+              <Styled.td
+                sx={{
+                  textAlign: 'right',
+                }}
+              >
+                <a
+                  sx={{
+                    color: 'background',
+                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={data.socialsYaml.linkedin}
+                >
+                  linkedin/jadetsp
+                </a>
+              </Styled.td>
+            </Styled.tr>
+            <Styled.tr>
+              <Styled.td
+                sx={{
+                  variant: 'text.pocketBoi',
+                  color: 'background',
+                  justifySelf: 'left',
+                }}
+              >
+                Go in-depth
+              </Styled.td>
+              <Styled.td
+                sx={{
+                  textAlign: 'right',
+                }}
+              >
+                <a
+                  sx={{
+                    color: 'background',
+                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={data.socialsYaml.medium}
+                >
+                  medium/jadetsp
+                </a>
+              </Styled.td>
+            </Styled.tr>
+            <Styled.tr>
+              <Styled.td>
+                Get inspired
+              </Styled.td>
+              <Styled.td
+                sx={{
+                  textAlign: 'right',
+                }}
+              >
+                <a
+                  sx={{
+                    color: 'background',
+                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={data.socialsYaml.dribbble}
+                >
+                  dribbble/jadetsp
+                </a>
+              </Styled.td>
+            </Styled.tr>
+          </tbody>
+        </Styled.table>
+      </div>
+
+      <div
+        sx={{
           display: 'flex',
-          justifyContent: 'center',
+          justifyContent: ['center', 'center', 'left'],
+          alignItems: 'center',
+          gridRow: [1, 1, null],
+          my: 1,
         }}
       >
         <img
-          src={blob}
-          alt="Blob"
+          src={JadeProfile}
+          title="Jade Profile"
+          alt="Jade smiling at the camera in front of a pink floral arch."
           sx={{
             maxWidth: '100%',
-            maxHeight: '100%',
           }}
         />
-      </div> */}
-      <Grid
-        id="contact"
-        sx={{
-          alignItems: 'center',
-        }}
-        columns={[1, 1, 2]}
-        gap={-1}
-      >
-        <div
-          sx={{
-            maxWidth: '480px',
-            marginTop: 2,
-          }}
-        >
-          <h1
-            sx={{
-              variant: 'text.bigBoi',
-              color: 'background',
-            }}
-          >
-            What&apos;s next?
-          </h1>
-          <p
-            sx={{
-              variant: 'text.smolBoi',
-              color: 'background',
-              paddingTop: 0,
-            }}
-          >
-            My partner and I are relocating to London, and I&apos;m looking for a new team to
-            create magic with.
-          </p>
-        </div>
-      </Grid>
-
-      <Grid
-        id="contact"
-        sx={{
-          backgroundColor: 'night',
-        }}
-        columns={[1, 1, 2]}
-        gap={0}
-      >
-
-        <div />
-        <Grid
-          sx={{
-            py: '8px',
-          }}
-          columns={[1, 1, 2]}
-          gap={-1}
-        >
-
-          <span
-            sx={{
-              variant: 'text.pocketBoi',
-              color: 'background',
-              justifySelf: 'left',
-            }}
-          >
-            Tweet me
-          </span>
-          <span
-            sx={{
-              variant: 'text.pocketBoi',
-              color: 'background',
-              justifySelf: ['left', 'left', 'right'],
-            }}
-          >
-            <a
-              sx={{
-                color: 'background',
-              }}
-              target="_blank"
-              rel="noopener noreferrer"
-              href={data.site.siteMetadata.twitter}
-            >
-              @jadetsssp
-            </a>
-          </span>
-        </Grid>
-
-        <div />
-        <Grid
-          sx={{
-            py: '8px',
-          }}
-          columns={[1, 1, 2]}
-          gap={-1}
-        >
-          <span
-            sx={{
-              variant: 'text.pocketBoi',
-              color: 'background',
-              justifySelf: 'left',
-            }}
-          >
-            Connect on LinkedIn
-          </span>
-          <span
-            sx={{
-              variant: 'text.pocketBoi',
-              color: 'background',
-              justifySelf: ['left', 'left', 'right'],
-            }}
-          >
-            <a
-              sx={{
-                color: 'background',
-                justifySelf: ['left', 'left', 'right'],
-              }}
-              target="_blank"
-              rel="noopener noreferrer"
-              href={data.site.siteMetadata.linkedin}
-            >
-              linkedin/jadetsp
-            </a>
-          </span>
-        </Grid>
-
-        <div />
-        <Grid
-          sx={{
-            // borderTop: '1px solid white',
-            py: '8px',
-          }}
-          columns={[1, 1, 2]}
-          gap={-1}
-        >
-          <span
-            sx={{
-              variant: 'text.pocketBoi',
-              color: 'background',
-              justifySelf: 'left',
-            }}
-          >
-            Go in-depth on Medium
-          </span>
-          <span
-            sx={{
-              variant: 'text.pocketBoi',
-              color: 'background',
-              justifySelf: ['left', 'left', 'right'],
-            }}
-          >
-            <a
-              sx={{
-                color: 'background',
-              }}
-              target="_blank"
-              rel="noopener noreferrer"
-              href={data.site.siteMetadata.medium}
-            >
-              jadetansweaphin
-            </a>
-          </span>
-        </Grid>
-
-        <div />
-        <Grid
-          sx={{
-            // borderTop: '1px solid white',
-            // borderBottom: '1px solid white',
-            py: '8px',
-          }}
-          columns={[1, 1, 2]}
-          gap={-1}
-        >
-          <span
-            sx={{
-              variant: 'text.pocketBoi',
-              color: 'background',
-              justifySelf: 'left',
-            }}
-          >
-            Get inspired on Dribbble
-          </span>
-          <span
-            sx={{
-              variant: 'text.pocketBoi',
-              color: 'background',
-              justifySelf: ['left', 'left', 'right'],
-            }}
-          >
-            <a
-              sx={{
-                color: 'background',
-              }}
-              target="_blank"
-              rel="noopener noreferrer"
-              href={data.site.siteMetadata.dribbble}
-            >
-              jadetsp
-            </a>
-          </span>
-        </Grid>
-      </Grid>
-    </div>
+      </div>
+    </Grid>
   );
 };
 

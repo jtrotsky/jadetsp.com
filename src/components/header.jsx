@@ -46,7 +46,7 @@ const Header = () => {
       <div
         sx={{
           variant: 'text.hardCaption',
-          width: '300px',
+          width: '350px',
           display: ['none', 'none', 'block'],
         }}
       >

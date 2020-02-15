@@ -11,7 +11,6 @@ const Work = () => (
         mx: 1,
         textAlign: 'center',
       }}
-      // columns={[3, '2fr 0.15fr 2fr']} // how to make center grid smaller?
       columns={[1, 1, 3]}
       gap={-1}
     >
@@ -28,7 +27,7 @@ const Work = () => (
             color: 'plum',
           }}
         >
-          See some of my projects
+          See snapshots of my work
         </Styled.a>
       </span>
 

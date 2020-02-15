@@ -20,8 +20,18 @@ import Dots from '../images/dots.svg';
 const Landing = () => {
   const data = useStaticQuery(
     graphql`
-    query Quotes {
-      allQuotesYaml(filter: {name: {eq: "Ludwig Wendzich"}}) {
+    query {
+      ludwigQuote: allQuotesYaml(filter: {name: {eq: "Ludwig Wendzich"}}) {
+        edges {
+          node {
+            name
+            quote
+            role
+            formerly
+          }
+        }
+      }
+      nicolaQuote: allQuotesYaml(filter: {name: {eq: "Nicola Horlor"}}) {
         edges {
           node {
             name
@@ -70,14 +80,13 @@ const Landing = () => {
               justifyContent: ['center', 'center', 'left'],
               alignItems: 'center',
               my: [2, 2, 3],
-              mx: 1,
             }}
           >
             <Block
-              paragraphOne="I bring a breadth of experience, from launching a startup to expanding a
-                seasoned product."
-              paragraphTwo="I move fast on user feedback, and focus on delivering real impact on
-                people's lives."
+              paragraphOne="I bring a breadth of experience, from helping to launch a startup to
+                expanding a seasoned product."
+              paragraphTwo="I develop scalable design systems, move fast on user feedback, and
+                focus on delivering real impact on people's lives."
             />
           </div>
         </Grid>
@@ -96,15 +105,14 @@ const Landing = () => {
               justifyContent: 'center',
               alignItems: 'center',
               my: [2, 2, 3],
-              mx: 1,
               gridRow: [0, 0, 1],
             }}
           >
             <Block
-              paragraphOne="With a decade of design experience, I've learned to recognise the unique
-                creative process in each designer."
-              paragraphTwo="I tune in for cues on when to push them to solve a problem for themselves,
-                or when to collaborate closely to keep the process moving."
+              paragraphOne="With a decade of design experience, I've learned to recognise the
+                unique creative process in each designer."
+              paragraphTwo="I tune in for cues on when to push them to solve a problem for
+                themselves, or when to collaborate closely to keep the process moving."
             />
           </div>
 
@@ -114,6 +122,7 @@ const Landing = () => {
               justifyContent: ['center', 'center', 'left'],
               alignItems: 'center',
               gridRow: [1, 1, null],
+              mx: 1,
             }}
           >
             <img
@@ -138,15 +147,17 @@ const Landing = () => {
         <Container>
           <Grid
             columns={[1, 1, 2]}
+            gap={-1}
           >
             <div
               sx={{
                 display: 'flex',
                 justifyContent: 'center',
+                marginTop: [4, 4, 3],
               }}
             >
               {
-                data.allQuotesYaml.edges.map((post) => {
+                data.ludwigQuote.edges.map((post) => {
                   const {
                     name,
                     quote,
@@ -165,27 +176,34 @@ const Landing = () => {
                 })
               }
             </div>
-          </Grid>
-
-          <Grid
-            columns={[1, 1, 2]}
-            gap={0}
-          >
-
-            <div />
 
             <div
               sx={{
                 display: 'flex',
                 justifyContent: ['center', 'center', 'left'],
+                paddingTop: [3, 3, 6],
+                marginBottom: [3, 3, 2],
               }}
             >
-              <Quote
-                quote="In her time at Vend, Jade personally mentored me and developed a design
-                practice that changed the way I have pursued product design as a career."
-                attribution="-Nicola Horlor, Product Designer at Vend. Previously design graduate
-                from AUT."
-              />
+              {
+                data.nicolaQuote.edges.map((post) => {
+                  const {
+                    name,
+                    quote,
+                    role,
+                    formerly,
+                  } = post.node;
+
+                  return (
+                    <Quote
+                      quote={quote}
+                      name={name}
+                      role={role}
+                      formerly={formerly}
+                    />
+                  );
+                })
+              }
             </div>
           </Grid>
         </Container>

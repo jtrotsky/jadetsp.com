@@ -75,7 +75,7 @@ export default {
     },
     hardCaption: {
       fontFamily: 'Nunito',
-      fontSize: 14,
+      fontSize: 16,
       lineHeight: '26px',
       letterSpacing: 0,
       fontWeight: 600,
@@ -85,7 +85,7 @@ export default {
       fontSize: 16,
       lineHeight: '22px',
       letterSpacing: 0,
-      fontWeight: 600,
+      fontWeight: 400,
       fontStyle: 'italic',
     },
   },
@@ -131,6 +131,16 @@ export default {
     code: {
       fontFamily: 'monospace',
       fontSize: 'inherit',
+    },
+    table: {
+      borderCollapse: 'collapse',
+    },
+    tr: {
+    },
+    td: {
+      paddingTop: '20px',
+      paddingBottom: '20px',
+      borderBottom: '1px solid white',
     },
     a: {
       cursor: 'pointer',
