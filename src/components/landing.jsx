@@ -9,7 +9,7 @@ import Quote from './quote';
 import Block from './block';
 import Background from './common/background';
 import Banner from './banner';
-// import Media from './media';
+import Media from './media';
 import Work from './work';
 import Contact from './contact';
 import Footer from './footer';
@@ -38,6 +38,36 @@ const Landing = () => {
             quote
             role
             formerly
+          }
+        }
+      }
+      firstMedia: allMediaYaml(filter: {name: {eq: "TEDx"}}) {
+        edges {
+          node {
+            thumbnail
+            link
+            icon
+            description
+          }
+        }
+      }
+      secondMedia: allMediaYaml(filter: {name: {eq: "Article"}}) {
+        edges {
+          node {
+            thumbnail
+            link
+            icon
+            description
+          }
+        }
+      }
+      thirdMedia: allMediaYaml(filter: {name: {eq: "Interview"}}) {
+        edges {
+          node {
+            thumbnail
+            link
+            icon
+            description
           }
         }
       }
@@ -87,7 +117,33 @@ const Landing = () => {
                 expanding a seasoned product."
               paragraphTwo="I develop scalable design systems, move fast on user feedback, and
                 focus on delivering real impact on people's lives."
-            />
+            >
+              <div
+                sx={{
+                  my: 1,
+                }}
+              >
+                {
+                  data.firstMedia.edges.map((post) => {
+                    const {
+                      thumbnail,
+                      link,
+                      icon,
+                      description,
+                    } = post.node;
+
+                    return (
+                      <Media
+                        thumbnail={thumbnail}
+                        link={link}
+                        icon={icon}
+                        description={description}
+                      />
+                    );
+                  })
+                }
+              </div>
+            </Block>
           </div>
         </Grid>
 
@@ -113,7 +169,33 @@ const Landing = () => {
                 unique creative process in each designer."
               paragraphTwo="I tune in for cues on when to push them to solve a problem for
                 themselves, or when to collaborate closely to keep the process moving."
-            />
+            >
+              <div
+                sx={{
+                  my: 1,
+                }}
+              >
+                {
+                  data.secondMedia.edges.map((post) => {
+                    const {
+                      thumbnail,
+                      link,
+                      icon,
+                      description,
+                    } = post.node;
+
+                    return (
+                      <Media
+                        thumbnail={thumbnail}
+                        link={link}
+                        icon={icon}
+                        description={description}
+                      />
+                    );
+                  })
+                }
+              </div>
+            </Block>
           </div>
 
           <div

@@ -1,61 +1,65 @@
-// /** @jsx jsx */
-// import { jsx } from 'theme-ui';
-// import { useStaticQuery, graphql } from 'gatsby';
-// import PropTypes from 'prop-types';
+/** @jsx jsx */
+import { jsx, Grid } from 'theme-ui';
+import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+// faMicrophoneAlt, faBookOpen
 
-// const Media = ({
-//   thumbnail,
-//   link,
-//   icon,
-//   description,
-// }) => {
-//   const data = useStaticQuery(
-//     graphql`
-//       query Media {
-//         allMediaYaml {
-//           nodes {
-//             firstMedia {
-//               thumbnail
-//               link
-//               icon
-//               description
-//             }
-//           }
-//         }
-//       }`,
-//   );
+const Media = ({
+  name,
+  thumbnail,
+  link,
+  // icon,
+  description,
+}) => (
 
-//   const thumbnailString = thumbnail || data.media.thumbnail;
-//   const linkString = link || data.media.link;
-//   const iconString = icon || data.media.icon;
-//   const descriptionString = description || data.media.description;
+  <a
+    href={link}
+    sx={{
+      textDecoration: 'none',
+    }}
+  >
+    <hr />
+    <Grid
+      columns={[2, '1fr 2fr']}
+      gap={1}
+    >
+      <img
+        src={`../images/${thumbnail}.jpg`}
+        title={name}
+        alt=""
+        sx={{
+          // maxWidth: '60px',
+          // maxHeight: '40px',
+        }}
+      />
+      <div
+        sx={{
+          variant: 'text.hardCaption',
+          color: 'text',
+        }}
+      >
+        <FontAwesomeIcon icon={faPlay} />
+        &nbsp;
+        {description}
+      </div>
+    </Grid>
+    <hr />
+  </a>
+);
 
-//   return (
-//     <div>
-//       <div
-//         sx={{
-//           variant: 'text.softCaption',
-//         }}
-//       >
-//         {thumbnailString}
-//         {linkString}
-//         {iconString}
-//         {descriptionString}
-//       </div>
-//     </div>
-//   );
-// };
+Media.defaultProps = {
+  name: 'placeholder',
+  // icon: 'faPlay',
+  description: 'Watch my TEDx talk.',
+};
 
-// Media.defaultProps = {
-//   icon: 'fa-play',
-//   description: 'Watch my TEDx talk.',
-// };
+Media.propTypes = {
+  name: PropTypes.string,
+  thumbnail: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  // icon: PropTypes.string,
+  description: PropTypes.string,
+};
 
-// Media.propTypes = {
-//   thumbnail: PropTypes.string.isRequired,
-//   link: PropTypes.string.isRequired,
-//   icon: PropTypes.string,
-//   description: PropTypes.string,
-// };
-
-// export default Media;
+export default Media;
