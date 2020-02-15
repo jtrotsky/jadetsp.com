@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Grid } from 'theme-ui';
+import { jsx, Grid, Styled } from 'theme-ui';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
@@ -13,11 +13,10 @@ const Media = ({
   description,
 }) => (
 
-  <a
+  <Styled.a
     href={link}
-    sx={{
-      textDecoration: 'none',
-    }}
+    role="link"
+    tabIndex={0}
   >
     <hr />
     <Grid
@@ -25,7 +24,7 @@ const Media = ({
       gap={1}
     >
       <img
-        src={`../images/${thumbnail}.jpg`}
+        src={`./src/images/${thumbnail}.jpg`}
         title={name}
         alt=""
         sx={{
@@ -45,7 +44,7 @@ const Media = ({
       </div>
     </Grid>
     <hr />
-  </a>
+  </Styled.a>
 );
 
 Media.defaultProps = {

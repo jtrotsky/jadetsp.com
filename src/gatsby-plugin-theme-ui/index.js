@@ -143,6 +143,7 @@ export default {
       borderBottom: '1px solid white',
     },
     a: {
+      color: 'text',
       cursor: 'pointer',
       textDecoration: 'none',
       '&:hover': {

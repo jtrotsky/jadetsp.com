@@ -4,7 +4,7 @@ module.exports = {
       by helping designers grow into empathetic leaders and allies.`,
     description: 'I lead product design teams',
     author: 'Jade Tan',
-    statusUpdate: `Right now: My partner and I are relocating to London, 
+    statusUpdate: `What's next: My partner and I are relocating to London, 
       and I’m looking for a new team to create magic with. `,
     quote: `"Some quote about me being really good at this and that. Will recommend for all 
       eternity."`,

@@ -20,7 +20,6 @@ const Intro = () => {
     <Grid
       id="intro"
       sx={{
-        justifyItems: 'center',
         my: [1, 1, 3],
       }}
       columns={1}
@@ -29,6 +28,7 @@ const Intro = () => {
         sx={{
           display: 'flex',
           justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
         <div>
@@ -44,9 +44,8 @@ const Intro = () => {
 
         <div
           sx={{
-            maxWidth: 840,
+            maxWidth: '840px',
             variant: ['text.pugBoi', 'text.pugBoi', 'text.chooChooBoi'],
-            alignSelf: 'center',
             position: 'absolute',
             mx: 1,
           }}
