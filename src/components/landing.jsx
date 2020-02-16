@@ -3,7 +3,6 @@ import { jsx, Grid, Container } from 'theme-ui';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Header from './header';
 import Intro from './intro';
 import Quote from './quote';
 import Block from './block';
@@ -12,7 +11,7 @@ import Banner from './banner';
 import Media from './media';
 import Work from './work';
 import Contact from './contact';
-import Footer from './footer';
+// import Footer from './footer';
 import Scale from '../images/scale.svg';
 import Dots from '../images/dots.svg';
 
@@ -41,35 +40,23 @@ const Landing = () => {
           }
         }
       }
-      firstMedia: allMediaYaml(filter: {name: {eq: "TEDx"}}) {
-        edges {
-          node {
-            thumbnail
-            link
-            icon
-            description
-          }
-        }
+      firstMedia: mediaYaml(name: {eq: "TEDx"}) {
+        thumbnail
+        link
+        icon
+        description
       }
-      secondMedia: allMediaYaml(filter: {name: {eq: "Article"}}) {
-        edges {
-          node {
-            thumbnail
-            link
-            icon
-            description
-          }
-        }
+      secondMedia: mediaYaml(name: {eq: "Article"}) {
+        thumbnail
+        link
+        icon
+        description
       }
-      thirdMedia: allMediaYaml(filter: {name: {eq: "Interview"}}) {
-        edges {
-          node {
-            thumbnail
-            link
-            icon
-            description
-          }
-        }
+      thirdMedia: mediaYaml(name: {eq: "Interview"}) {
+        thumbnail
+        link
+        icon
+        description
       }
     }`,
   );
@@ -77,13 +64,11 @@ const Landing = () => {
   return (
     <>
       <Container>
-        <Header />
-
         <Intro />
 
         <Grid
           sx={{
-            paddingTop: [2, 2, 4],
+            paddingTop: [null, null, 4],
           }}
           columns={[1, 1, 2]}
           gap={0}
@@ -118,29 +103,11 @@ const Landing = () => {
               paragraphTwo="I develop scalable design systems, move fast on user feedback, and
                 focus on delivering real impact on people's lives."
             >
-              <div
-                sx={{
-                  my: 1,
-                }}
-              >
-                {
-                  data.firstMedia.edges.map((post) => {
-                    const {
-                      link,
-                      icon,
-                      description,
-                    } = post.node;
-
-                    return (
-                      <Media
-                        link={link}
-                        icon={icon}
-                        description={description}
-                      />
-                    );
-                  })
-                }
-              </div>
+              <Media
+                link={data.firstMedia.link}
+                icon={data.firstMedia.icon}
+                description={data.firstMedia.description}
+              />
             </Block>
           </div>
         </Grid>
@@ -168,29 +135,11 @@ const Landing = () => {
               paragraphTwo="I tune in for cues on when to push them to solve a problem for
                 themselves, or when to collaborate closely to keep the process moving."
             >
-              <div
-                sx={{
-                  my: 1,
-                }}
-              >
-                {
-                  data.secondMedia.edges.map((post) => {
-                    const {
-                      link,
-                      icon,
-                      description,
-                    } = post.node;
-
-                    return (
-                      <Media
-                        link={link}
-                        icon={icon}
-                        description={description}
-                      />
-                    );
-                  })
-                }
-              </div>
+              <Media
+                link={data.secondMedia.link}
+                icon={data.secondMedia.icon}
+                description={data.secondMedia.description}
+              />
             </Block>
           </div>
 
@@ -221,24 +170,12 @@ const Landing = () => {
             quote="As a design leader, my goal is to create a space where people feel inspired, invested,
           and protected to do their best work."
           >
-            {
-              data.thirdMedia.edges.map((post) => {
-                const {
-                  link,
-                  icon,
-                  description,
-                } = post.node;
-
-                return (
-                  <Media
-                    link={link}
-                    icon={icon}
-                    description={description}
-                    textColor="white"
-                  />
-                );
-              })
-            }
+            <Media
+              textColor="background"
+              link={data.thirdMedia.link}
+              icon={data.thirdMedia.icon}
+              description={data.thirdMedia.description}
+            />
           </Banner>
         </Container>
       </Background>
@@ -319,11 +256,11 @@ const Landing = () => {
         </Container>
       </Background>
 
-      <Background color="night">
+      {/* <Background color="night">
         <Container>
           <Footer />
         </Container>
-      </Background>
+      </Background> */}
     </>
   );
 };

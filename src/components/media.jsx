@@ -32,6 +32,7 @@ function Media({
     <div
       sx={{
         maxWidth: '500px',
+        my: 1,
       }}
     >
       <Styled.a
@@ -48,6 +49,9 @@ function Media({
         <Grid
           columns={[2, '1fr 2fr']}
           gap={-1}
+          sx={{
+            my: '16px',
+          }}
         >
           <img
             src={thumbnail}
@@ -55,7 +59,11 @@ function Media({
             alt={description}
             sx={{
               alignSelf: 'center',
+              justifySelf: 'center',
               borderRadius: '8px',
+              height: ['80px', '80px', 'auto'],
+              maxWidth: ['100px', '100px', '100%'],
+              objectFit: 'cover',
             }}
           />
           <div

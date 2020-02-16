@@ -2,6 +2,7 @@
 import { jsx, Grid } from 'theme-ui';
 import { useStaticQuery, graphql } from 'gatsby';
 import Circle from '../images/circle.svg';
+import Header from './header';
 
 
 const Intro = () => {
@@ -17,43 +18,51 @@ const Intro = () => {
   );
 
   return (
-    <Grid
-      id="intro"
-      sx={{
-        my: [1, 1, 3],
-      }}
-      columns={1}
-    >
-      <div
+    <div>
+      <Header />
+      <Grid
+        id="intro"
         sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
+          marginTop: ['-60%', '-60%', 4],
+          marginBottom: 2,
         }}
+        columns={1}
       >
-        <div>
-          <img
-            src={Circle}
-            title="Circle Illustration"
-            alt="The background is an imperfect yellow circle in screen centre"
-            sx={{
-              maxWidth: '100%',
-            }}
-          />
-        </div>
-
         <div
           sx={{
-            maxWidth: '840px',
-            variant: ['text.pugBoi', 'text.pugBoi', 'text.chooChooBoi'],
-            position: 'absolute',
-            mx: 1,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            overflow: 'hidden',
           }}
         >
-          {data.site.siteMetadata.title}
+          <div>
+            <img
+              src={Circle}
+              title="Circle Illustration"
+              alt="The background is an imperfect yellow circle in screen centre"
+              sx={{
+                maxWidth: [null, null, '100%'],
+                width: ['900px', '900px', '100%'],
+                height: ['750px', '750px', '100%'],
+              }}
+            />
+          </div>
+
+          <div
+            sx={{
+              maxWidth: '840px',
+              paddingTop: ['40%', '40%', '0px'],
+              variant: ['text.pugBoi', 'text.pugBoi', 'text.chooChooBoi'],
+              position: 'absolute',
+              mx: ['8px', '8px', 1],
+            }}
+          >
+            {data.site.siteMetadata.title}
+          </div>
         </div>
-      </div>
-    </Grid>
+      </Grid>
+    </div>
   );
 };
 

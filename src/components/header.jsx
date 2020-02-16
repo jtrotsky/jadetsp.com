@@ -24,6 +24,7 @@ const Header = () => {
       sx={{
         marginTop: 2,
         justifyItems: 'center',
+        position: ['relative', 'relative', null],
       }}
       columns={[2, 2, 3]}
     >
