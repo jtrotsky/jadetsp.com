@@ -2,63 +2,92 @@
 import { jsx, Grid, Styled } from 'theme-ui';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay } from '@fortawesome/free-solid-svg-icons';
-// faMicrophoneAlt, faBookOpen
+import { faPlay, faMicrophoneAlt, faBookOpen } from '@fortawesome/free-solid-svg-icons';
+import firstMediaImage from '../images/img-media-01.jpg';
+import secondMediaImage from '../images/img-media-02.jpg';
+import thirdMediaImage from '../images/img-media-03.jpg';
 
-const Media = ({
-  name,
-  thumbnail,
-  link,
-  // icon,
-  description,
-}) => (
-
-  <Styled.a
-    href={link}
-    role="link"
-    tabIndex={0}
-  >
-    <hr />
-    <Grid
-      columns={[2, '1fr 2fr']}
-      gap={1}
+function Media({
+  name, link, icon, description, textColor,
+}) {
+  let iconString = icon;
+  let thumbnail = Image;
+  switch (String(iconString)) {
+    case 'faPlay':
+      iconString = faPlay;
+      thumbnail = firstMediaImage;
+      break;
+    case 'faMicrophoneAlt':
+      iconString = faMicrophoneAlt;
+      thumbnail = secondMediaImage;
+      break;
+    case 'faBookOpen':
+      iconString = faBookOpen;
+      thumbnail = thirdMediaImage;
+      break;
+    default:
+      break;
+  }
+  return (
+    <div
+      sx={{
+        maxWidth: '500px',
+      }}
     >
-      <img
-        src={`./src/images/${thumbnail}.jpg`}
-        title={name}
-        alt=""
+      <Styled.a
+        href={link}
+        role="link"
+        tabIndex={0}
+        target="_blank"
+        rel="noopener noreferrer"
         sx={{
-          // maxWidth: '60px',
-          // maxHeight: '40px',
-        }}
-      />
-      <div
-        sx={{
-          variant: 'text.hardCaption',
-          color: 'text',
+          color: textColor,
         }}
       >
-        <FontAwesomeIcon icon={faPlay} />
-        &nbsp;
-        {description}
-      </div>
-    </Grid>
-    <hr />
-  </Styled.a>
-);
+        <hr />
+        <Grid
+          columns={[2, '1fr 2fr']}
+          gap={-1}
+        >
+          <img
+            src={thumbnail}
+            title={name}
+            alt={description}
+            sx={{
+              alignSelf: 'center',
+              borderRadius: '8px',
+            }}
+          />
+          <div
+            sx={{
+              variant: 'text.hardCaption',
+              paddingLeft: '16px',
+            }}
+          >
+            <FontAwesomeIcon icon={iconString} />
+            &nbsp;
+            {description}
+          </div>
+        </Grid>
+        <hr />
+      </Styled.a>
+    </div>
+  );
+}
 
 Media.defaultProps = {
   name: 'placeholder',
-  // icon: 'faPlay',
+  icon: 'faPlay',
   description: 'Watch my TEDx talk.',
+  textColor: 'text',
 };
 
 Media.propTypes = {
   name: PropTypes.string,
-  thumbnail: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  // icon: PropTypes.string,
+  icon: PropTypes.string,
   description: PropTypes.string,
+  textColor: PropTypes.string,
 };
 
 export default Media;

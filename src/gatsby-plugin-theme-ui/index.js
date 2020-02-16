@@ -145,6 +145,7 @@ export default {
     a: {
       color: 'text',
       cursor: 'pointer',
+      outline: 'none',
       textDecoration: 'none',
       '&:hover': {
         textDecoration: 'underline',

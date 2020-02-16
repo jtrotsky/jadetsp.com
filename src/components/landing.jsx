@@ -109,7 +109,7 @@ const Landing = () => {
               display: 'flex',
               justifyContent: ['center', 'center', 'left'],
               alignItems: 'center',
-              my: [2, 2, 3],
+              paddingTop: 0,
             }}
           >
             <Block
@@ -126,7 +126,6 @@ const Landing = () => {
                 {
                   data.firstMedia.edges.map((post) => {
                     const {
-                      thumbnail,
                       link,
                       icon,
                       description,
@@ -134,7 +133,6 @@ const Landing = () => {
 
                     return (
                       <Media
-                        thumbnail={thumbnail}
                         link={link}
                         icon={icon}
                         description={description}
@@ -148,11 +146,11 @@ const Landing = () => {
         </Grid>
 
         <Grid
-          sx={{
-            my: [0, 0, 3],
-          }}
           columns={[1, 1, 2]}
           gap={0}
+          sx={{
+            paddingTop: [2, 2, null],
+          }}
         >
 
           <div
@@ -160,7 +158,7 @@ const Landing = () => {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              my: [2, 2, 3],
+              my: [1, 1, null],
               gridRow: [0, 0, 1],
             }}
           >
@@ -178,7 +176,6 @@ const Landing = () => {
                 {
                   data.secondMedia.edges.map((post) => {
                     const {
-                      thumbnail,
                       link,
                       icon,
                       description,
@@ -186,7 +183,6 @@ const Landing = () => {
 
                     return (
                       <Media
-                        thumbnail={thumbnail}
                         link={link}
                         icon={icon}
                         description={description}
@@ -219,9 +215,31 @@ const Landing = () => {
         </Grid>
       </Container>
 
-      <Background color="tan">
+      <Background color="tan" overlay="img-vend-team">
         <Container>
-          <Banner />
+          <Banner
+            quote="As a design leader, my goal is to create a space where people feel inspired, invested,
+          and protected to do their best work."
+          >
+            {
+              data.thirdMedia.edges.map((post) => {
+                const {
+                  link,
+                  icon,
+                  description,
+                } = post.node;
+
+                return (
+                  <Media
+                    link={link}
+                    icon={icon}
+                    description={description}
+                    textColor="white"
+                  />
+                );
+              })
+            }
+          </Banner>
         </Container>
       </Background>
 
@@ -298,6 +316,11 @@ const Landing = () => {
       <Background color="night">
         <Container>
           <Contact />
+        </Container>
+      </Background>
+
+      <Background color="night">
+        <Container>
           <Footer />
         </Container>
       </Background>
