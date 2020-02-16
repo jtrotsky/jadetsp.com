@@ -28,19 +28,6 @@ const Contact = () => {
         mx: 1,
       }}
     >
-
-      <img
-        src={BigSplat}
-        title="Big Splat"
-        alt="Big paint splat at the bottom of Jade's Profile."
-        sx={{
-          position: 'absolute',
-          display: ['none', 'none', 'block'],
-          marginLeft: '30%',
-          marginTop: '55%',
-        }}
-      />
-
       <div
         id="contact"
         sx={{
@@ -189,31 +176,43 @@ const Contact = () => {
           alignItems: 'center',
           gridRow: [1, 1, null],
           overflow: 'hidden',
+          my: 1,
+          maxHeight: '800px',
         }}
       >
-        <img
-          src={SmallSplat}
-          title="Small Split"
-          alt="Small paint splat at the top right corner of Jade's Profile."
-          sx={{
-            position: 'absolute',
-            alignSelf: 'flex-start',
-            overflow: 'hidden',
-            display: ['none', 'none', 'block'],
-            mx: '16%',
-          }}
-        />
-        <img
-          src={JadeProfile}
-          title="Jade Profile"
-          alt="Jade smiling at the camera in front of a pink floral arch."
-          sx={{
-            maxWidth: '1200px',
-            maxHeight: '1000px',
-            marginLeft: '-40%',
-            my: 0,
-          }}
-        />
+        <div>
+          <img
+            src={SmallSplat}
+            title="Small Split"
+            alt="Small paint splat at the top right corner of Jade's Profile."
+            sx={{
+              // alignSelf: 'flex-start',
+              // overflow: 'hidden',
+              // display: ['none', 'none', 'block'],
+              // mx: '16%',
+            }}
+          />
+          <img
+            src={JadeProfile}
+            title="Jade Profile"
+            alt="Jade smiling at the camera in front of a pink floral arch."
+            sx={{
+              maxWidth: '1200px',
+              height: '1200px',
+              marginLeft: ['-30%', '-30%', '-60%'],
+              marginTop: '100%',
+            }}
+          />
+          <img
+            src={BigSplat}
+            title="Big Splat"
+            alt="Big paint splat at the bottom of Jade's Profile."
+            sx={{
+              display: ['none', 'none', 'block'],
+              bottom: 0,
+            }}
+          />
+        </div>
       </div>
     </Grid>
   );

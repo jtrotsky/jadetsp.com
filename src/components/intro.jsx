@@ -23,8 +23,8 @@ const Intro = () => {
       <Grid
         id="intro"
         sx={{
-          my: [null, null, 3],
-          marginTop: ['-60%', '-60%', null],
+          marginTop: ['-60%', '-60%', 4],
+          marginBottom: 2,
         }}
         columns={1}
       >
@@ -43,8 +43,8 @@ const Intro = () => {
               alt="The background is an imperfect yellow circle in screen centre"
               sx={{
                 maxWidth: [null, null, '100%'],
-                width: ['900px', '900px', null],
-                height: ['900px', '900px', null],
+                width: ['900px', '900px', '100%'],
+                height: ['750px', '750px', '100%'],
               }}
             />
           </div>
@@ -52,7 +52,7 @@ const Intro = () => {
           <div
             sx={{
               maxWidth: '840px',
-              paddingTop: ['25%', '25%', null],
+              paddingTop: ['40%', '40%', '0px'],
               variant: ['text.pugBoi', 'text.pugBoi', 'text.chooChooBoi'],
               position: 'absolute',
               mx: ['8px', '8px', 1],

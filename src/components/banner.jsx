@@ -13,7 +13,7 @@ const Banner = ({ quote, children }) => (
   >
     <div
       sx={{
-        my: [2, 2, 3],
+        my: [2, 2, 2],
         mx: 1,
       }}
     >
@@ -23,13 +23,13 @@ const Banner = ({ quote, children }) => (
           color: 'background',
           maxWidth: '680px',
           textAlign: 'center',
+          marginBottom: '0px',
         }}
       >
         {quote}
       </h1>
       <div
         sx={{
-          my: 1,
           display: 'flex',
           justifyContent: 'center',
         }}
