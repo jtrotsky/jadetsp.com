@@ -3,7 +3,7 @@ import { jsx, Grid, Container } from 'theme-ui';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Header from './header';
+// import Header from './header';
 import Intro from './intro';
 import Quote from './quote';
 import Block from './block';
@@ -12,7 +12,7 @@ import Banner from './banner';
 import Media from './media';
 import Work from './work';
 import Contact from './contact';
-import Footer from './footer';
+// import Footer from './footer';
 import Scale from '../images/scale.svg';
 import Dots from '../images/dots.svg';
 
@@ -77,13 +77,11 @@ const Landing = () => {
   return (
     <>
       <Container>
-        <Header />
-
         <Intro />
 
         <Grid
           sx={{
-            paddingTop: [2, 2, 4],
+            paddingTop: [null, null, 4],
           }}
           columns={[1, 1, 2]}
           gap={0}
@@ -319,11 +317,11 @@ const Landing = () => {
         </Container>
       </Background>
 
-      <Background color="night">
+      {/* <Background color="night">
         <Container>
           <Footer />
         </Container>
-      </Background>
+      </Background> */}
     </>
   );
 };

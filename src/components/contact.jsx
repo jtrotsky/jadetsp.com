@@ -29,6 +29,18 @@ const Contact = () => {
       }}
     >
 
+      <img
+        src={BigSplat}
+        title="Big Splat"
+        alt="Big paint splat at the bottom of Jade's Profile."
+        sx={{
+          position: 'absolute',
+          display: ['none', 'none', 'block'],
+          marginLeft: '30%',
+          marginTop: '55%',
+        }}
+      />
+
       <div
         id="contact"
         sx={{
@@ -187,8 +199,8 @@ const Contact = () => {
             position: 'absolute',
             alignSelf: 'flex-start',
             overflow: 'hidden',
-            marginTop: 1,
-            mx: '18%',
+            display: ['none', 'none', 'block'],
+            mx: '16%',
           }}
         />
         <img
@@ -197,20 +209,9 @@ const Contact = () => {
           alt="Jade smiling at the camera in front of a pink floral arch."
           sx={{
             maxWidth: '1200px',
-            maxHeight: '1400px',
-            mx: '-85%',
-            my: 1,
-          }}
-        />
-        <img
-          src={BigSplat}
-          title="Big Splat"
-          alt="Big paint splat at the bottom of Jade's Profile."
-          sx={{
-            position: 'absolute',
-            alignSelf: 'flex-end',
-            mx: '-15%',
-            my: '-2.7%',
+            maxHeight: '1000px',
+            marginLeft: '-40%',
+            my: 0,
           }}
         />
       </div>
