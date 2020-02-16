@@ -11,7 +11,7 @@ function Media({
   name, link, icon, description, textColor,
 }) {
   let iconString = icon;
-  let thumbnail = Image;
+  let thumbnail = String;
   switch (String(iconString)) {
     case 'faPlay':
       iconString = faPlay;
