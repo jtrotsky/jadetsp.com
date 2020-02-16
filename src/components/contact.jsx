@@ -186,10 +186,10 @@ const Contact = () => {
             title="Small Split"
             alt="Small paint splat at the top right corner of Jade's Profile."
             sx={{
-              // alignSelf: 'flex-start',
-              // overflow: 'hidden',
-              // display: ['none', 'none', 'block'],
-              // mx: '16%',
+              alignSelf: 'flex-start',
+              overflow: 'hidden',
+              display: ['none', 'none', 'block'],
+              mx: '16%',
             }}
           />
           <img
@@ -199,8 +199,8 @@ const Contact = () => {
             sx={{
               maxWidth: '1200px',
               height: '1200px',
-              marginLeft: ['-30%', '-30%', '-60%'],
-              marginTop: '100%',
+              marginLeft: [null, null, '-30%'],
+              marginTop: '30%',
             }}
           />
           <img
@@ -209,7 +209,7 @@ const Contact = () => {
             alt="Big paint splat at the bottom of Jade's Profile."
             sx={{
               display: ['none', 'none', 'block'],
-              bottom: 0,
+              // bottom: 0,
             }}
           />
         </div>
