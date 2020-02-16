@@ -1,5 +1,18 @@
 - firstMedia:
-  thumbnail: 'test'
-  link: 'test'
-  icon: 'test'
-  description: 'test'
+  name: 'TEDx'
+  thumbnail: 'img-media-01'
+  link: 'https://www.youtube.com/watch?v=Xt5OuEnJbM4'
+  icon: 'faPlay'
+  description: 'Watch my TEDx talk on the story of Mobile Eye, an app to help people who are blind better navigate the world.'
+- secondMedia:
+  name: 'Article'
+  thumbnail: 'img-media-02'
+  link: 'https://medium.com/we-build-vend/fostering-a-culture-of-vulnerability-and-openness-2b323f5453af'
+  icon: 'faBookOpen'
+  description: 'Read my thoughts on how to foster a culture of vulnerability and openness in your design organisation.'
+- thirdMedia:
+  name: 'Interview'
+  thumbnail: 'img-media-03'
+  link: 'https://storyo.co/stories/jade-tan'
+  icon: 'faMicrophoneAlt'
+  description: 'Check out an interview with Elina Ashimbayeva on my journey as a product designer.'

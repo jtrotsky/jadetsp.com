@@ -1,41 +1,53 @@
 /** @jsx jsx */
 import { jsx, Grid } from 'theme-ui';
+import PropTypes from 'prop-types';
 
-const Banner = () => (
-  <div
+const Banner = ({ quote, children }) => (
+  <Grid
     sx={{
       display: 'flex',
-      alignItems: 'center',
       justifyContent: 'center',
-      width: '100%',
+      alignItems: 'center',
     }}
+    columns={1}
   >
-    <Grid
+    <div
       sx={{
-        display: 'flex',
-        textAlign: '-webkit-center',
+        my: [2, 2, 3],
+        mx: 1,
       }}
-      columns={[1]}
     >
-      <div
+      <h1
         sx={{
-          my: [2, 2, 3],
-          mx: 1,
+          variant: ['text.smolBoi', 'text.smolBoi', 'text.chooChooBoi'],
+          color: 'background',
+          maxWidth: '680px',
+          textAlign: 'center',
         }}
       >
-        <h1
-          sx={{
-            variant: ['text.smolBoi', 'text.smolBoi', 'text.chooChooBoi'],
-            color: 'background',
-            maxWidth: 600,
-          }}
-        >
-          As a design leader, my goal is to create a space where people feel inspired, invested,
-          and protected to do their best work.
-        </h1>
+        {quote}
+      </h1>
+      <div
+        sx={{
+          my: 1,
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+      >
+        {children}
       </div>
-    </Grid>
-  </div>
+    </div>
+  </Grid>
 );
+
+Banner.defaultProps = {
+  children: '',
+};
+
+Banner.propTypes = {
+  quote: PropTypes.string.isRequired,
+  children: PropTypes.node,
+};
+
 
 export default Banner;

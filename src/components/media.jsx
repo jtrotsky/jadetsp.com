@@ -1,61 +1,93 @@
-// /** @jsx jsx */
-// import { jsx } from 'theme-ui';
-// import { useStaticQuery, graphql } from 'gatsby';
-// import PropTypes from 'prop-types';
+/** @jsx jsx */
+import { jsx, Grid, Styled } from 'theme-ui';
+import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay, faMicrophoneAlt, faBookOpen } from '@fortawesome/free-solid-svg-icons';
+import firstMediaImage from '../images/img-media-01.jpg';
+import secondMediaImage from '../images/img-media-02.jpg';
+import thirdMediaImage from '../images/img-media-03.jpg';
 
-// const Media = ({
-//   thumbnail,
-//   link,
-//   icon,
-//   description,
-// }) => {
-//   const data = useStaticQuery(
-//     graphql`
-//       query Media {
-//         allMediaYaml {
-//           nodes {
-//             firstMedia {
-//               thumbnail
-//               link
-//               icon
-//               description
-//             }
-//           }
-//         }
-//       }`,
-//   );
+function Media({
+  name, link, icon, description, textColor,
+}) {
+  let iconString = icon;
+  let thumbnail = Image;
+  switch (String(iconString)) {
+    case 'faPlay':
+      iconString = faPlay;
+      thumbnail = firstMediaImage;
+      break;
+    case 'faMicrophoneAlt':
+      iconString = faMicrophoneAlt;
+      thumbnail = secondMediaImage;
+      break;
+    case 'faBookOpen':
+      iconString = faBookOpen;
+      thumbnail = thirdMediaImage;
+      break;
+    default:
+      break;
+  }
+  return (
+    <div
+      sx={{
+        maxWidth: '500px',
+      }}
+    >
+      <Styled.a
+        href={link}
+        role="link"
+        tabIndex={0}
+        target="_blank"
+        rel="noopener noreferrer"
+        sx={{
+          color: textColor,
+        }}
+      >
+        <hr />
+        <Grid
+          columns={[2, '1fr 2fr']}
+          gap={-1}
+        >
+          <img
+            src={thumbnail}
+            title={name}
+            alt={description}
+            sx={{
+              alignSelf: 'center',
+              borderRadius: '8px',
+            }}
+          />
+          <div
+            sx={{
+              variant: 'text.hardCaption',
+              paddingLeft: '16px',
+            }}
+          >
+            <FontAwesomeIcon icon={iconString} />
+            &nbsp;
+            {description}
+          </div>
+        </Grid>
+        <hr />
+      </Styled.a>
+    </div>
+  );
+}
 
-//   const thumbnailString = thumbnail || data.media.thumbnail;
-//   const linkString = link || data.media.link;
-//   const iconString = icon || data.media.icon;
-//   const descriptionString = description || data.media.description;
+Media.defaultProps = {
+  name: 'placeholder',
+  icon: 'faPlay',
+  description: 'Watch my TEDx talk.',
+  textColor: 'text',
+};
 
-//   return (
-//     <div>
-//       <div
-//         sx={{
-//           variant: 'text.softCaption',
-//         }}
-//       >
-//         {thumbnailString}
-//         {linkString}
-//         {iconString}
-//         {descriptionString}
-//       </div>
-//     </div>
-//   );
-// };
+Media.propTypes = {
+  name: PropTypes.string,
+  link: PropTypes.string.isRequired,
+  icon: PropTypes.string,
+  description: PropTypes.string,
+  textColor: PropTypes.string,
+};
 
-// Media.defaultProps = {
-//   icon: 'fa-play',
-//   description: 'Watch my TEDx talk.',
-// };
-
-// Media.propTypes = {
-//   thumbnail: PropTypes.string.isRequired,
-//   link: PropTypes.string.isRequired,
-//   icon: PropTypes.string,
-//   description: PropTypes.string,
-// };
-
-// export default Media;
+export default Media;

@@ -4,6 +4,8 @@ import { jsx, Grid, Styled } from 'theme-ui';
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import JadeProfile from '../images/img-jade-profile.jpg';
+import BigSplat from '../images/splat-big.svg';
+import SmallSplat from '../images/splat-small.svg';
 
 const Contact = () => {
   const data = useStaticQuery(
@@ -20,11 +22,11 @@ const Contact = () => {
 
   return (
     <Grid
+      columns={[1, 1, 2]}
+      gap={1}
       sx={{
         mx: 1,
       }}
-      columns={[1, 1, 2]}
-      gap={2}
     >
 
       <div
@@ -174,15 +176,41 @@ const Contact = () => {
           justifyContent: ['center', 'center', 'left'],
           alignItems: 'center',
           gridRow: [1, 1, null],
-          my: 1,
+          overflow: 'hidden',
         }}
       >
+        <img
+          src={SmallSplat}
+          title="Small Split"
+          alt="Small paint splat at the top right corner of Jade's Profile."
+          sx={{
+            position: 'absolute',
+            alignSelf: 'flex-start',
+            overflow: 'hidden',
+            marginTop: 1,
+            mx: '18%',
+          }}
+        />
         <img
           src={JadeProfile}
           title="Jade Profile"
           alt="Jade smiling at the camera in front of a pink floral arch."
           sx={{
-            maxWidth: '100%',
+            maxWidth: '1200px',
+            maxHeight: '1400px',
+            mx: '-85%',
+            my: 1,
+          }}
+        />
+        <img
+          src={BigSplat}
+          title="Big Splat"
+          alt="Big paint splat at the bottom of Jade's Profile."
+          sx={{
+            position: 'absolute',
+            alignSelf: 'flex-end',
+            mx: '-15%',
+            my: '-2.7%',
           }}
         />
       </div>

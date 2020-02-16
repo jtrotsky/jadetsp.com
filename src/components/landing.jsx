@@ -9,7 +9,7 @@ import Quote from './quote';
 import Block from './block';
 import Background from './common/background';
 import Banner from './banner';
-// import Media from './media';
+import Media from './media';
 import Work from './work';
 import Contact from './contact';
 import Footer from './footer';
@@ -38,6 +38,36 @@ const Landing = () => {
             quote
             role
             formerly
+          }
+        }
+      }
+      firstMedia: allMediaYaml(filter: {name: {eq: "TEDx"}}) {
+        edges {
+          node {
+            thumbnail
+            link
+            icon
+            description
+          }
+        }
+      }
+      secondMedia: allMediaYaml(filter: {name: {eq: "Article"}}) {
+        edges {
+          node {
+            thumbnail
+            link
+            icon
+            description
+          }
+        }
+      }
+      thirdMedia: allMediaYaml(filter: {name: {eq: "Interview"}}) {
+        edges {
+          node {
+            thumbnail
+            link
+            icon
+            description
           }
         }
       }
@@ -79,7 +109,7 @@ const Landing = () => {
               display: 'flex',
               justifyContent: ['center', 'center', 'left'],
               alignItems: 'center',
-              my: [2, 2, 3],
+              paddingTop: 0,
             }}
           >
             <Block
@@ -87,16 +117,40 @@ const Landing = () => {
                 expanding a seasoned product."
               paragraphTwo="I develop scalable design systems, move fast on user feedback, and
                 focus on delivering real impact on people's lives."
-            />
+            >
+              <div
+                sx={{
+                  my: 1,
+                }}
+              >
+                {
+                  data.firstMedia.edges.map((post) => {
+                    const {
+                      link,
+                      icon,
+                      description,
+                    } = post.node;
+
+                    return (
+                      <Media
+                        link={link}
+                        icon={icon}
+                        description={description}
+                      />
+                    );
+                  })
+                }
+              </div>
+            </Block>
           </div>
         </Grid>
 
         <Grid
-          sx={{
-            my: [0, 0, 3],
-          }}
           columns={[1, 1, 2]}
           gap={0}
+          sx={{
+            paddingTop: [2, 2, null],
+          }}
         >
 
           <div
@@ -104,7 +158,7 @@ const Landing = () => {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              my: [2, 2, 3],
+              my: [1, 1, null],
               gridRow: [0, 0, 1],
             }}
           >
@@ -113,7 +167,31 @@ const Landing = () => {
                 unique creative process in each designer."
               paragraphTwo="I tune in for cues on when to push them to solve a problem for
                 themselves, or when to collaborate closely to keep the process moving."
-            />
+            >
+              <div
+                sx={{
+                  my: 1,
+                }}
+              >
+                {
+                  data.secondMedia.edges.map((post) => {
+                    const {
+                      link,
+                      icon,
+                      description,
+                    } = post.node;
+
+                    return (
+                      <Media
+                        link={link}
+                        icon={icon}
+                        description={description}
+                      />
+                    );
+                  })
+                }
+              </div>
+            </Block>
           </div>
 
           <div
@@ -137,9 +215,31 @@ const Landing = () => {
         </Grid>
       </Container>
 
-      <Background color="tan">
+      <Background color="tan" overlay="img-vend-team">
         <Container>
-          <Banner />
+          <Banner
+            quote="As a design leader, my goal is to create a space where people feel inspired, invested,
+          and protected to do their best work."
+          >
+            {
+              data.thirdMedia.edges.map((post) => {
+                const {
+                  link,
+                  icon,
+                  description,
+                } = post.node;
+
+                return (
+                  <Media
+                    link={link}
+                    icon={icon}
+                    description={description}
+                    textColor="white"
+                  />
+                );
+              })
+            }
+          </Banner>
         </Container>
       </Background>
 
@@ -153,7 +253,7 @@ const Landing = () => {
               sx={{
                 display: 'flex',
                 justifyContent: 'center',
-                marginTop: [4, 4, 3],
+                marginTop: [5, 5, 4],
               }}
             >
               {
@@ -181,7 +281,7 @@ const Landing = () => {
               sx={{
                 display: 'flex',
                 justifyContent: ['center', 'center', 'left'],
-                paddingTop: [3, 3, 6],
+                paddingTop: [3, 3, 7],
                 marginBottom: [3, 3, 2],
               }}
             >
@@ -216,6 +316,11 @@ const Landing = () => {
       <Background color="night">
         <Container>
           <Contact />
+        </Container>
+      </Background>
+
+      <Background color="night">
+        <Container>
           <Footer />
         </Container>
       </Background>

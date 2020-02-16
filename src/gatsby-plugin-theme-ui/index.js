@@ -143,7 +143,9 @@ export default {
       borderBottom: '1px solid white',
     },
     a: {
+      color: 'text',
       cursor: 'pointer',
+      outline: 'none',
       textDecoration: 'none',
       '&:hover': {
         textDecoration: 'underline',
