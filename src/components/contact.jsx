@@ -3,6 +3,7 @@ import { jsx, Grid, Styled } from 'theme-ui';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 const Contact = () => {
   const data = useStaticQuery(
@@ -19,7 +20,7 @@ const Contact = () => {
           maxWidth: 1200,
           maxHeight: 1200,
           quality: 75,
-          cropFocus: CENTER
+          cropFocus: ATTENTION
         ) {
           ...GatsbyImageSharpFluid
         }
@@ -202,13 +203,13 @@ const Contact = () => {
           }}
         /> */}
         <div>
-          <img
-            src={data.jadeProfileImage.fluid.GatsbyImageSharpFluid}
+          <Img
+            fluid={data.jadeProfileImage.fluid}
             title="Jade Profile"
             alt="Jade smiling at the camera in front of a pink floral arch."
             sx={{
-              marginLeft: ['-500px', '-500px', '-400px'],
-              marginTop: '20%',
+              // marginLeft: ['-500px', '-500px', '-400px'],
+              // marginTop: '20%',
             }}
           />
         </div>

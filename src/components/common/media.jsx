@@ -12,18 +12,18 @@ function Media({
     graphql`
     query {
       image01: imageSharp(fluid: {originalName: {eq:"img-media-01.jpg"}}) {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 50) {
+          src
         }
       }
       image02: imageSharp(fluid: {originalName: {eq:"img-media-02.jpg"}}) {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 50) {
+          src
         }
       }
       image03: imageSharp(fluid: {originalName: {eq:"img-media-03.jpg"}}) {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 50) {
+          src
         }
       }
     }`,
@@ -33,15 +33,15 @@ function Media({
   switch (name) {
     case 'TEDx':
       iconString = faPlay;
-      thumbnailSrc = data.image01.fluid.GatsbyImageSharpFluid;
+      thumbnailSrc = data.image01.fluid.src;
       break;
     case 'Article':
       iconString = faMicrophoneAlt;
-      thumbnailSrc = data.image02.fluid.GatsbyImageSharpFluid;
+      thumbnailSrc = data.image02.fluid.src;
       break;
     case 'Interview':
       iconString = faBookOpen;
-      thumbnailSrc = data.image03.fluid.GatsbyImageSharpFluid;
+      thumbnailSrc = data.image03.fluid.src;
       break;
     default:
       break;
