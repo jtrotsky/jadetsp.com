@@ -12,17 +12,29 @@ function Media({
     graphql`
     query {
       image01: imageSharp(fluid: {originalName: {eq:"img-media-01.jpg"}}) {
-        fluid(quality: 50) {
+        fluid(
+          maxWidth: 150,
+          maxHeight: 80,
+          quality: 50
+        ) {
           src
         }
       }
       image02: imageSharp(fluid: {originalName: {eq:"img-media-02.jpg"}}) {
-        fluid(quality: 50) {
+        fluid(
+          maxWidth: 150,
+          maxHeight: 80,
+          quality: 50
+        ) {
           src
         }
       }
       image03: imageSharp(fluid: {originalName: {eq:"img-media-03.jpg"}}) {
-        fluid(quality: 50) {
+        fluid(
+          maxWidth: 150,
+          maxHeight: 80,
+          quality: 50
+        ) {
           src
         }
       }

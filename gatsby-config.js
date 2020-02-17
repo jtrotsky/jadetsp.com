@@ -17,7 +17,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-smoothscroll',
     'gatsby-plugin-theme-ui',
-    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -33,6 +32,7 @@ module.exports = {
         path: './src/data',
       },
     },
+    'gatsby-background-image',
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-sharp',

@@ -151,5 +151,11 @@ export default {
         textDecoration: 'underline',
       },
     },
+    BackgroundImage: {
+      width: '100%',
+      backgroundSize: 'cover',
+      backgroundPosition: 'inherit',
+      backgroundRepeat: '',
+    },
   },
 };

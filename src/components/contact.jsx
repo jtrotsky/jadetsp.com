@@ -17,12 +17,12 @@ const Contact = () => {
       }
       jadeProfileImage: imageSharp(fluid: {originalName: {eq:"img-jade-profile.jpg"}}) {
         fluid(
-          maxWidth: 1200,
+          maxWidth: 800,
           maxHeight: 1200,
           quality: 75,
           cropFocus: ATTENTION
         ) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
       bigSplatImage: file(relativePath: {eq:"splat-big.svg"}) {
@@ -46,7 +46,7 @@ const Contact = () => {
         id="contact"
         sx={{
           maxWidth: '480px',
-          marginTop: [null, null, 3],
+          marginTop: [null, null, 1],
           gridRow: [0, 0, 1],
         }}
       >
@@ -187,8 +187,8 @@ const Contact = () => {
         sx={{
           gridRow: [1, 1, null],
           overflow: 'hidden',
-          maxHeight: '800px',
-          my: 1,
+          // maxHeight: '800px',
+          my: 0,
         }}
       >
         {/* <img
@@ -208,8 +208,11 @@ const Contact = () => {
             title="Jade Profile"
             alt="Jade smiling at the camera in front of a pink floral arch."
             sx={{
-              // marginLeft: ['-500px', '-500px', '-400px'],
-              // marginTop: '20%',
+              objectPosition: 'top',
+              objectFit: 'cover',
+              height: '750px',
+              width: '800px',
+              marginLeft: '-40%',
             }}
           />
         </div>

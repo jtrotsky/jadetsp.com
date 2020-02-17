@@ -6,7 +6,8 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Intro from './intro';
 import Quote from './common/quote';
 import Block from './common/block';
-import Background from './common/background';
+import Background from './common/Background';
+import BackgroundImg from './common/BackgroundImg';
 import Banner from './common/banner';
 import Media from './common/media';
 import Work from './work';
@@ -66,7 +67,7 @@ const Landing = () => {
             opacity: 85
           }
         ) {
-          src
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
       bigSplatImage: file(relativePath: {eq:"splat-big.svg"}) {
@@ -182,7 +183,7 @@ const Landing = () => {
         </Grid>
       </Container>
 
-      <Background image={data.vendTeamImage.fluid.src}>
+      <BackgroundImg imageData={data.vendTeamImage.fluid}>
         <Container>
           <Banner
             quote="As a design leader, my goal is to create a space where people feel inspired, invested,
@@ -197,7 +198,7 @@ const Landing = () => {
             />
           </Banner>
         </Container>
-      </Background>
+      </BackgroundImg>
 
       <Background color="plum">
         <Container>
