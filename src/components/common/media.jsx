@@ -13,17 +13,17 @@ function Media({
     query {
       image01: imageSharp(fluid: {originalName: {eq:"img-media-01.jpg"}}) {
         fluid(quality: 100) {
-          src
+          ...GatsbyImageSharpFluid
         }
       }
       image02: imageSharp(fluid: {originalName: {eq:"img-media-02.jpg"}}) {
         fluid(quality: 100) {
-          src
+          ...GatsbyImageSharpFluid
         }
       }
       image03: imageSharp(fluid: {originalName: {eq:"img-media-03.jpg"}}) {
         fluid(quality: 100) {
-          src
+          ...GatsbyImageSharpFluid
         }
       }
     }`,
@@ -33,15 +33,15 @@ function Media({
   switch (name) {
     case 'TEDx':
       iconString = faPlay;
-      thumbnailSrc = data.image01.fluid.src;
+      thumbnailSrc = data.image01.fluid.GatsbyImageSharpFluid;
       break;
     case 'Article':
       iconString = faMicrophoneAlt;
-      thumbnailSrc = data.image02.fluid.src;
+      thumbnailSrc = data.image02.fluid.GatsbyImageSharpFluid;
       break;
     case 'Interview':
       iconString = faBookOpen;
-      thumbnailSrc = data.image03.fluid.src;
+      thumbnailSrc = data.image03.fluid.GatsbyImageSharpFluid;
       break;
     default:
       break;

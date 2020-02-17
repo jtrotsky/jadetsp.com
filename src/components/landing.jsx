@@ -66,7 +66,7 @@ const Landing = () => {
             opacity: 85
           }
         ) {
-          src
+          ...GatsbyImageSharpFluid
         }
       }
       bigSplatImage: file(relativePath: {eq:"splat-big.svg"}) {
@@ -182,7 +182,7 @@ const Landing = () => {
         </Grid>
       </Container>
 
-      <Background image={data.vendTeamImage.fluid.src}>
+      <Background image={data.vendTeamImage.fluid.GatsbyImageSharpFluid}>
         <Container>
           <Banner
             quote="As a design leader, my goal is to create a space where people feel inspired, invested,

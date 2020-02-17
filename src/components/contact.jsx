@@ -18,10 +18,10 @@ const Contact = () => {
         fluid(
           maxWidth: 1200,
           maxHeight: 1200,
-          quality: 100,
+          quality: 75,
           cropFocus: CENTER
         ) {
-          src
+          ...GatsbyImageSharpFluid
         }
       }
       bigSplatImage: file(relativePath: {eq:"splat-big.svg"}) {
@@ -203,7 +203,7 @@ const Contact = () => {
         /> */}
         <div>
           <img
-            src={data.jadeProfileImage.fluid.src}
+            src={data.jadeProfileImage.fluid.GatsbyImageSharpFluid}
             title="Jade Profile"
             alt="Jade smiling at the camera in front of a pink floral arch."
             sx={{
