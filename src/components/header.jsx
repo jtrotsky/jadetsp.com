@@ -22,6 +22,7 @@ const Header = () => {
   return (
     <Grid
       sx={{
+        zIndex: 1,
         marginTop: 2,
         justifyItems: 'center',
         position: ['relative', 'relative', null],

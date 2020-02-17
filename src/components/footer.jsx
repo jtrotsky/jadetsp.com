@@ -3,10 +3,9 @@ import { jsx, Grid } from 'theme-ui';
 
 const Footer = () => (
   <Grid
-    sx={{
-      paddingTop: 1,
-    }}
-    // columns={[1, 1, 2]}
+    // sx={{
+    //   paddingTop: 1,
+    // }}
     columns={1}
     gap={0}
   >

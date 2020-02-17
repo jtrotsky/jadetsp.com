@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { jsx, Grid } from 'theme-ui';
 import { useStaticQuery, graphql } from 'gatsby';
-import Circle from '../images/circle.svg';
-import Header from './header';
+// import Circle from '../images/circle.svg';
 
 
 const Intro = () => {
@@ -14,12 +13,14 @@ const Intro = () => {
             title
           }
         }
+        circleImage: file(relativePath: {eq:"circle.svg"}) {
+          publicURL
+        }
       }`,
   );
 
   return (
     <div>
-      <Header />
       <Grid
         id="intro"
         sx={{
@@ -38,7 +39,7 @@ const Intro = () => {
         >
           <div>
             <img
-              src={Circle}
+              src={data.circleImage.publicURL}
               title="Circle Illustration"
               alt="The background is an imperfect yellow circle in screen centre"
               sx={{

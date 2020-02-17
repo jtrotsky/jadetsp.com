@@ -13,7 +13,7 @@ const Banner = ({ quote, children }) => (
   >
     <div
       sx={{
-        my: [2, 2, 2],
+        my: [1, 1, 1],
         mx: 1,
       }}
     >

@@ -1,29 +1,47 @@
 /** @jsx jsx */
 import { jsx, Grid, Styled } from 'theme-ui';
 import PropTypes from 'prop-types';
+import { useStaticQuery, graphql } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faMicrophoneAlt, faBookOpen } from '@fortawesome/free-solid-svg-icons';
-import firstMediaImage from '../images/img-media-01.jpg';
-import secondMediaImage from '../images/img-media-02.jpg';
-import thirdMediaImage from '../images/img-media-03.jpg';
 
 function Media({
   name, link, icon, description, textColor,
 }) {
+  const data = useStaticQuery(
+    graphql`
+    query {
+      image01: imageSharp(fluid: {originalName: {eq:"img-media-01.jpg"}}) {
+        fluid(quality: 100) {
+          src
+        }
+      }
+      image02: imageSharp(fluid: {originalName: {eq:"img-media-02.jpg"}}) {
+        fluid(quality: 100) {
+          src
+        }
+      }
+      image03: imageSharp(fluid: {originalName: {eq:"img-media-03.jpg"}}) {
+        fluid(quality: 100) {
+          src
+        }
+      }
+    }`,
+  );
   let iconString = icon;
-  let thumbnail = String;
-  switch (String(iconString)) {
-    case 'faPlay':
+  let thumbnailSrc = String;
+  switch (name) {
+    case 'TEDx':
       iconString = faPlay;
-      thumbnail = firstMediaImage;
+      thumbnailSrc = data.image01.fluid.src;
       break;
-    case 'faMicrophoneAlt':
+    case 'Article':
       iconString = faMicrophoneAlt;
-      thumbnail = secondMediaImage;
+      thumbnailSrc = data.image02.fluid.src;
       break;
-    case 'faBookOpen':
+    case 'Interview':
       iconString = faBookOpen;
-      thumbnail = thirdMediaImage;
+      thumbnailSrc = data.image03.fluid.src;
       break;
     default:
       break;
@@ -54,9 +72,9 @@ function Media({
           }}
         >
           <img
-            src={thumbnail}
-            title={name}
-            alt={description}
+            src={thumbnailSrc}
+            title={description}
+            alt={name}
             sx={{
               alignSelf: 'center',
               justifySelf: 'center',
