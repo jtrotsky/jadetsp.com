@@ -2,6 +2,7 @@
 import { jsx, Grid, Styled } from 'theme-ui';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faMicrophoneAlt, faBookOpen } from '@fortawesome/free-solid-svg-icons';
 
@@ -13,47 +14,47 @@ function Media({
     query {
       image01: imageSharp(fluid: {originalName: {eq:"img-media-01.jpg"}}) {
         fluid(
-          maxWidth: 150,
-          maxHeight: 80,
-          quality: 50
+          maxWidth: 184,
+          maxHeight: 93,
+          quality: 100
         ) {
-          src
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
       image02: imageSharp(fluid: {originalName: {eq:"img-media-02.jpg"}}) {
         fluid(
-          maxWidth: 150,
-          maxHeight: 80,
-          quality: 50
+          maxWidth: 184,
+          maxHeight: 93,
+          quality: 100
         ) {
-          src
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
       image03: imageSharp(fluid: {originalName: {eq:"img-media-03.jpg"}}) {
         fluid(
-          maxWidth: 150,
-          maxHeight: 80,
-          quality: 50
+          maxWidth: 184,
+          maxHeight: 93,
+          quality: 100
         ) {
-          src
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }`,
   );
   let iconString = icon;
-  let thumbnailSrc = String;
+  let thumbnailImage = Img;
   switch (name) {
     case 'TEDx':
       iconString = faPlay;
-      thumbnailSrc = data.image01.fluid.src;
+      thumbnailImage = data.image01.fluid;
       break;
     case 'Article':
       iconString = faMicrophoneAlt;
-      thumbnailSrc = data.image02.fluid.src;
+      thumbnailImage = data.image02.fluid;
       break;
     case 'Interview':
       iconString = faBookOpen;
-      thumbnailSrc = data.image03.fluid.src;
+      thumbnailImage = data.image03.fluid;
       break;
     default:
       break;
@@ -61,10 +62,11 @@ function Media({
   return (
     <div
       sx={{
-        maxWidth: '500px',
+        maxWidth: '400px',
         my: 1,
       }}
     >
+      <hr />
       <Styled.a
         href={link}
         role="link"
@@ -75,7 +77,6 @@ function Media({
           color: textColor,
         }}
       >
-        <hr />
         <Grid
           columns={[2, '1fr 2fr']}
           gap={-1}
@@ -83,17 +84,15 @@ function Media({
             my: '16px',
           }}
         >
-          <img
-            src={thumbnailSrc}
+          <Img
+            fluid={thumbnailImage}
             title={description}
             alt={name}
             sx={{
               alignSelf: 'center',
-              justifySelf: 'center',
               borderRadius: '8px',
-              height: ['80px', '80px', 'auto'],
-              maxWidth: ['100px', '100px', '100%'],
-              objectFit: 'cover',
+              height: ['70%', '70%', '100%'],
+              width: ['110px', '110px', '100%'],
             }}
           />
           <div
@@ -107,8 +106,8 @@ function Media({
             {description}
           </div>
         </Grid>
-        <hr />
       </Styled.a>
+      <hr />
     </div>
   );
 }

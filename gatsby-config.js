@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: `I lead product design teams to collaborate and thrive, 
@@ -21,7 +23,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/images',
+        path: path.join(__dirname, 'src', 'images'),
       },
     },
     'gatsby-transformer-yaml',
@@ -29,7 +31,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'data',
-        path: './src/data',
+        path: path.join(__dirname, 'src', 'data'),
       },
     },
     'gatsby-background-image',
@@ -46,7 +48,7 @@ module.exports = {
         name: "Jade Tan's Portfolio",
         start_url: '/',
         display: 'minimal-ui',
-        icon: './static/favicon/favicon-32x32.png',
+        icon: path.join(__dirname, 'static', 'favicon', 'favicon-32x32.png'),
       },
     },
     {
@@ -56,18 +58,11 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        fonts: [
-          {
-            family: 'Noto Serif SC',
-            variants: ['600'],
-          },
-          {
-            family: 'Nunito',
-            variants: ['400', '600', '700'],
-          },
-        ],
+        google: {
+          families: ['Noto Serif SC:600', 'Nunito:400,600,700'],
+        },
       },
     },
   ],

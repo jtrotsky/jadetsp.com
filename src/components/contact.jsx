@@ -70,7 +70,6 @@ const Contact = () => {
         </p>
 
         <Styled.table
-          id="contact"
           sx={{
             maxWidth: '480px',
             width: '100%',

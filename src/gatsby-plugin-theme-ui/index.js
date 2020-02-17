@@ -75,14 +75,14 @@ export default {
     },
     hardCaption: {
       fontFamily: 'Nunito',
-      fontSize: 16,
+      fontSize: 14,
       lineHeight: '26px',
       letterSpacing: 0,
-      fontWeight: 600,
+      fontWeight: 700,
     },
     softCaption: {
       fontFamily: 'Nunito',
-      fontSize: 16,
+      fontSize: 14,
       lineHeight: '22px',
       letterSpacing: 0,
       fontWeight: 400,
@@ -145,7 +145,6 @@ export default {
     a: {
       color: 'text',
       cursor: 'pointer',
-      outline: 'none',
       textDecoration: 'none',
       '&:hover': {
         textDecoration: 'underline',
@@ -156,6 +155,13 @@ export default {
       backgroundSize: 'cover',
       backgroundPosition: 'inherit',
       backgroundRepeat: '',
+    },
+  },
+  links: {
+    nav: {
+      role: 'navigation',
+      variant: 'text.signPost',
+      cursor: 'pointer',
     },
   },
 };

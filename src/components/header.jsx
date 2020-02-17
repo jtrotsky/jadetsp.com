@@ -30,33 +30,29 @@ const Header = () => {
       columns={[2, 2, 3]}
     >
 
-      <span
-        as={NavLink}
+      <NavLink
         sx={{
-          variant: 'text.signPost',
-          cursor: 'pointer',
           outline: 'none',
         }}
-        role="menuitem"
+        role="link"
         onClick={() => scrollTo('#intro')}
         tabIndex={-1}
         onKeyPress={() => scrollTo('#intro')}
       >
         {data.site.siteMetadata.author}
-      </span>
+      </NavLink>
 
       <div
         sx={{
           variant: 'text.hardCaption',
-          width: '350px',
+          width: '300px',
           display: ['none', 'none', 'block'],
         }}
       >
         {data.site.siteMetadata.statusUpdate}
-        <span
+        <Styled.a
           sx={{
             textDecoration: 'underline',
-            cursor: 'pointer',
             color: 'plum',
           }}
           role="button"
@@ -65,17 +61,16 @@ const Header = () => {
           onKeyPress={() => scrollTo('#contact')}
         >
           Get in touch!
-        </span>
+        </Styled.a>
       </div>
 
       <div
-        sx={{
-          variant: 'text.signPost',
-        }}
+        role="navigation"
+        aria-label="Main"
       >
         <Styled.a
           as={NavLink}
-          role="menuitem"
+          role="link"
           onClick={() => scrollTo('#intro')}
           tabIndex={0}
           onKeyPress={() => scrollTo('#intro')}
@@ -85,7 +80,7 @@ const Header = () => {
         <br />
         <Styled.a
           as={NavLink}
-          role="menuitem"
+          role="link"
           onClick={() => scrollTo('#my-work')}
           tabIndex={0}
           onKeyPress={() => scrollTo('#my-work')}
@@ -95,7 +90,7 @@ const Header = () => {
         <br />
         <Styled.a
           as={NavLink}
-          role="menuitem"
+          role="link"
           onClick={() => scrollTo('#contact')}
           tabIndex={0}
           onKeyPress={() => scrollTo('#contact')}
