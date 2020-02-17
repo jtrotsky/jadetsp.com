@@ -56,6 +56,7 @@ const Header = () => {
             color: 'plum',
           }}
           role="button"
+          rel="preload"
           onClick={() => scrollTo('#contact')}
           tabIndex={0}
           onKeyPress={() => scrollTo('#contact')}
@@ -71,6 +72,7 @@ const Header = () => {
         <Styled.a
           as={NavLink}
           role="link"
+          rel="preload"
           onClick={() => scrollTo('#intro')}
           tabIndex={0}
           onKeyPress={() => scrollTo('#intro')}
@@ -81,6 +83,7 @@ const Header = () => {
         <Styled.a
           as={NavLink}
           role="link"
+          rel="preload"
           onClick={() => scrollTo('#my-work')}
           tabIndex={0}
           onKeyPress={() => scrollTo('#my-work')}
@@ -91,6 +94,7 @@ const Header = () => {
         <Styled.a
           as={NavLink}
           role="link"
+          rel="preload"
           onClick={() => scrollTo('#contact')}
           tabIndex={0}
           onKeyPress={() => scrollTo('#contact')}

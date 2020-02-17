@@ -72,7 +72,7 @@ function Media({
         role="link"
         tabIndex={0}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="preload noopener noreferrer"
         sx={{
           color: textColor,
         }}
