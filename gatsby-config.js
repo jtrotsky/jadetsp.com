@@ -57,6 +57,7 @@ module.exports = {
         precachePages: ['/'],
       },
     },
+    'gatsby-plugin-preload-fonts',
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
