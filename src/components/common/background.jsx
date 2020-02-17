@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import PropTypes from 'prop-types';
-// import VendTeam from '../../images/img-vend-team.png';
 
-const Background = ({ children, color }) => (
+const Background = ({ children, color, image }) => (
   <div
     sx={{
       backgroundColor: String(color),
-      // backgroundImage: VendTeam,
+      backgroundImage: `url(${image})`,
+      backgroundSize: ['auto', 'auto', '100%'],
     }}
   >
     {children}
@@ -15,14 +15,14 @@ const Background = ({ children, color }) => (
 );
 
 Background.defaultProps = {
-  color: 'background',
-  // overlay: '',
+  color: '',
+  image: '',
 };
 
 Background.propTypes = {
   children: PropTypes.node.isRequired,
   color: PropTypes.string,
-  // overlay: PropTypes.string,
+  image: PropTypes.string,
 };
 
 export default Background;

@@ -3,9 +3,6 @@ import { jsx, Grid, Styled } from 'theme-ui';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import JadeProfile from '../images/img-jade-profile.jpg';
-import BigSplat from '../images/splat-big.svg';
-import SmallSplat from '../images/splat-small.svg';
 
 const Contact = () => {
   const data = useStaticQuery(
@@ -16,6 +13,22 @@ const Contact = () => {
         linkedin
         medium
         twitter
+      }
+      jadeProfileImage: imageSharp(fluid: {originalName: {eq:"img-jade-profile.jpg"}}) {
+        fluid(
+          maxWidth: 1200,
+          maxHeight: 1200,
+          quality: 100,
+          cropFocus: CENTER
+        ) {
+          src
+        }
+      }
+      bigSplatImage: file(relativePath: {eq:"splat-big.svg"}) {
+        publicURL
+      }
+      smallSplatImage: file(relativePath: {eq:"splat-small.svg"}) {
+        publicURL
       }
     }`,
   );
@@ -32,7 +45,7 @@ const Contact = () => {
         id="contact"
         sx={{
           maxWidth: '480px',
-          my: [null, null, 3],
+          marginTop: [null, null, 3],
           gridRow: [0, 0, 1],
         }}
       >
@@ -171,45 +184,31 @@ const Contact = () => {
 
       <div
         sx={{
-          display: 'flex',
-          justifyContent: ['center', 'center', 'left'],
-          alignItems: 'center',
           gridRow: [1, 1, null],
           overflow: 'hidden',
-          my: 1,
           maxHeight: '800px',
+          my: 1,
         }}
       >
+        {/* <img
+          src={data.smallSplatImage.publicURL}
+          title="Small Split"
+          alt="Small paint splat at the top right corner of Jade's Profile."
+          sx={{
+            display: ['none', 'none', 'block'],
+            position: 'absolute',
+            // top: 0,
+            // left: '50%',
+          }}
+        /> */}
         <div>
           <img
-            src={SmallSplat}
-            title="Small Split"
-            alt="Small paint splat at the top right corner of Jade's Profile."
-            sx={{
-              alignSelf: 'flex-start',
-              overflow: 'hidden',
-              display: ['none', 'none', 'block'],
-              mx: '16%',
-            }}
-          />
-          <img
-            src={JadeProfile}
+            src={data.jadeProfileImage.fluid.src}
             title="Jade Profile"
             alt="Jade smiling at the camera in front of a pink floral arch."
             sx={{
-              maxWidth: '1200px',
-              height: '1200px',
-              marginLeft: [null, null, '-30%'],
-              marginTop: '30%',
-            }}
-          />
-          <img
-            src={BigSplat}
-            title="Big Splat"
-            alt="Big paint splat at the bottom of Jade's Profile."
-            sx={{
-              display: ['none', 'none', 'block'],
-              // bottom: 0,
+              marginLeft: ['-500px', '-500px', '-400px'],
+              marginTop: '20%',
             }}
           />
         </div>

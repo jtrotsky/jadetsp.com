@@ -4,59 +4,73 @@ import { jsx, Grid, Container } from 'theme-ui';
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Intro from './intro';
-import Quote from './quote';
-import Block from './block';
+import Quote from './common/quote';
+import Block from './common/block';
 import Background from './common/background';
-import Banner from './banner';
-import Media from './media';
+import Banner from './common/banner';
+import Media from './common/media';
 import Work from './work';
 import Contact from './contact';
-// import Footer from './footer';
-import Scale from '../images/scale.svg';
-import Dots from '../images/dots.svg';
-
+import Footer from './footer';
+import Header from './header';
 
 const Landing = () => {
   const data = useStaticQuery(
     graphql`
     query {
-      ludwigQuote: allQuotesYaml(filter: {name: {eq: "Ludwig Wendzich"}}) {
-        edges {
-          node {
-            name
-            quote
-            role
-            formerly
-          }
-        }
+      ludwigQuote: quotesYaml(name: {eq: "Ludwig Wendzich"}) {
+        name
+        quote
+        role
+        formerly
       }
-      nicolaQuote: allQuotesYaml(filter: {name: {eq: "Nicola Horlor"}}) {
-        edges {
-          node {
-            name
-            quote
-            role
-            formerly
-          }
-        }
+      nicolaQuote: quotesYaml(name: {eq: "Nicola Horlor"}) {
+        name
+        quote
+        role
+        formerly
       }
       firstMedia: mediaYaml(name: {eq: "TEDx"}) {
+        name
         thumbnail
         link
         icon
         description
       }
       secondMedia: mediaYaml(name: {eq: "Article"}) {
+        name
         thumbnail
         link
         icon
         description
       }
       thirdMedia: mediaYaml(name: {eq: "Interview"}) {
+        name
         thumbnail
         link
         icon
         description
+      }
+      scaleImage: file(relativePath: {eq:"scale.svg"}) {
+        publicURL
+      }
+      dotsImage: file(relativePath: {eq:"dots.svg"}) {
+        publicURL
+      }
+      vendTeamImage: imageSharp(fluid: {originalName: {eq:"img-vend-team.png"}}) {
+        fluid(
+          quality: 100,
+          duotone: {
+            highlight: "#B1836F",
+            shadow: "#838383",
+            opacity: 85
+          }
+        ) {
+          src
+        }
+      }
+      bigSplatImage: file(relativePath: {eq:"splat-big.svg"}) {
+        publicURL
       }
     }`,
   );
@@ -64,6 +78,8 @@ const Landing = () => {
   return (
     <>
       <Container>
+        <Header />
+
         <Intro />
 
         <Grid
@@ -79,7 +95,7 @@ const Landing = () => {
             }}
           >
             <img
-              src={Scale}
+              src={data.scaleImage.publicURL}
               title="Scale Illustration"
               alt="Colourful half-circles projecting outward from the left of the screen"
               sx={{
@@ -104,6 +120,7 @@ const Landing = () => {
                 focus on delivering real impact on people's lives."
             >
               <Media
+                name={data.firstMedia.name}
                 link={data.firstMedia.link}
                 icon={data.firstMedia.icon}
                 description={data.firstMedia.description}
@@ -136,6 +153,7 @@ const Landing = () => {
                 themselves, or when to collaborate closely to keep the process moving."
             >
               <Media
+                name={data.secondMedia.name}
                 link={data.secondMedia.link}
                 icon={data.secondMedia.icon}
                 description={data.secondMedia.description}
@@ -153,7 +171,7 @@ const Landing = () => {
             }}
           >
             <img
-              src={Dots}
+              src={data.dotsImage.publicURL}
               title="Dots Illustration"
               alt="A grid of colourful dots filling the right-hand side of the screen"
               sx={{
@@ -164,17 +182,18 @@ const Landing = () => {
         </Grid>
       </Container>
 
-      <Background color="tan" overlay="img-vend-team">
+      <Background image={data.vendTeamImage.fluid.src}>
         <Container>
           <Banner
             quote="As a design leader, my goal is to create a space where people feel inspired, invested,
           and protected to do their best work."
           >
             <Media
-              textColor="background"
+              name={data.thirdMedia.name}
               link={data.thirdMedia.link}
               icon={data.thirdMedia.icon}
               description={data.thirdMedia.description}
+              textColor="background"
             />
           </Banner>
         </Container>
@@ -193,25 +212,12 @@ const Landing = () => {
                 marginTop: [5, 5, 4],
               }}
             >
-              {
-                data.ludwigQuote.edges.map((post) => {
-                  const {
-                    name,
-                    quote,
-                    role,
-                    formerly,
-                  } = post.node;
-
-                  return (
-                    <Quote
-                      quote={quote}
-                      name={name}
-                      role={role}
-                      formerly={formerly}
-                    />
-                  );
-                })
-              }
+              <Quote
+                quote={data.ludwigQuote.quote}
+                name={data.ludwigQuote.name}
+                role={data.ludwigQuote.role}
+                formerly={data.ludwigQuote.formerly}
+              />
             </div>
 
             <div
@@ -222,25 +228,12 @@ const Landing = () => {
                 marginBottom: [3, 3, 2],
               }}
             >
-              {
-                data.nicolaQuote.edges.map((post) => {
-                  const {
-                    name,
-                    quote,
-                    role,
-                    formerly,
-                  } = post.node;
-
-                  return (
-                    <Quote
-                      quote={quote}
-                      name={name}
-                      role={role}
-                      formerly={formerly}
-                    />
-                  );
-                })
-              }
+              <Quote
+                quote={data.nicolaQuote.quote}
+                name={data.nicolaQuote.name}
+                role={data.nicolaQuote.role}
+                formerly={data.nicolaQuote.formerly}
+              />
             </div>
           </Grid>
         </Container>
@@ -256,11 +249,23 @@ const Landing = () => {
         </Container>
       </Background>
 
-      {/* <Background color="night">
+      <Background color="night">
         <Container>
           <Footer />
+
+          {/* <img
+            src={data.bigSplatImage.publicURL}
+            title="Big Splat"
+            alt="Big paint splat at the bottom of Jade's Profile."
+            sx={{
+              display: ['none', 'none', 'block'],
+              position: 'absolute',
+              // right: '10%',
+              // top: '700%',
+            }}
+          /> */}
         </Container>
-      </Background> */}
+      </Background>
     </>
   );
 };
