@@ -136,16 +136,16 @@ const Landing = () => {
           columns={[1, 1, 2]}
           gap={0}
           sx={{
-            paddingTop: [2, 2, null],
+            paddingTop: 0,
           }}
         >
-
           <div
             sx={{
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              my: [1, 1, null],
+              marginTop: [1, 1, 0],
+              marginBottom: 2,
               gridRow: [0, 0, 1],
             }}
           >
@@ -212,7 +212,7 @@ const Landing = () => {
               sx={{
                 display: 'flex',
                 justifyContent: 'center',
-                marginTop: [5, 5, 4],
+                marginTop: [2, 2, 3],
               }}
             >
               <Quote
@@ -227,8 +227,8 @@ const Landing = () => {
               sx={{
                 display: 'flex',
                 justifyContent: ['center', 'center', 'left'],
-                paddingTop: [3, 3, 7],
-                marginBottom: [3, 3, 2],
+                paddingTop: [0, 0, 7],
+                marginBottom: 2,
               }}
             >
               <Quote

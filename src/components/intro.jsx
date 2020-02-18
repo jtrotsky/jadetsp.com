@@ -1,7 +1,6 @@
 /** @jsx jsx */
-import { jsx, Grid } from 'theme-ui';
+import { jsx, Grid, Styled } from 'theme-ui';
 import { useStaticQuery, graphql } from 'gatsby';
-// import Circle from '../images/circle.svg';
 
 
 const Intro = () => {
@@ -50,7 +49,7 @@ const Intro = () => {
             />
           </div>
 
-          <div
+          <Styled.h2
             sx={{
               maxWidth: '840px',
               paddingTop: ['40%', '40%', '0px'],
@@ -60,7 +59,7 @@ const Intro = () => {
             }}
           >
             {data.site.siteMetadata.title}
-          </div>
+          </Styled.h2>
         </div>
       </Grid>
     </div>

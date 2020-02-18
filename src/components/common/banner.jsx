@@ -17,7 +17,7 @@ const Banner = ({ quote, children }) => (
         mx: 1,
       }}
     >
-      <h1
+      <h2
         sx={{
           variant: ['text.smolBoi', 'text.smolBoi', 'text.chooChooBoi'],
           color: 'background',
@@ -27,7 +27,7 @@ const Banner = ({ quote, children }) => (
         }}
       >
         {quote}
-      </h1>
+      </h2>
       <div
         sx={{
           display: 'flex',

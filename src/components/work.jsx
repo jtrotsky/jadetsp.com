@@ -7,18 +7,15 @@ const Work = () => (
   >
     <Grid
       sx={{
-        my: [4, 4, 5],
+        my: 2,
         mx: 1,
         textAlign: 'center',
+        alignItems: 'center',
       }}
       columns={[1, 1, 3]}
       gap={-1}
     >
-      <span
-        sx={{
-          variant: 'text.pugBoi',
-        }}
-      >
+      <Styled.h3>
         <Styled.a
           href="https://dribbble.com/JadeTSP"
           target="_blank"
@@ -29,7 +26,7 @@ const Work = () => (
         >
           See snapshots of my work
         </Styled.a>
-      </span>
+      </Styled.h3>
 
       <p
         sx={{
@@ -40,11 +37,7 @@ const Work = () => (
         or
       </p>
 
-      <span
-        sx={{
-          variant: 'text.pugBoi',
-        }}
-      >
+      <Styled.h3>
         <Styled.a
           href="https://medium.com/@JadeTSP"
           target="_blank"
@@ -55,7 +48,7 @@ const Work = () => (
         >
           Read about my process
         </Styled.a>
-      </span>
+      </Styled.h3>
     </Grid>
   </div>
 );

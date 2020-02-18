@@ -2,7 +2,7 @@
 import { jsx, Grid, Styled } from 'theme-ui';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 const Contact = () => {
@@ -50,14 +50,13 @@ const Contact = () => {
           gridRow: [0, 0, 1],
         }}
       >
-        <h1
+        <Styled.h1
           sx={{
-            variant: 'text.bigBoi',
             color: 'background',
           }}
         >
           What&apos;s next?
-        </h1>
+        </Styled.h1>
         <p
           sx={{
             variant: 'text.smolBoi',
@@ -92,7 +91,7 @@ const Contact = () => {
                   textAlign: 'right',
                 }}
               >
-                <Link
+                <Styled.a
                   sx={{
                     color: 'background',
                   }}
@@ -101,7 +100,7 @@ const Contact = () => {
                   href={data.socialsYaml.twitter}
                 >
                   @jadetsssp
-                </Link>
+                </Styled.a>
               </Styled.td>
             </Styled.tr>
             <Styled.tr>
@@ -118,7 +117,7 @@ const Contact = () => {
                   textAlign: 'right',
                 }}
               >
-                <Link
+                <Styled.a
                   sx={{
                     color: 'background',
                   }}
@@ -127,7 +126,7 @@ const Contact = () => {
                   href={data.socialsYaml.linkedin}
                 >
                   linkedin/jadetsp
-                </Link>
+                </Styled.a>
               </Styled.td>
             </Styled.tr>
             <Styled.tr>
@@ -145,7 +144,7 @@ const Contact = () => {
                   textAlign: 'right',
                 }}
               >
-                <Link
+                <Styled.a
                   sx={{
                     color: 'background',
                   }}
@@ -154,7 +153,7 @@ const Contact = () => {
                   href={data.socialsYaml.medium}
                 >
                   medium/jadetsp
-                </Link>
+                </Styled.a>
               </Styled.td>
             </Styled.tr>
             <Styled.tr>
@@ -166,7 +165,7 @@ const Contact = () => {
                   textAlign: 'right',
                 }}
               >
-                <Link
+                <Styled.a
                   sx={{
                     color: 'background',
                   }}
@@ -175,7 +174,7 @@ const Contact = () => {
                   href={data.socialsYaml.dribbble}
                 >
                   dribbble/jadetsp
-                </Link>
+                </Styled.a>
               </Styled.td>
             </Styled.tr>
           </tbody>

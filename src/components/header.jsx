@@ -1,9 +1,7 @@
 /** @jsx jsx */
-import {
-  jsx, Grid, NavLink, Styled,
-} from 'theme-ui';
+import { jsx, Grid, Link } from 'theme-ui';
 import { useStaticQuery, graphql } from 'gatsby';
-import scrollTo from 'gatsby-plugin-smoothscroll';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const Header = () => {
   const data = useStaticQuery(
@@ -30,17 +28,22 @@ const Header = () => {
       columns={[2, 2, 3]}
     >
 
-      <NavLink
+      <Link
+        as={AnchorLink}
         sx={{
+          variant: 'text.signPost',
           outline: 'none',
+          '&:hover': {
+            textDecoration: 'none',
+          },
         }}
+        title="Start of Jade's Portfolio"
         role="link"
-        onClick={() => scrollTo('#intro')}
+        to="/#intro"
         tabIndex={-1}
-        onKeyPress={() => scrollTo('#intro')}
       >
         {data.site.siteMetadata.author}
-      </NavLink>
+      </Link>
 
       <div
         sx={{
@@ -51,59 +54,51 @@ const Header = () => {
         }}
       >
         {data.site.siteMetadata.statusUpdate}
-        <Styled.a
+        <Link
+          as={AnchorLink}
           sx={{
             textDecoration: 'underline',
             color: 'plum',
           }}
-          role="button"
-          rel="preload"
-          onClick={() => scrollTo('#contact')}
+          to="/#contact"
           tabIndex={0}
-          onKeyPress={() => scrollTo('#contact')}
         >
           Get in touch!
-        </Styled.a>
+        </Link>
       </div>
 
-      <div
+      <nav
         role="navigation"
         aria-label="Main"
+        sx={{
+          variant: 'text.signPost',
+        }}
       >
-        <Styled.a
-          as={NavLink}
-          role="link"
-          rel="preload"
-          onClick={() => scrollTo('#intro')}
+        <Link
+          as={AnchorLink}
+          to="/#intro"
           tabIndex={0}
-          onKeyPress={() => scrollTo('#intro')}
         >
           About
-        </Styled.a>
+        </Link>
         <br />
-        <Styled.a
-          as={NavLink}
-          role="link"
-          rel="preload"
-          onClick={() => scrollTo('#my-work')}
+        <Link
+          as={AnchorLink}
+          to="/#my-work"
           tabIndex={0}
-          onKeyPress={() => scrollTo('#my-work')}
         >
           Work
-        </Styled.a>
+        </Link>
         <br />
-        <Styled.a
-          as={NavLink}
-          role="link"
-          rel="preload"
-          onClick={() => scrollTo('#contact')}
+        <Link
+          as={AnchorLink}
+          to="/#contact"
           tabIndex={0}
-          onKeyPress={() => scrollTo('#contact')}
         >
           Contact
-        </Styled.a>
+        </Link>
         <br />
-      </div>
+      </nav>
     </Grid>
   );
 };

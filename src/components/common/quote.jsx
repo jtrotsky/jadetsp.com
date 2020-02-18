@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
+import { jsx, Styled } from 'theme-ui';
 import PropTypes from 'prop-types';
 
 const Quote = ({
@@ -18,16 +18,11 @@ const Quote = ({
 
     <div
       sx={{
-        variant: 'text.pugBoi',
         marginLeft: '8px',
       }}
     >
 
-      <div
-        sx={{
-          variant: 'text.pugBoi',
-        }}
-      >
+      <Styled.h3>
         <div
           sx={{
             position: 'absolute',
@@ -38,12 +33,12 @@ const Quote = ({
         </div>
         {quote}
         &rdquo;
-      </div>
+      </Styled.h3>
     </div>
 
     <div
       sx={{
-        my: 1,
+        my: 0,
         marginLeft: '8px',
       }}
     >

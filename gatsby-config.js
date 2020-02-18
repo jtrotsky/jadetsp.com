@@ -24,15 +24,20 @@ module.exports = {
         short_name: "Jade's Portfolio",
         description: 'A bit about Jade and her work.',
         lang: 'en',
-        start_url: '/',
+        start_url: '.',
         display: 'minimal-ui',
         background_color: '#F7F8F8',
         theme_color: '#ED9A12',
-        icon: path.join(__dirname, 'static', 'favicon', 'favicon-32x32.png'),
+        icon: path.join(__dirname, 'static', 'favicon', 'favicon-512x512.png'),
       },
     },
     'gatsby-plugin-theme-ui',
-    'gatsby-plugin-smoothscroll',
+    {
+      resolve: 'gatsby-plugin-anchor-links',
+      options: {
+        offset: -100,
+      },
+    },
     'gatsby-transformer-yaml',
     {
       resolve: 'gatsby-source-filesystem',

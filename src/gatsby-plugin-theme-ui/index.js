@@ -27,7 +27,6 @@ export default {
     night: '#1B2130',
     yellow: '#ED9A12',
     plum: '#763248',
-    // tan: '#B1836F'
     tan: '#956850',
   },
   text: {
@@ -98,6 +97,9 @@ export default {
       lineHeight: 'body',
       fontWeight: 'body',
     },
+    p: {
+      variant: 'text.pugBoi',
+    },
     h1: {
       variant: 'text.bigBoi',
     },
@@ -151,18 +153,23 @@ export default {
         textDecoration: 'underline',
       },
     },
-    BackgroundImage: {
-      width: '100%',
-      backgroundSize: 'cover',
-      backgroundPosition: 'inherit',
-      backgroundRepeat: '',
+    menu: {
+      variant: 'text.signPost',
+      role: 'navigation',
+      cursor: 'pointer',
+      '&:hover': {
+        textDecoration: 'underline',
+      },
     },
   },
   links: {
     nav: {
-      role: 'navigation',
       variant: 'text.signPost',
+      role: 'navigation',
       cursor: 'pointer',
+      '&:hover': {
+        textDecoration: 'underline',
+      },
     },
   },
 };
