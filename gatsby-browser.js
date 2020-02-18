@@ -1,2 +1,2 @@
-require('typeface-nunito');
-require('typeface-noto-serif-sc');
+import 'typeface-nunito';
+import 'typeface-noto-serif-sc';

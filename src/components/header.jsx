@@ -47,6 +47,7 @@ const Header = () => {
           variant: 'text.hardCaption',
           width: '300px',
           display: ['none', 'none', 'block'],
+          ariaHidden: ['true', 'true', 'false'],
         }}
       >
         {data.site.siteMetadata.statusUpdate}

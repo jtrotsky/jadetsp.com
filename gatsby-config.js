@@ -17,8 +17,24 @@ module.exports = {
     linkedin: 'https://www.linkedin.com/in/jadetsp',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: "Jade's Portfolio",
+        short_name: "Jade's Portfolio",
+        description: 'A bit about Jade and her work.',
+        lang: 'en',
+        start_url: '/',
+        display: 'minimal-ui',
+        background_color: '#F7F8F8',
+        theme_color: '#ED9A12',
+        icon: path.join(__dirname, 'static', 'favicon', 'favicon-32x32.png'),
+      },
+    },
     'gatsby-plugin-smoothscroll',
     'gatsby-plugin-theme-ui',
+    'gatsby-plugin-preload-fonts',
+    'gatsby-transformer-yaml',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -26,7 +42,6 @@ module.exports = {
         path: path.join(__dirname, 'src', 'images'),
       },
     },
-    'gatsby-transformer-yaml',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -43,28 +58,11 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: "Jade Tan's Portfolio",
-        start_url: '/',
-        display: 'minimal-ui',
-        icon: path.join(__dirname, 'static', 'favicon', 'favicon-32x32.png'),
-      },
-    },
-    {
       resolve: 'gatsby-plugin-offline',
       options: {
         precachePages: ['/'],
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-web-font-loader',
-    //   options: {
-    //     google: {
-    //       families: ['Noto Serif SC:600', 'Nunito:400,700'],
-    //     },
-    //   },
-    // },
   ],
   mapping: {
     socials: 'SocialsYaml',

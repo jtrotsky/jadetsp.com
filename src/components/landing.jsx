@@ -7,7 +7,7 @@ import Intro from './intro';
 import Quote from './common/quote';
 import Block from './common/block';
 import Background from './common/background';
-import BackgroundImg from './common/BackgroundImg';
+import BackgroundImg from './common/background-img';
 import Banner from './common/banner';
 import Media from './common/media';
 import Work from './work';

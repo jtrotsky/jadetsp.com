@@ -16,7 +16,7 @@ function Media({
         fluid(
           maxWidth: 184,
           maxHeight: 93,
-          quality: 100
+          quality: 50
         ) {
           ...GatsbyImageSharpFluid_withWebp
         }
@@ -25,7 +25,7 @@ function Media({
         fluid(
           maxWidth: 184,
           maxHeight: 93,
-          quality: 100
+          quality: 50
         ) {
           ...GatsbyImageSharpFluid_withWebp
         }
@@ -34,7 +34,7 @@ function Media({
         fluid(
           maxWidth: 184,
           maxHeight: 93,
-          quality: 100
+          quality: 50
         ) {
           ...GatsbyImageSharpFluid_withWebp
         }
