@@ -1,5 +1,5 @@
 - firstMedia:
-  name: 'TEDx'
+  name: 'Video'
   thumbnail: 'img-media-01'
   link: 'https://www.youtube.com/watch?v=Xt5OuEnJbM4'
   icon: 'faPlay'

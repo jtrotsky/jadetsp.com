@@ -57,14 +57,14 @@ module.exports = {
         precachePages: ['/'],
       },
     },
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: ['Noto Serif SC:600', 'Nunito:400,700'],
-        },
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-web-font-loader',
+    //   options: {
+    //     google: {
+    //       families: ['Noto Serif SC:600', 'Nunito:400,700'],
+    //     },
+    //   },
+    // },
   ],
   mapping: {
     socials: 'SocialsYaml',

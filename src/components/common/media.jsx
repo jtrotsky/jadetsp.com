@@ -44,7 +44,7 @@ function Media({
   let iconString = icon;
   let thumbnailImage = Img;
   switch (name) {
-    case 'TEDx':
+    case 'Video':
       iconString = faPlay;
       thumbnailImage = data.image01.fluid;
       break;

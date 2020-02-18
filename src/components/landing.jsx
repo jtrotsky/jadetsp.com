@@ -31,7 +31,7 @@ const Landing = () => {
         role
         formerly
       }
-      firstMedia: mediaYaml(name: {eq: "TEDx"}) {
+      firstMedia: mediaYaml(name: {eq: "Video"}) {
         name
         thumbnail
         link
@@ -98,7 +98,7 @@ const Landing = () => {
             <img
               src={data.scaleImage.publicURL}
               title="Scale Illustration"
-              alt="Colourful half-circles projecting outward from the left of the screen"
+              alt="Colourful ripples projecting outward with bigger and bigger impact"
               sx={{
                 maxWidth: '100%',
               }}
@@ -174,7 +174,7 @@ const Landing = () => {
             <img
               src={data.dotsImage.publicURL}
               title="Dots Illustration"
-              alt="A grid of colourful dots filling the right-hand side of the screen"
+              alt="Dots in different colours and shapes like individuals in a team"
               sx={{
                 maxWidth: '100%',
               }}

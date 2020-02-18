@@ -41,7 +41,7 @@ const Intro = () => {
             <img
               src={data.circleImage.publicURL}
               title="Circle Illustration"
-              alt="The background is an imperfect yellow circle in screen centre"
+              alt="The background is an imperfect yellow circle"
               sx={{
                 maxWidth: [null, null, '100%'],
                 width: ['900px', '900px', '100%'],

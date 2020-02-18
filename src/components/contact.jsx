@@ -2,7 +2,7 @@
 import { jsx, Grid, Styled } from 'theme-ui';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 const Contact = () => {
@@ -92,7 +92,7 @@ const Contact = () => {
                   textAlign: 'right',
                 }}
               >
-                <a
+                <Link
                   sx={{
                     color: 'background',
                   }}
@@ -101,7 +101,7 @@ const Contact = () => {
                   href={data.socialsYaml.twitter}
                 >
                   @jadetsssp
-                </a>
+                </Link>
               </Styled.td>
             </Styled.tr>
             <Styled.tr>
@@ -118,7 +118,7 @@ const Contact = () => {
                   textAlign: 'right',
                 }}
               >
-                <a
+                <Link
                   sx={{
                     color: 'background',
                   }}
@@ -127,7 +127,7 @@ const Contact = () => {
                   href={data.socialsYaml.linkedin}
                 >
                   linkedin/jadetsp
-                </a>
+                </Link>
               </Styled.td>
             </Styled.tr>
             <Styled.tr>
@@ -145,7 +145,7 @@ const Contact = () => {
                   textAlign: 'right',
                 }}
               >
-                <a
+                <Link
                   sx={{
                     color: 'background',
                   }}
@@ -154,7 +154,7 @@ const Contact = () => {
                   href={data.socialsYaml.medium}
                 >
                   medium/jadetsp
-                </a>
+                </Link>
               </Styled.td>
             </Styled.tr>
             <Styled.tr>
@@ -166,7 +166,7 @@ const Contact = () => {
                   textAlign: 'right',
                 }}
               >
-                <a
+                <Link
                   sx={{
                     color: 'background',
                   }}
@@ -175,7 +175,7 @@ const Contact = () => {
                   href={data.socialsYaml.dribbble}
                 >
                   dribbble/jadetsp
-                </a>
+                </Link>
               </Styled.td>
             </Styled.tr>
           </tbody>
