@@ -57,12 +57,11 @@ module.exports = {
         precachePages: ['/'],
       },
     },
-    'gatsby-plugin-preload-fonts',
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Noto Serif SC:600', 'Nunito:400,600,700'],
+          families: ['Noto Serif SC:600', 'Nunito:400,700'],
         },
       },
     },

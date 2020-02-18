@@ -63,7 +63,7 @@ export default {
       fontSize: 20,
       lineHeight: '40px',
       letterSpacing: 0,
-      fontWeight: 600,
+      fontWeight: 700,
     },
     signPost: {
       fontFamily: 'Nunito',
