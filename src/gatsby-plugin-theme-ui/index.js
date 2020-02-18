@@ -27,7 +27,8 @@ export default {
     night: '#1B2130',
     yellow: '#ED9A12',
     plum: '#763248',
-    tan: '#B1836F',
+    // tan: '#B1836F'
+    tan: '#956850',
   },
   text: {
     bigBoi: {

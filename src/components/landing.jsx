@@ -64,7 +64,7 @@ const Landing = () => {
           maxHeight: 653,
           quality: 100,
           duotone: {
-            highlight: "#B1836F",
+            highlight: "#956850",
             shadow: "#838383",
             opacity: 85
           }
