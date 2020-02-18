@@ -32,7 +32,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-theme-ui',
-    'gatsby-plugin-preload-fonts',
     'gatsby-plugin-smoothscroll',
     'gatsby-transformer-yaml',
     {
