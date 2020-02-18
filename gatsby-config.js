@@ -31,9 +31,9 @@ module.exports = {
         icon: path.join(__dirname, 'static', 'favicon', 'favicon-32x32.png'),
       },
     },
-    'gatsby-plugin-smoothscroll',
     'gatsby-plugin-theme-ui',
     'gatsby-plugin-preload-fonts',
+    'gatsby-plugin-smoothscroll',
     'gatsby-transformer-yaml',
     {
       resolve: 'gatsby-source-filesystem',
