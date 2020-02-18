@@ -60,6 +60,8 @@ const Landing = () => {
       }
       vendTeamImage: imageSharp(fluid: {originalName: {eq:"img-vend-team.png"}}) {
         fluid(
+          maxWidth: 445,
+          maxHeight: 653,
           quality: 100,
           duotone: {
             highlight: "#B1836F",
