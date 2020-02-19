@@ -3,6 +3,7 @@ import { jsx, Grid, Styled } from 'theme-ui';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faMicrophoneAlt, faBookOpen } from '@fortawesome/free-solid-svg-icons';
 
