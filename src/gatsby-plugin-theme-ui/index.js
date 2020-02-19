@@ -7,8 +7,8 @@ export default {
     },
   },
   fonts: {
-    body: '"Noto Serif Semibold", "Nunito Semi Bold", "Nunito Light Italic", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif',
-    heading: 'Noto Serif Semibold',
+    body: 'Noto Serif SC, Nunito, system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif',
+    heading: 'Noto Serif SC',
     monospace: 'Menlo, monospace',
   },
   fontSizes: [14, 16, 24, 40, 60],

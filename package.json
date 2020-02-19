@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "jade-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A bit about Jade and her work.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Joe Armstrong",
   "dependencies": {
     "@emotion/core": "^10.0.27",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
@@ -35,6 +35,7 @@
     "gatsby-plugin-theme-ui": "^0.3.0",
     "gatsby-plugin-typography": "^2.3.21",
     "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-plugin-webfonts": "^1.1.2",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-sharp": "^2.3.13",
     "gatsby-transformer-yaml": "^2.2.25",
