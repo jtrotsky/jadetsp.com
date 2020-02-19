@@ -42,9 +42,8 @@ const Intro = () => {
               title="Circle Illustration"
               alt="The background is an imperfect yellow circle"
               sx={{
-                maxWidth: [null, null, '100%'],
-                width: ['900px', '900px', '100%'],
-                height: ['900px', '900px', '100%'],
+                width: ['800px', '800px', '100%'],
+                height: ['800px', '800px', '100%'],
               }}
             />
           </div>
@@ -53,10 +52,10 @@ const Intro = () => {
             sx={{
               maxWidth: '840px',
               width: ['360px', '360px', '100%'],
-              paddingTop: ['40%', '40%', '0px'],
+              paddingTop: [2, 2, '0px'],
               variant: ['text.pugBoi', 'text.pugBoi', 'text.chooChooBoi'],
               position: 'absolute',
-              mx: [null, null, 1],
+              mx: ['8px', '8px', 1],
             }}
           >
             {data.site.siteMetadata.title}

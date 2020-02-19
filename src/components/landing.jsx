@@ -101,6 +101,9 @@ const Landing = () => {
               src={data.scaleImage.publicURL}
               title="Scale Illustration"
               alt="Colourful ripples projecting outward with bigger and bigger impact"
+              sx={{
+                maxWidth: '100%',
+              }}
             />
           </div>
 
@@ -174,6 +177,9 @@ const Landing = () => {
               src={data.dotsImage.publicURL}
               title="Dots Illustration"
               alt="Dots in different colours and shapes like individuals in a team"
+              sx={{
+                maxWidth: '100%',
+              }}
             />
           </div>
         </Grid>
