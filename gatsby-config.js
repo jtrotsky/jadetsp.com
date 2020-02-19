@@ -8,9 +8,6 @@ module.exports = {
     author: 'Jade Tan',
     statusUpdate: `What's next: My partner and I are relocating to London, 
       and I’m looking for a new team to create magic with. `,
-    quote: `"Some quote about me being really good at this and that. Will recommend for all 
-      eternity."`,
-    attribution: '-Said by a nice person I worked with',
     medium: 'https://medium.com/@jadetsp',
     dribbble: 'https://dribbble.com/jadetsp',
     twitter: 'https://twitter.com/jadetsssp',
@@ -51,13 +48,6 @@ module.exports = {
       options: {
         name: 'data',
         path: path.join(__dirname, 'src', 'data'),
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'fonts',
-        path: path.join(__dirname, 'static', 'fonts'),
       },
     },
     'gatsby-background-image',

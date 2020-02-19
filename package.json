@@ -1,9 +1,9 @@
 {
-  "name": "jade-portfolio",
+  "name": "Jade's Portfolio",
   "private": true,
-  "description": "A bit about Jade and her work.",
-  "version": "0.1.0",
-  "author": "Joe Armstrong",
+  "description": "I lead product design teams",
+  "version": "1.0.0",
+  "author": "Jade Tan",
   "dependencies": {
     "@emotion/core": "^10.0.27",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
