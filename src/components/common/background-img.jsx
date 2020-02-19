@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BackgroundImage from 'gatsby-background-image';
-import fluid from 'gatsby-image';
+import Image from 'gatsby-image';
 
 const BackgroundImg = ({ imageData, children }) => (
   <BackgroundImage
@@ -18,7 +18,7 @@ const BackgroundImg = ({ imageData, children }) => (
 );
 
 BackgroundImg.propTypes = {
-  imageData: PropTypes.instanceOf(fluid).isRequired,
+  imageData: PropTypes.instanceOf(Image).isRequired,
   children: PropTypes.node.isRequired,
 };
 

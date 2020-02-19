@@ -39,7 +39,6 @@ module.exports = {
       },
     },
     'gatsby-transformer-yaml',
-    'gatsby-plugin-preload-fonts',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -52,6 +51,13 @@ module.exports = {
       options: {
         name: 'data',
         path: path.join(__dirname, 'src', 'data'),
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'fonts',
+        path: path.join(__dirname, 'static', 'fonts'),
       },
     },
     'gatsby-background-image',
