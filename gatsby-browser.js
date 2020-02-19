@@ -1,1 +1,2 @@
-import './static/fonts/fonts.css';
+import 'typeface-nunito';
+import 'typeface-noto-serif-sc';
