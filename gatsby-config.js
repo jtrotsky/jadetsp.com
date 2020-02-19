@@ -38,16 +38,8 @@ module.exports = {
         offset: -100,
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-web-font-loader',
-    //   options: {
-    //     custom: {
-    //       families: ['Nunito', 'Noto Serif SC'],
-    //       urls: path.join(__dirname, 'static', 'fonts', 'fonts.css'),
-    //     },
-    //   },
-    // },
     'gatsby-transformer-yaml',
+    'gatsby-plugin-preload-fonts',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
