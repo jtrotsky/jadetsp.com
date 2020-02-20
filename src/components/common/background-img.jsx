@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BackgroundImage from 'gatsby-background-image';
-import Image from 'gatsby-image';
+// import Img from 'gatsby-image';
 
-const BackgroundImg = ({ imageData, children }) => (
+const BackgroundImg = ({ image, children }) => (
   <BackgroundImage
-    fluid={imageData}
+    fluid={image}
     style={{
       width: '100%',
       backgroundSize: 'cover',
       backgroundPosition: 'top',
       backgroundRepeat: '',
+      backgroundColor: '#956850',
     }}
   >
     { children }
@@ -18,7 +19,8 @@ const BackgroundImg = ({ imageData, children }) => (
 );
 
 BackgroundImg.propTypes = {
-  imageData: PropTypes.instanceOf(Image).isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  image: PropTypes.object.isRequired,
   children: PropTypes.node.isRequired,
 };
 

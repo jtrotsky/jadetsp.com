@@ -23,7 +23,7 @@ const Intro = () => {
       <Grid
         id="intro"
         sx={{
-          marginTop: ['-60%', '-60%', 4],
+          marginTop: ['-60%', '-60%', 3],
           marginBottom: 2,
         }}
         columns={1}
@@ -42,8 +42,8 @@ const Intro = () => {
               title="Circle Illustration"
               alt="The background is an imperfect yellow circle"
               sx={{
-                width: ['800px', '800px', '100%'],
-                height: ['800px', '800px', '100%'],
+                width: ['800px', '800px', '640px'],
+                height: ['800px', '800px', '640px'],
               }}
             />
           </div>

@@ -65,9 +65,9 @@ const Landing = () => {
           quality: 100,
           duotone: {
             highlight: "#956850",
-            shadow: "#838383",
-            opacity: 85
-          }
+            shadow: "#192550",
+            opacity: 90
+            }
         ) {
           ...GatsbyImageSharpFluid_withWebp
         }
@@ -88,6 +88,8 @@ const Landing = () => {
         <Grid
           sx={{
             paddingTop: [null, null, 4],
+            alignSelf: 'center',
+            justifyItems: 'center',
           }}
           columns={[1, 1, 2]}
           gap={0}
@@ -112,7 +114,6 @@ const Landing = () => {
             sx={{
               display: 'flex',
               justifyContent: ['center', 'center', 'left'],
-              alignItems: 'center',
               paddingTop: 0,
             }}
           >
@@ -136,7 +137,7 @@ const Landing = () => {
           columns={[1, 1, 2]}
           gap={0}
           sx={{
-            paddingTop: 0,
+            paddingTop: 1,
           }}
         >
           <div
@@ -185,7 +186,7 @@ const Landing = () => {
         </Grid>
       </Container>
 
-      <BackgroundImg imageData={data.vendTeamImage.fluid}>
+      <BackgroundImg image={data.vendTeamImage.fluid}>
         <Container>
           <Banner
             quote="As a design leader, my goal is to create a space where people feel inspired, invested,

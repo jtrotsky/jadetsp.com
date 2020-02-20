@@ -28,6 +28,7 @@ module.exports = {
         icon: path.join(__dirname, 'static', 'favicon', 'favicon-512x512.png'),
       },
     },
+    'gatsby-plugin-netlify',
     'gatsby-plugin-theme-ui',
     {
       resolve: 'gatsby-plugin-anchor-links',
