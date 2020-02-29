@@ -12,7 +12,7 @@ const Work = () => (
         textAlign: 'center',
         alignItems: 'center',
       }}
-      columns={[1, 1, 3]}
+      columns={[1, 1, '1fr 0.2fr 1fr']}
       gap={-1}
     >
       <Styled.h3>
@@ -24,7 +24,7 @@ const Work = () => (
             color: 'plum',
           }}
         >
-          See snapshots of my work
+          See some of my work
         </Styled.a>
       </Styled.h3>
 

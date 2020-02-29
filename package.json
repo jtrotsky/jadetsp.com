@@ -19,7 +19,7 @@
     "eslint-config-react-app": "^5.2.0",
     "gatsby": "^2.19.7",
     "gatsby-background-image": "^0.10.0",
-    "gatsby-cli": "^2.8.30",
+    "gatsby-cli": "^2.9.0",
     "gatsby-image": "^2.2.39",
     "gatsby-link": "^2.2.29",
     "gatsby-plugin-anchor-links": "^1.1.0",

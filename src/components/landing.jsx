@@ -250,24 +250,7 @@ const Landing = () => {
       <Background color="night">
         <Container>
           <Contact />
-        </Container>
-      </Background>
-
-      <Background color="night">
-        <Container>
           <Footer />
-
-          {/* <img
-            src={data.bigSplatImage.publicURL}
-            title="Big Splat"
-            alt="Big paint splat at the bottom of Jade's Profile."
-            sx={{
-              display: ['none', 'none', 'block'],
-              position: 'absolute',
-              // right: '10%',
-              // top: '700%',
-            }}
-          /> */}
         </Container>
       </Background>
     </>

@@ -76,7 +76,7 @@ export default {
     hardCaption: {
       fontFamily: 'Nunito',
       fontSize: 14,
-      lineHeight: '26px',
+      lineHeight: '22px',
       letterSpacing: 0,
       fontWeight: 700,
     },
