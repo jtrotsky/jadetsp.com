@@ -76,14 +76,6 @@ const Header = () => {
       >
         <Link
           as={AnchorLink}
-          to="/#intro"
-          tabIndex={0}
-        >
-          About
-        </Link>
-        <br />
-        <Link
-          as={AnchorLink}
           to="/#my-work"
           tabIndex={0}
         >
