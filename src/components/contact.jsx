@@ -20,7 +20,7 @@ const Contact = () => {
           maxWidth: 800,
           maxHeight: 1200,
           quality: 75,
-          cropFocus: ATTENTION
+          cropFocus: NORTH,
         ) {
           ...GatsbyImageSharpFluid_withWebp
         }
@@ -39,7 +39,7 @@ const Contact = () => {
       columns={[1, 1, 2]}
       gap={1}
       sx={{
-        mx: 1,
+        overflow: 'hidden',
       }}
     >
       <div
@@ -48,11 +48,13 @@ const Contact = () => {
           maxWidth: '480px',
           marginTop: [null, null, 1],
           gridRow: [0, 0, 1],
+          mx: 1,
         }}
       >
         <Styled.h1
           sx={{
             color: 'background',
+            variant: ['text.chooChooBoi', 'text.chooChooBoi', 'text.bigBoi'],
           }}
         >
           What&apos;s next?
@@ -61,18 +63,17 @@ const Contact = () => {
           sx={{
             variant: 'text.smolBoi',
             color: 'background',
-            paddingTop: 0,
           }}
         >
           My partner and I are relocating to London, and I&apos;m looking for a new team to
-          create magic with.
+          create magic with. Want to get in touch?
         </p>
 
         <Styled.table
           sx={{
             maxWidth: '480px',
             width: '100%',
-            my: 1,
+            my: 2,
             color: 'background',
             variant: 'text.pocketBoi',
           }}
@@ -94,6 +95,7 @@ const Contact = () => {
                 <Styled.a
                   sx={{
                     color: 'background',
+                    textDecoration: 'underline',
                   }}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -120,6 +122,7 @@ const Contact = () => {
                 <Styled.a
                   sx={{
                     color: 'background',
+                    textDecoration: 'underline',
                   }}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -147,6 +150,7 @@ const Contact = () => {
                 <Styled.a
                   sx={{
                     color: 'background',
+                    textDecoration: 'underline',
                   }}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -168,6 +172,7 @@ const Contact = () => {
                 <Styled.a
                   sx={{
                     color: 'background',
+                    textDecoration: 'underline',
                   }}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -185,36 +190,62 @@ const Contact = () => {
         sx={{
           gridRow: [1, 1, null],
           overflow: 'hidden',
-          // maxHeight: '800px',
-          my: 0,
         }}
       >
-        {/* <img
-          src={data.smallSplatImage.publicURL}
-          title="Small Split"
-          alt="Small paint splat at the top right corner of Jade's Profile."
+        {/* <div
           sx={{
-            display: ['none', 'none', 'block'],
-            position: 'absolute',
-            // top: 0,
-            // left: '50%',
+            position: 'relative',
           }}
-        /> */}
+        >
+          <img
+            src={data.smallSplatImage.publicURL}
+            title="Small Split"
+            alt="Small paint splat at the top right corner of Jade's Profile."
+            sx={{
+              zIndex: 1,
+              display: ['none', 'none', 'block'],
+              position: 'absolute',
+              left: '-75%',
+            }}
+          />
+        </div> */}
         <div>
           <Img
             fluid={data.jadeProfileImage.fluid}
             title="Jade Profile"
             alt="Jade smiling at the camera in front of a pink floral arch."
+            objectPosition="center 25%"
+            imgStyle={{ objectPosition: 'center 25%' }}
             sx={{
-              objectPosition: 'top',
-              objectFit: 'cover',
-              height: '750px',
-              width: '800px',
+              my: [null, null, 0],
+              position: ['absolute', 'absolute', 'relative'],
+              maxHeight: ['500px', '500px', '750px'],
+              maxWidth: '850px',
+              width: ['650px', '650px', '850px'],
               marginLeft: '-40%',
             }}
           />
         </div>
       </div>
+      {/* <div
+        sx={{
+          position: 'relative',
+        }}
+      >
+        <img
+          src={data.bigSplatImage.publicURL}
+          title="Big Splat"
+          alt="Big paint splat at the bottom of Jade's Profile."
+          sx={{
+            display: ['none', 'none', 'block'],
+            position: 'absolute',
+            left: '60%',
+            // bottom: '-100%',
+            // right: '10%',
+            // top: '100%',
+          }}
+        />
+      </div> */}
     </Grid>
   );
 };

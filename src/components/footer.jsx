@@ -3,33 +3,35 @@ import { jsx, Grid } from 'theme-ui';
 
 const Footer = () => (
   <Grid
-    // sx={{
-    //   paddingTop: 1,
-    // }}
-    columns={1}
-    gap={0}
+    columns={[1, 1, '2fr 1fr']}
+    gap={[0, 0, -1]}
   >
-    <div
+    <span
       sx={{
-        mx: 0,
-        my: 0,
-        variant: 'text.softCaption',
+        marginLeft: 0,
+        marginBottom: [null, null, 0],
+        variant: 'text.hardCaption',
         opacity: 0.5,
         color: 'background',
       }}
     >
-      <span>
-        Fun fact #25: I have a collection of discontinued cash and coins from around the world.
-        It&apos;s priceless.
-      </span>
+      Fun fact #25: I have a collection of discontinued coins from around the world.
+      It&apos;s priceless.
+    </span>
 
-      <span>
-        &nbsp;
-        ©&nbsp;
-        {new Date().getFullYear()}
-        &nbsp;Jade Tan Swea Phin
-      </span>
-    </div>
+    <span
+      sx={{
+        mx: [0, 0, '0px'],
+        marginBottom: 0,
+        variant: 'text.hardCaption',
+        opacity: 0.5,
+        color: 'background',
+      }}
+    >
+      ©&nbsp;
+      {new Date().getFullYear()}
+      &nbsp;Jade Tan Swea Phin
+    </span>
   </Grid>
 );
 
