@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
+    siteUrl: 'https://www.jadetsp.com',
     title: `I lead product design teams to collaborate and thrive, 
       by helping designers grow into empathetic leaders and allies.`,
     description: 'I lead product design teams',
@@ -29,6 +30,21 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [
+          {
+            userAgent: 'Googlebot',
+            disallow: '/',
+          },
+          {
+            userAgent: 'OtherBot',
+            disallow: '/',
+          },
+        ],
+      },
+    },
     'gatsby-plugin-theme-ui',
     {
       resolve: 'gatsby-plugin-anchor-links',
