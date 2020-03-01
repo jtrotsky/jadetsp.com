@@ -79,11 +79,35 @@ const Landing = () => {
   );
 
   return (
-    <>
+    <div
+      sx={{
+        overflow: 'hidden',
+      }}
+    >
       <Container>
         <Header />
 
         <Intro />
+
+        <div
+          sx={{
+            position: 'relative',
+            top: '160px',
+          }}
+        >
+          <img
+            src={data.scaleImage.publicURL}
+            title="Inverted Scale Illustration"
+            alt="Colourful ripples projecting outward with bigger and bigger impact"
+            css="transform: rotate(180deg);"
+            sx={{
+              display: ['none', 'none', 'inline-block'],
+              maxWidth: '100%',
+              position: 'absolute',
+              left: '-430px',
+            }}
+          />
+        </div>
 
         <Grid
           sx={{
@@ -92,11 +116,11 @@ const Landing = () => {
             justifyItems: 'center',
           }}
           columns={[1, 1, 2]}
-          gap={0}
+          gap={1}
         >
           <div
             sx={{
-              mx: 1,
+              mx: [0, 0, null],
             }}
           >
             <img
@@ -135,9 +159,10 @@ const Landing = () => {
 
         <Grid
           columns={[1, 1, 2]}
-          gap={0}
+          gap={1}
           sx={{
-            paddingTop: 1,
+            paddingTop: 2,
+            paddingBottom: 2,
           }}
         >
           <div
@@ -145,8 +170,7 @@ const Landing = () => {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              marginTop: [1, 1, 0],
-              marginBottom: 2,
+              marginTop: [1, 1, null],
               gridRow: [0, 0, 1],
             }}
           >
@@ -171,7 +195,7 @@ const Landing = () => {
               justifyContent: ['center', 'center', 'left'],
               alignItems: 'center',
               gridRow: [1, 1, null],
-              mx: 1,
+              mx: 0,
             }}
           >
             <img
@@ -184,6 +208,25 @@ const Landing = () => {
             />
           </div>
         </Grid>
+
+        <div
+          sx={{
+            position: 'relative',
+            bottom: '520px',
+          }}
+        >
+          <img
+            src={data.dotsImage.publicURL}
+            title="Inverted Dots Illustration"
+            alt="Dots in different colours and shapes like individuals in a team"
+            sx={{
+              display: ['none', 'none', 'inline-block'],
+              maxWidth: '100%',
+              position: 'absolute',
+              right: '-270px',
+            }}
+          />
+        </div>
       </Container>
 
       <BackgroundImg image={data.vendTeamImage.fluid}>
@@ -253,7 +296,7 @@ const Landing = () => {
           <Footer />
         </Container>
       </Background>
-    </>
+    </div>
   );
 };
 
