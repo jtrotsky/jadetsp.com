@@ -66,7 +66,7 @@ const Landing = () => {
           duotone: {
             highlight: "#956850",
             shadow: "#000000",
-            opacity: 90
+            opacity: 95
             }
         ) {
           ...GatsbyImageSharpFluid_withWebp

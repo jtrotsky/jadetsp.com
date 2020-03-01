@@ -17,10 +17,10 @@ const Contact = () => {
       }
       jadeProfileImage: imageSharp(fluid: {originalName: {eq:"img-jade-profile.jpg"}}) {
         fluid(
-          maxWidth: 850,
+          maxWidth: 350,
           maxHeight: 750,
           quality: 75,
-          cropFocus: NORTH,
+          cropFocus: ATTENTION,
         ) {
           ...GatsbyImageSharpFluid_withWebp
         }
@@ -220,9 +220,7 @@ const Contact = () => {
               my: [null, null, 0],
               position: ['absolute', 'absolute', 'relative'],
               maxHeight: ['500px', '500px', '750px'],
-              maxWidth: '850px',
-              width: ['650px', '650px', '850px'],
-              marginLeft: '-40%',
+              maxWidth: '500px',
             }}
           />
         </div>
