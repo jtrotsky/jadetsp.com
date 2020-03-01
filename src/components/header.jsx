@@ -72,6 +72,7 @@ const Header = () => {
         aria-label="Main"
         sx={{
           variant: 'text.signPost',
+          lineHeight: ['32px', '32px', '26px'],
         }}
       >
         <Link
@@ -89,7 +90,6 @@ const Header = () => {
         >
           Contact
         </Link>
-        <br />
       </nav>
     </Grid>
   );
