@@ -38,10 +38,6 @@ module.exports = {
             userAgent: 'Googlebot',
             disallow: '/',
           },
-          {
-            userAgent: 'OtherBot',
-            disallow: '/',
-          },
         ],
       },
     },
