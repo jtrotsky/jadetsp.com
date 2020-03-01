@@ -17,8 +17,8 @@ const Contact = () => {
       }
       jadeProfileImage: imageSharp(fluid: {originalName: {eq:"img-jade-profile.jpg"}}) {
         fluid(
-          maxWidth: 800,
-          maxHeight: 1200,
+          maxWidth: 850,
+          maxHeight: 750,
           quality: 75,
           cropFocus: NORTH,
         ) {

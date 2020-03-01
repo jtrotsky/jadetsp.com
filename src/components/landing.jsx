@@ -65,7 +65,7 @@ const Landing = () => {
           quality: 100,
           duotone: {
             highlight: "#956850",
-            shadow: "#192550",
+            shadow: "#000000",
             opacity: 90
             }
         ) {

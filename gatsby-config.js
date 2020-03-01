@@ -2,17 +2,17 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.jadetsp.com',
     title: `I lead product design teams to collaborate and thrive, 
-      by helping designers grow into empathetic leaders and allies.`,
+    by helping designers grow into empathetic leaders and allies.`,
     description: 'I lead product design teams',
     author: 'Jade Tan',
     statusUpdate: `What's next: My partner and I are relocating to London, 
-      and I’m looking for a new team to create magic with. `,
+    and I’m looking for a new team to create magic with. `,
     medium: 'https://medium.com/@jadetsp',
     dribbble: 'https://dribbble.com/jadetsp',
     twitter: 'https://twitter.com/jadetsssp',
     linkedin: 'https://www.linkedin.com/in/jadetsp',
+    siteUrl: 'https://www.jadetsp.com',
   },
   plugins: [
     {
