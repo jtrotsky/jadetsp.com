@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BackgroundImage from 'gatsby-background-image';
-// import Img from 'gatsby-image';
 
 const BackgroundImg = ({ image, children }) => (
   <BackgroundImage
@@ -10,7 +9,6 @@ const BackgroundImg = ({ image, children }) => (
       width: '100%',
       backgroundSize: 'cover',
       backgroundPosition: 'top',
-      backgroundRepeat: '',
       backgroundColor: '#956850',
     }}
   >

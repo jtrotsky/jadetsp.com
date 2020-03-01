@@ -19,7 +19,7 @@ const Contact = () => {
         fluid(
           maxWidth: 350,
           maxHeight: 750,
-          quality: 75,
+          quality: 50,
           cropFocus: ATTENTION,
         ) {
           ...GatsbyImageSharpFluid_withWebp
