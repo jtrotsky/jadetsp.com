@@ -30,6 +30,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify',
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
