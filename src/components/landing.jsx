@@ -68,7 +68,7 @@ const Landing = () => {
         fluid(
           maxWidth: 445,
           maxHeight: 653,
-          quality: 85,
+          quality: 100,
           duotone: {
             highlight: "#5e4132",
             shadow: "#3c2920",
