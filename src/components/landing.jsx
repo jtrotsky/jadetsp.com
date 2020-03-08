@@ -292,7 +292,7 @@ const Landing = () => {
               sx={{
                 display: 'flex',
                 justifyContent: ['center', 'center', 'left'],
-                paddingTop: [0, 0, 2],
+                paddingTop: 0,
                 marginBottom: 2,
               }}
             >
