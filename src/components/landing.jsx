@@ -37,21 +37,21 @@ const Landing = () => {
         role
         formerly
       }
-      firstMedia: mediaYaml(name: {eq: "Video"}) {
+      videoMedia: mediaYaml(name: {eq: "Video"}) {
         name
         thumbnail
         link
         icon
         description
       }
-      secondMedia: mediaYaml(name: {eq: "Article"}) {
+      articleMedia: mediaYaml(name: {eq: "Article"}) {
         name
         thumbnail
         link
         icon
         description
       }
-      thirdMedia: mediaYaml(name: {eq: "Interview"}) {
+      interviewMedia: mediaYaml(name: {eq: "Interview"}) {
         name
         thumbnail
         link
@@ -154,10 +154,10 @@ const Landing = () => {
                 focus on delivering real impact on people's lives."
             >
               <Media
-                name={data.firstMedia.name}
-                link={data.firstMedia.link}
-                icon={data.firstMedia.icon}
-                description={data.firstMedia.description}
+                name={data.videoMedia.name}
+                link={data.videoMedia.link}
+                icon={data.videoMedia.icon}
+                description={data.videoMedia.description}
               />
             </Block>
           </div>
@@ -187,10 +187,10 @@ const Landing = () => {
                 themselves, or when to collaborate closely to keep the process moving."
             >
               <Media
-                name={data.secondMedia.name}
-                link={data.secondMedia.link}
-                icon={data.secondMedia.icon}
-                description={data.secondMedia.description}
+                name={data.articleMedia.name}
+                link={data.articleMedia.link}
+                icon={data.articleMedia.icon}
+                description={data.articleMedia.description}
               />
             </Block>
           </div>
@@ -242,10 +242,10 @@ const Landing = () => {
           and protected to do their best work."
           >
             <Media
-              name={data.thirdMedia.name}
-              link={data.thirdMedia.link}
-              icon={data.thirdMedia.icon}
-              description={data.thirdMedia.description}
+              name={data.interviewMedia.name}
+              link={data.interviewMedia.link}
+              icon={data.interviewMedia.icon}
+              description={data.interviewMedia.description}
               textColor="background"
             />
           </Banner>

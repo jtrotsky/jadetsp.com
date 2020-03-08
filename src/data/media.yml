@@ -1,7 +1,7 @@
 - firstMedia:
   name: 'Video'
   thumbnail: 'img-media-01'
-  link: 'https://www.youtube.com/watch?v=Xt5OuEnJbM4'
+  link: 'https://www.youtube-nocookie.com/embed/Xt5OuEnJbM4'
   icon: 'faPlay'
   description: 'Watch my TEDx talk on the story of Mobile Eye, an app to help people who are blind better navigate the world.'
 - secondMedia:
