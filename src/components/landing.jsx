@@ -277,7 +277,7 @@ const Landing = () => {
               sx={{
                 display: 'flex',
                 justifyContent: 'center',
-                marginTop: [2, 2, '900px'],
+                marginTop: [0, 0, '900px'],
               }}
             >
               <Quote
