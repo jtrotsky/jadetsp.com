@@ -6,10 +6,7 @@ const BackgroundImg = ({ image, children }) => (
   <BackgroundImage
     fluid={image}
     style={{
-      width: '100%',
-      backgroundSize: 'cover',
       backgroundPosition: 'top',
-      backgroundColor: '#956850',
     }}
   >
     { children }
