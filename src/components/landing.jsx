@@ -19,6 +19,12 @@ const Landing = () => {
   const data = useStaticQuery(
     graphql`
     query {
+      aaronQuote: quotesYaml(name: {eq: "Aaron Patzer"}) {
+        name
+        quote
+        role
+        formerly
+      }
       ludwigQuote: quotesYaml(name: {eq: "Ludwig Wendzich"}) {
         name
         quote
@@ -62,7 +68,7 @@ const Landing = () => {
         fluid(
           maxWidth: 445,
           maxHeight: 653,
-          quality: 50,
+          quality: 100,
           duotone: {
             highlight: "#5e4132",
             shadow: "#3c2920",
@@ -255,8 +261,23 @@ const Landing = () => {
             <div
               sx={{
                 display: 'flex',
-                justifyContent: 'center',
+                justifyContent: ['center', 'center', 'left'],
                 marginTop: [2, 2, 3],
+              }}
+            >
+              <Quote
+                quote={data.aaronQuote.quote}
+                name={data.aaronQuote.name}
+                role={data.aaronQuote.role}
+                formerly={data.aaronQuote.formerly}
+              />
+            </div>
+
+            <div
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                marginTop: [2, 2, '900px'],
               }}
             >
               <Quote
@@ -271,7 +292,7 @@ const Landing = () => {
               sx={{
                 display: 'flex',
                 justifyContent: ['center', 'center', 'left'],
-                paddingTop: [0, 0, 7],
+                paddingTop: [0, 0, 2],
                 marginBottom: 2,
               }}
             >
