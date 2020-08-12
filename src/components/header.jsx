@@ -25,7 +25,7 @@ const Header = () => {
         justifyItems: 'center',
         position: ['relative', 'relative', null],
       }}
-      columns={[2, 2, 3]}
+      columns={2}
     >
 
       <Link
@@ -45,7 +45,7 @@ const Header = () => {
         {data.site.siteMetadata.author}
       </Link>
 
-      <div
+      {/* <div
         sx={{
           variant: 'text.hardCaption',
           width: '320px',
@@ -65,7 +65,7 @@ const Header = () => {
         >
           Get in touch!
         </Link>
-      </div>
+      </div> */}
 
       <nav
         role="navigation"

@@ -57,7 +57,7 @@ const Contact = () => {
             variant: ['text.chooChooBoi', 'text.chooChooBoi', 'text.bigBoi'],
           }}
         >
-          What&apos;s next?
+          On my days off
         </Styled.h1>
         <p
           sx={{
@@ -65,8 +65,8 @@ const Contact = () => {
             color: 'background',
           }}
         >
-          My partner and I are relocating to London, and I&apos;m looking for a new team to
-          create magic with. Want to get in touch?
+          You&apos;ll find me pottering about with my plants, nerding out about history, or dipping
+          fries into my ice cream. Want to get in touch?
         </p>
 
         <Styled.table
