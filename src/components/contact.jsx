@@ -57,7 +57,7 @@ const Contact = () => {
             variant: ['text.chooChooBoi', 'text.chooChooBoi', 'text.bigBoi'],
           }}
         >
-          On my days off
+          On days off
         </Styled.h1>
         <p
           sx={{
