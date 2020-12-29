@@ -3,4 +3,4 @@
 # Jade's Portfolio
 Updated Feb 2020
 
-->>> [jadetsp.com](https://jadetsp.com)
+->>> [jadetsp.com](https://jadetsp.com) <<<-
