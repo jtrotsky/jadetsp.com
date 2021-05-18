@@ -3,11 +3,14 @@ import { jsx, Grid, Container } from 'theme-ui';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { getImage } from 'gatsby-plugin-image';
+import { BgImage } from 'gbimage-bridge';
+// import BackgroundImage from 'gatsby-background-image'
 import Intro from './intro';
 import Quote from './common/quote';
 import Block from './common/block';
 import Background from './common/background';
-import BackgroundImg from './common/background-img';
+// import BackgroundImg from './common/background-img';
 import Banner from './common/banner';
 import Media from './common/media';
 import Work from './work';
@@ -65,24 +68,28 @@ const Landing = () => {
         publicURL
       }
       vendTeamImage: imageSharp(fluid: {originalName: {eq:"img-vend-team.png"}}) {
-        fluid(
-          maxWidth: 445,
-          maxHeight: 653,
-          quality: 100,
-          duotone: {
-            highlight: "#5e4132",
-            shadow: "#3c2920",
-            opacity: 95
+        gatsbyImageData(
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          width: 500
+          height: 350
+          transformOptions: {
+            cropFocus: ATTENTION
+            duotone: { 
+              shadow: "#3c2920"
+              highlight: "#5e4132"
+              opacity: 70 
             }
-        ) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+          }
+        )
       }
       bigSplatImage: file(relativePath: {eq:"splat-big.svg"}) {
         publicURL
       }
     }`,
   );
+
+  const pluginImage = getImage(data.vendTeamImage.gatsbyImageData);
 
   return (
     <div
@@ -98,7 +105,7 @@ const Landing = () => {
         <div
           sx={{
             position: 'relative',
-            top: '160px',
+            top: '120px',
           }}
         >
           <img
@@ -218,7 +225,7 @@ const Landing = () => {
         <div
           sx={{
             position: 'relative',
-            bottom: '520px',
+            bottom: '470px',
           }}
         >
           <img
@@ -235,7 +242,7 @@ const Landing = () => {
         </div>
       </Container>
 
-      <BackgroundImg image={data.vendTeamImage.fluid}>
+      <BgImage image={pluginImage}>
         <Container>
           <Banner
             quote="As a design leader, my goal is to create a space where people feel inspired, invested,
@@ -250,7 +257,7 @@ const Landing = () => {
             />
           </Banner>
         </Container>
-      </BackgroundImg>
+      </BgImage>
 
       <Background color="plum">
         <Container>

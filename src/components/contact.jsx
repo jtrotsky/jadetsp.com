@@ -3,7 +3,6 @@ import { jsx, Grid, Themed } from 'theme-ui';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-// import Img from "gatsby-image"
 import { GatsbyImage as Img } from 'gatsby-plugin-image';
 
 const Contact = () => {
@@ -18,12 +17,13 @@ const Contact = () => {
       }
       jadeProfileImage: imageSharp(fluid: {originalName: {eq:"img-jade-profile.jpg"}}) {
         gatsbyImageData(
-          layout: CONSTRAINED,
-          width: 500,
-          height: 850,
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          width: 500
+          height: 800
           transformOptions: {
-            cropFocus: ATTENTION
-          },
+            cropFocus: ENTROPY
+          }
         )
       }
       bigSplatImage: file(relativePath: {eq:"splat-big.svg"}) {

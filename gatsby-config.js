@@ -56,7 +56,14 @@ module.exports = {
     },
     'gatsby-background-image',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          placeholder: `dominantColor`,
+        }
+      }
+    },
     {
       resolve: 'gatsby-plugin-offline',
       options: {

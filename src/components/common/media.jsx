@@ -77,6 +77,7 @@ function Media({
           gap={-1}
           sx={{
             my: '16px',
+            mx: '16px',
           }}
         >
           <Img
