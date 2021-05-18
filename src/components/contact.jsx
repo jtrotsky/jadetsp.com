@@ -1,9 +1,10 @@
 /** @jsx jsx */
-import { jsx, Grid, Styled } from 'theme-ui';
+import { jsx, Grid, Themed } from 'theme-ui';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+// import Img from "gatsby-image"
+import { GatsbyImage as Img } from 'gatsby-plugin-image';
 
 const Contact = () => {
   const data = useStaticQuery(
@@ -16,14 +17,14 @@ const Contact = () => {
         twitter
       }
       jadeProfileImage: imageSharp(fluid: {originalName: {eq:"img-jade-profile.jpg"}}) {
-        fluid(
-          maxWidth: 280,
-          maxHeight: 750,
-          quality: 50,
-          cropFocus: ATTENTION,
-        ) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(
+          layout: CONSTRAINED,
+          width: 500,
+          height: 850,
+          transformOptions: {
+            cropFocus: ATTENTION
+          },
+        )
       }
       bigSplatImage: file(relativePath: {eq:"splat-big.svg"}) {
         publicURL
@@ -51,14 +52,14 @@ const Contact = () => {
           mx: 1,
         }}
       >
-        <Styled.h1
+        <Themed.h1
           sx={{
             color: 'background',
             variant: ['text.chooChooBoi', 'text.chooChooBoi', 'text.bigBoi'],
           }}
         >
           On days off
-        </Styled.h1>
+        </Themed.h1>
         <p
           sx={{
             variant: 'text.smolBoi',
@@ -69,7 +70,7 @@ const Contact = () => {
           fries into my ice cream. Want to get in touch?
         </p>
 
-        <Styled.table
+        <Themed.table
           sx={{
             maxWidth: '480px',
             width: '100%',
@@ -79,20 +80,20 @@ const Contact = () => {
           }}
         >
           <tbody>
-            <Styled.tr
+            <Themed.tr
               sx={{
                 borderTop: '1px solid white',
               }}
             >
-              <Styled.td>
+              <Themed.td>
                 Tweet me
-              </Styled.td>
-              <Styled.td
+              </Themed.td>
+              <Themed.td
                 sx={{
                   textAlign: 'right',
                 }}
               >
-                <Styled.a
+                <Themed.a
                   sx={{
                     color: 'background',
                     textDecoration: 'underline',
@@ -102,24 +103,24 @@ const Contact = () => {
                   href={data.socialsYaml.twitter}
                 >
                   @jadetsssp
-                </Styled.a>
-              </Styled.td>
-            </Styled.tr>
-            <Styled.tr>
-              <Styled.td
+                </Themed.a>
+              </Themed.td>
+            </Themed.tr>
+            <Themed.tr>
+              <Themed.td
                 sx={{
                   variant: 'text.pocketBoi',
                   color: 'background',
                 }}
               >
                 See my work history
-              </Styled.td>
-              <Styled.td
+              </Themed.td>
+              <Themed.td
                 sx={{
                   textAlign: 'right',
                 }}
               >
-                <Styled.a
+                <Themed.a
                   sx={{
                     color: 'background',
                     textDecoration: 'underline',
@@ -129,11 +130,11 @@ const Contact = () => {
                   href={data.socialsYaml.linkedin}
                 >
                   linkedin/jadetsp
-                </Styled.a>
-              </Styled.td>
-            </Styled.tr>
-            <Styled.tr>
-              <Styled.td
+                </Themed.a>
+              </Themed.td>
+            </Themed.tr>
+            <Themed.tr>
+              <Themed.td
                 sx={{
                   variant: 'text.pocketBoi',
                   color: 'background',
@@ -141,13 +142,13 @@ const Contact = () => {
                 }}
               >
                 Go in-depth
-              </Styled.td>
-              <Styled.td
+              </Themed.td>
+              <Themed.td
                 sx={{
                   textAlign: 'right',
                 }}
               >
-                <Styled.a
+                <Themed.a
                   sx={{
                     color: 'background',
                     textDecoration: 'underline',
@@ -157,19 +158,19 @@ const Contact = () => {
                   href={data.socialsYaml.medium}
                 >
                   medium/jadetsp
-                </Styled.a>
-              </Styled.td>
-            </Styled.tr>
-            <Styled.tr>
-              <Styled.td>
+                </Themed.a>
+              </Themed.td>
+            </Themed.tr>
+            <Themed.tr>
+              <Themed.td>
                 Get inspired
-              </Styled.td>
-              <Styled.td
+              </Themed.td>
+              <Themed.td
                 sx={{
                   textAlign: 'right',
                 }}
               >
-                <Styled.a
+                <Themed.a
                   sx={{
                     color: 'background',
                     textDecoration: 'underline',
@@ -179,11 +180,11 @@ const Contact = () => {
                   href={data.socialsYaml.dribbble}
                 >
                   dribbble/jadetsp
-                </Styled.a>
-              </Styled.td>
-            </Styled.tr>
+                </Themed.a>
+              </Themed.td>
+            </Themed.tr>
           </tbody>
-        </Styled.table>
+        </Themed.table>
       </div>
 
       <div
@@ -192,58 +193,20 @@ const Contact = () => {
           overflow: 'hidden',
         }}
       >
-        {/* <div
-          sx={{
-            position: 'relative',
-          }}
-        >
-          <img
-            src={data.smallSplatImage.publicURL}
-            title="Small Split"
-            alt="Small paint splat at the top right corner of Jade's Profile."
-            sx={{
-              zIndex: 1,
-              display: ['none', 'none', 'block'],
-              position: 'absolute',
-              left: '-75%',
-            }}
-          />
-        </div> */}
         <div>
           <Img
-            fluid={data.jadeProfileImage.fluid}
+            image={data.jadeProfileImage.gatsbyImageData}
             title="Jade Profile"
             alt="Jade smiling at the camera in front of a pink floral arch."
             objectPosition="center 25%"
             imgStyle={{ objectPosition: 'center 25%' }}
             sx={{
               my: [null, null, 0],
-              position: ['absolute', 'absolute', 'relative'],
-              maxHeight: ['500px', '500px', '750px'],
-              maxWidth: '500px',
+              marginBottom: [null, null, 16]
             }}
           />
         </div>
       </div>
-      {/* <div
-        sx={{
-          position: 'relative',
-        }}
-      >
-        <img
-          src={data.bigSplatImage.publicURL}
-          title="Big Splat"
-          alt="Big paint splat at the bottom of Jade's Profile."
-          sx={{
-            display: ['none', 'none', 'block'],
-            position: 'absolute',
-            left: '60%',
-            // bottom: '-100%',
-            // right: '10%',
-            // top: '100%',
-          }}
-        />
-      </div> */}
     </Grid>
   );
 };

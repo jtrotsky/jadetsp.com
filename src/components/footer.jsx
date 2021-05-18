@@ -4,6 +4,7 @@ import { jsx, Grid } from 'theme-ui';
 const Footer = () => (
   <Grid
     columns={[1, 1, '2fr 1fr']}
+    mx={32}
     gap={[0, 0, -1]}
   >
     <span
@@ -16,13 +17,14 @@ const Footer = () => (
       }}
     >
       Fun fact #25: I have a collection of discontinued coins from around the world.
-      It&apos;s priceless.
+      It&apos;s&nbsp;priceless.
     </span>
 
     <span
       sx={{
         mx: [0, 0, '0px'],
-        marginBottom: 0,
+        paddingLeft: [0, 0, 118],
+        marginBottom: 32,
         variant: 'text.hardCaption',
         opacity: 0.5,
         color: 'background',

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Grid, Styled } from 'theme-ui';
+import { jsx, Grid, Themed } from 'theme-ui';
 import { useStaticQuery, graphql } from 'gatsby';
 
 
@@ -23,7 +23,6 @@ const Intro = () => {
       <Grid
         id="intro"
         sx={{
-          marginTop: ['-60%', '-60%', 3],
           marginBottom: 2,
         }}
         columns={1}
@@ -48,7 +47,7 @@ const Intro = () => {
             />
           </div>
 
-          <Styled.h2
+          <Themed.h2
             sx={{
               maxWidth: '840px',
               width: ['360px', '360px', '100%'],
@@ -59,7 +58,7 @@ const Intro = () => {
             }}
           >
             {data.site.siteMetadata.title}
-          </Styled.h2>
+          </Themed.h2>
         </div>
       </Grid>
     </div>

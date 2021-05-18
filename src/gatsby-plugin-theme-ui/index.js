@@ -1,6 +1,6 @@
 export default {
   breakpoints: ['0px', '768px', '768px'],
-  space: [32, 40, 80, 120, 160, 200, 280, 360, 400],
+  space: [0, 32, 40, 80, 120, 160, 200, 280, 360, 400],
   layout: {
     container: {
       maxWidth: '1000px',

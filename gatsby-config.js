@@ -15,6 +15,7 @@ module.exports = {
     siteUrl: 'https://www.jadetsp.com',
   },
   plugins: [
+    'gatsby-plugin-image',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -55,12 +56,7 @@ module.exports = {
     },
     'gatsby-background-image',
     'gatsby-transformer-sharp',
-    {
-      resolve: 'gatsby-plugin-sharp',
-      options: {
-        maxWidth: 1000,
-      },
-    },
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-offline',
       options: {

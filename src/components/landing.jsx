@@ -262,7 +262,7 @@ const Landing = () => {
               sx={{
                 display: 'flex',
                 justifyContent: ['center', 'center', 'left'],
-                marginTop: [2, 2, 3],
+                marginTop: [2, 2, 2],
               }}
             >
               <Quote
@@ -277,7 +277,7 @@ const Landing = () => {
               sx={{
                 display: 'flex',
                 justifyContent: 'center',
-                marginTop: [0, 0, '900px'],
+                marginTop: [32, 32, '450px'],
               }}
             >
               <Quote
@@ -293,7 +293,8 @@ const Landing = () => {
                 display: 'flex',
                 justifyContent: ['center', 'center', 'left'],
                 paddingTop: 0,
-                marginBottom: 2,
+                marginBottom: 3,
+                marginTop: 32,
               }}
             >
               <Quote

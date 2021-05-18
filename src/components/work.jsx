@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Grid, Styled } from 'theme-ui';
+import { jsx, Grid, Themed } from 'theme-ui';
 
 const Work = () => (
   <div
@@ -15,8 +15,8 @@ const Work = () => (
       columns={[1, 1, '1fr 0.2fr 1fr']}
       gap={-1}
     >
-      <Styled.h3>
-        <Styled.a
+      <Themed.h3>
+        <Themed.a
           href="https://dribbble.com/JadeTSP"
           target="_blank"
           rel="noopener noreferrer"
@@ -25,8 +25,8 @@ const Work = () => (
           }}
         >
           See some of my work
-        </Styled.a>
-      </Styled.h3>
+        </Themed.a>
+      </Themed.h3>
 
       <p
         sx={{
@@ -37,8 +37,8 @@ const Work = () => (
         or
       </p>
 
-      <Styled.h3>
-        <Styled.a
+      <Themed.h3>
+        <Themed.a
           href="https://medium.com/@JadeTSP"
           target="_blank"
           rel="noopener noreferrer"
@@ -47,8 +47,8 @@ const Work = () => (
           }}
         >
           Read about my process
-        </Styled.a>
-      </Styled.h3>
+        </Themed.a>
+      </Themed.h3>
     </Grid>
   </div>
 );

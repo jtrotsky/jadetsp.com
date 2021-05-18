@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { jsx, Grid, Styled } from 'theme-ui';
+import { jsx, Grid, Themed } from 'theme-ui';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage as Img } from 'gatsby-plugin-image';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faMicrophoneAlt, faBookOpen } from '@fortawesome/free-solid-svg-icons';
@@ -14,31 +14,25 @@ function Media({
     graphql`
     query {
       image01: imageSharp(fluid: {originalName: {eq:"img-media-01.jpg"}}) {
-        fluid(
-          maxWidth: 184,
-          maxHeight: 93,
-          quality: 50
-        ) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(
+          layout: CONSTRAINED,
+          width: 184,
+          height: 93
+        )
       }
       image02: imageSharp(fluid: {originalName: {eq:"img-media-02.jpg"}}) {
-        fluid(
-          maxWidth: 184,
-          maxHeight: 93,
-          quality: 50
-        ) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(
+          layout: CONSTRAINED,
+          width: 184,
+          height: 93
+        )
       }
       image03: imageSharp(fluid: {originalName: {eq:"img-media-03.jpg"}}) {
-        fluid(
-          maxWidth: 184,
-          maxHeight: 93,
-          quality: 50
-        ) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(
+          layout: CONSTRAINED,
+          width: 184,
+          height: 93
+        )
       }
     }`,
   );
@@ -47,15 +41,15 @@ function Media({
   switch (name) {
     case 'Video':
       iconString = faPlay;
-      thumbnailImage = data.image01.fluid;
+      thumbnailImage = data.image01.gatsbyImageData;
       break;
     case 'Article':
       iconString = faMicrophoneAlt;
-      thumbnailImage = data.image02.fluid;
+      thumbnailImage = data.image02.gatsbyImageData;
       break;
     case 'Interview':
       iconString = faBookOpen;
-      thumbnailImage = data.image03.fluid;
+      thumbnailImage = data.image03.gatsbyImageData;
       break;
     default:
       break;
@@ -68,7 +62,7 @@ function Media({
       }}
     >
       <hr />
-      <Styled.a
+      <Themed.a
         href={link}
         role="link"
         tabIndex={0}
@@ -86,7 +80,7 @@ function Media({
           }}
         >
           <Img
-            fluid={thumbnailImage}
+            image={thumbnailImage}
             title={description}
             alt={name}
             sx={{
@@ -107,7 +101,7 @@ function Media({
             {description}
           </div>
         </Grid>
-      </Styled.a>
+      </Themed.a>
       <hr />
     </div>
   );
