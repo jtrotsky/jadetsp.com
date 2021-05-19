@@ -105,7 +105,7 @@ const Landing = () => {
         <div
           sx={{
             position: 'relative',
-            top: '120px',
+            top: '80px',
           }}
         >
           <img
@@ -225,7 +225,7 @@ const Landing = () => {
         <div
           sx={{
             position: 'relative',
-            bottom: '470px',
+            bottom: '460px',
           }}
         >
           <img

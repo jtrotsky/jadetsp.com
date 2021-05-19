@@ -7,7 +7,7 @@ const Block = ({ paragraphOne, paragraphTwo, children }) => (
     sx={{
       maxWidth: '440px',
       variant: 'text.smolBoi',
-      mx: [0, 0, '8px'],
+      mx: 2,
     }}
   >
 

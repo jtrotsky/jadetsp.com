@@ -51,10 +51,10 @@ const Intro = () => {
             sx={{
               maxWidth: '840px',
               width: ['360px', '360px', '100%'],
-              paddingTop: [2, 2, '0px'],
+              paddingTop: [2, 2, 1],
+              mx: 2,
               variant: ['text.pugBoi', 'text.pugBoi', 'text.chooChooBoi'],
               position: 'absolute',
-              mx: ['8px', '8px', 1],
             }}
           >
             {data.site.siteMetadata.title}
