@@ -5,12 +5,10 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
-// import BackgroundImage from 'gatsby-background-image'
 import Intro from './intro';
 import Quote from './common/quote';
 import Block from './common/block';
 import Background from './common/background';
-// import BackgroundImg from './common/background-img';
 import Banner from './common/banner';
 import Media from './common/media';
 import Work from './work';
@@ -67,21 +65,23 @@ const Landing = () => {
       dotsImage: file(relativePath: {eq:"dots.svg"}) {
         publicURL
       }
-      vendTeamImage: imageSharp(fluid: {originalName: {eq:"img-vend-team.png"}}) {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          width: 500
-          height: 350
-          transformOptions: {
-            cropFocus: ATTENTION
-            duotone: { 
-              shadow: "#3c2920"
-              highlight: "#5e4132"
-              opacity: 70 
-            }
-          }
-        )
+      vendTeamImage: file(relativePath: {eq:"img-vend-team.png"}) {
+        childImageSharp {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            width: 500
+            height: 350
+            quality: 100
+            transformOptions: {
+                cropFocus: ATTENTION
+                duotone: { 
+                  shadow: "#3c2920"
+                  highlight: "#5e4132"
+                  opacity: 70 
+                }
+              }
+          )
+        }
       }
       bigSplatImage: file(relativePath: {eq:"splat-big.svg"}) {
         publicURL
@@ -89,7 +89,23 @@ const Landing = () => {
     }`,
   );
 
-  const pluginImage = getImage(data.vendTeamImage.gatsbyImageData);
+  // gatsbyImageData(
+  //   layout: CONSTRAINED
+  //   placeholder: BLURRED
+  //   width: 500
+  //   height: 350
+  //   transformOptions: {
+  //     cropFocus: ATTENTION
+  //     duotone: { 
+  //       shadow: "#3c2920"
+  //       highlight: "#5e4132"
+  //       opacity: 70 
+  //     }
+  //   }
+  // )
+
+  // const pluginImage = getImage(image);
+  const pluginImage = getImage(data.vendTeamImage.childImageSharp.gatsbyImageData);
 
   return (
     <div
