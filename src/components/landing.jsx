@@ -89,22 +89,6 @@ const Landing = () => {
     }`,
   );
 
-  // gatsbyImageData(
-  //   layout: CONSTRAINED
-  //   placeholder: BLURRED
-  //   width: 500
-  //   height: 350
-  //   transformOptions: {
-  //     cropFocus: ATTENTION
-  //     duotone: { 
-  //       shadow: "#3c2920"
-  //       highlight: "#5e4132"
-  //       opacity: 70 
-  //     }
-  //   }
-  // )
-
-  // const pluginImage = getImage(image);
   const pluginImage = getImage(data.vendTeamImage.childImageSharp.gatsbyImageData);
 
   return (
