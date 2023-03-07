@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Grid } from 'theme-ui';
+import { jsx, Grid, Themed } from 'theme-ui';
 import PropTypes from 'prop-types';
 
 const Banner = ({ quote, children }) => (

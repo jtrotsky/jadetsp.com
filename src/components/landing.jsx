@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, Grid, Container } from 'theme-ui';
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';

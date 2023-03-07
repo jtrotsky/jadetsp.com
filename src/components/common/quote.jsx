@@ -21,8 +21,9 @@ const Quote = ({
         marginLeft: '8px',
       }}
     >
-      <Themed.h4
+      <div
         sx={{
+          variant: 'text.smolBoi',
           marginBottom: '16px',
         }}
       >
@@ -36,7 +37,7 @@ const Quote = ({
         </div>
         {quote}
         &rdquo;
-      </Themed.h4>
+      </div>
     </div>
 
     <div
