@@ -27,7 +27,21 @@ module.exports = {
         display: 'minimal-ui',
         background_color: '#F7F8F8',
         theme_color: '#ED9A12',
-        icon: path.join(__dirname, 'static', 'favicon', 'favicon-512x512.png'),
+        icon: path.join(__dirname, 'static', 'favicons', 'maskable_icon_x512.png'),
+        icons: [
+          {
+            src: path.join(__dirname, 'static', 'favicons', 'favicon_x512.png'),
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any',
+          },
+          {
+            src: path.join(__dirname, 'static', 'favicons', 'maskable_icon_x512.png'),
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable',
+          },
+        ]
       },
     },
     'gatsby-plugin-netlify',
