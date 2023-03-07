@@ -115,9 +115,11 @@ const Landing = () => {
             css="transform: rotate(180deg);"
             sx={{
               display: ['none', 'none', 'inline-block'],
-              maxWidth: '100%',
               position: 'absolute',
               left: '-430px',
+              width: 400,
+              height: 500,
+              maxWidth: '100%',
             }}
           />
         </div>
@@ -141,6 +143,8 @@ const Landing = () => {
               title="Scale Illustration"
               alt="Colourful ripples projecting outward with bigger and bigger impact"
               sx={{
+                width: 400,
+                height: 500,
                 maxWidth: '100%',
               }}
             />
@@ -216,6 +220,8 @@ const Landing = () => {
               title="Dots Illustration"
               alt="Dots in different colours and shapes like individuals in a team"
               sx={{
+                width: 400,
+                height: 500,
                 maxWidth: '100%',
               }}
             />
@@ -225,7 +231,7 @@ const Landing = () => {
         <div
           sx={{
             position: 'relative',
-            bottom: '460px',
+            bottom: '550px',
           }}
         >
           <img
@@ -234,9 +240,12 @@ const Landing = () => {
             alt="Dots in different colours and shapes like individuals in a team"
             sx={{
               display: ['none', 'none', 'inline-block'],
-              maxWidth: '100%',
               position: 'absolute',
-              right: '-270px',
+              right: '-380px',
+              width: 400,
+              height: 500,
+              maxWidth: '100%',
+              
             }}
           />
         </div>
